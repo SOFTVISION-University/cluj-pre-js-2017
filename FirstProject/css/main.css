@@ -1,0 +1,42 @@
+header {
+    background-image: url(../feedback-banner.jpg);
+}
+
+.left_image {
+    height: 290px;
+}
+
+.right_description {
+    font-weight: bold;
+}
+
+
+.container-fluid {
+    background-color: lightgrey;
+}
+
+body {
+    overflow-x:hidden;
+}
+
+a {
+    text-decoration: none!important;
+    cursor: pointer;
+    color: black!important;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+a:hover {
+    border-bottom: 4px solid blue;
+}
+
+
+th, td {
+    padding-left: 55px!important;
+    font-size: 20px;
+}
+
+td {
+    border-bottom: 1px solid black;
+}
