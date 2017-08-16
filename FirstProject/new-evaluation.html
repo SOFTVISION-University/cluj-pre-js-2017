@@ -4,65 +4,533 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="img/">
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--&lt;!&ndash; jQuery library &ndash;&gt;-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
 
     <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 </head>
 
 <body>
-        <div class="row">
-            <div class="col-md-12" style="border-bottom: 2px solid darkgrey; padding-top: 12px; padding-bottom: 14px;">
-                <div class="col-md-4" style="text-align:center;">
-                    <img href="#" style="width: 40%;" src="img/logo-v2.png"/>
-                </div>
-
-                <div class="col-md-4">
-                    <a href="#">Evaluations</a>
-                    <a href="#" style="margin-left: 100px;">New Evaluation</a>
-                </div>
-                <div class="col-md-4">
-                    <a href="#" style="float:right;">Logout</a>
-
-                </div>
+    <nav class="row">
+        <div class="col-md-12" style="border-bottom: 2px solid darkgrey; padding-top: 12px;">
+            <div class="col-md-4" style="text-align:center;">
+                <img style="float:left; width: 12%;" href="#" style="width: 40%;" src="img/logo-v2.png"/>
+            </div>
+            <div class="col-md-4" style="padding-top: 8px;">
+                <a href="#">Evaluations</a>
+                <a href="#" style="margin-left: 100px;">New Evaluation</a>
+            </div>
+            <div class="col-md-4" style="padding-top: 4px;">
+                <a href="#" style="float:right;">Logout</a>
             </div>
         </div>
+    </nav>
     <div class="row">
         <div class="container" style="margin-top: 100px;">
             <div class="col-md-3"><input style="margin-top: 30px;  border-right: none; border-left: none; border-top: none;"type="password" name="lastname" placeholder="Candidate"/></div>
             <div class="col-md-3"> <input style="margin-top: 30px;  border-right: none; border-left: none; border-top: none;"type="password" name="lastname" placeholder="Interviewer"/></div>
-            <div class="col-md-3"> <input style="margin-top: 30px;  border-right: none; border-left: none; border-top: none; border-bottom: none;"type="password" name="lastname" placeholder="4/22/2012"/> <img style="width: 50px;" src="img/2019-200.png"/></div>
+            <div class="col-md-3"> <input style="margin-top: 30px;  border-right: none; border-left: none; border-top: none; border-bottom: none;"type="password" name="lastname" placeholder="4/22/2012"/> </div>
+            <div class="col-md-3"><img style="width: 35px; margin-top: 18px;" src="img/2019-200.png"/></div>
         </div>
     </div>
     <div class="container" style="margin-top:100px;">
         <div class="row">
-            <h2 style="color: cornflowerblue;">Technical level</h2>
+            <h2 class="description_section" style="color: cornflowerblue;">Technical level</h2>
+        </div>
+
+        <div class="row" style="background-color: cornflowerblue;">
+                <div class="col-md-3">
+                    <h4 style="color:white;">Trainee</h4>
+                </div>
+
+                <div class="col-md-3">
+                    <h4 style="color: white;">Junior</h4>
+                </div>
+                <div class="col-md-3">
+                    <h4 style="color: white;">Middle</h4>
+                </div>
+                <div class="col-md-3">
+                    <h4 style="color:white;">Senior</h4>
+                </div>
+        </div>
+
+        <div class="row_section" style="border: 1px solid black;">
+            <div class="col-md-3">
+                <ul>
+                    <li class="bullets"><p>&#9711;</p></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <ul style="display: inline-flex;">
+                    <li class="bullets"><p>&#9711;</p></li>
+                    <li class="bullets"><p>&#9711;</p></li>
+                    <li class="bullets"><p>&#9711;</p></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <ul style="display: inline-flex;">
+                    <li class="bullets"><p>&#9711;</p></li>
+                    <li class="bullets"><p>&#9711;</p></li>
+                    <li class="bullets"><p>&#9711;</p></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <ul style="display: inline-flex;">
+                    <li class="bullets"><p>&#9711;</p></li>
+                    <li class="bullets"><p>&#9711;</p></li>
+                    <li class="bullets"><p>&#9711;</p></li>
+                </ul>
+            </div>
         </div>
 
         <div class="row">
-            <h2 style="color: cornflowerblue;">Should the candidate be hired?</h2>
-            <textarea style="width:100%; height:150px;" placeholder="The type of project that is suitable for the candidate
+            <h2 class="description_section" style="color: cornflowerblue;">Should the candidate be hired?</h2>
+            <textarea cols="194" style="margin-right: 282px; margin-left: 252px; height:150px;" placeholder="The type of project that is suitable for the candidate
 Is guidance required for the candidate
 " ></textarea>
         </div>
 
         <div class="row">
-            <h2 style="color: cornflowerblue;">General Impression</h2>
-            <textarea style="width:100%; height:150px;" placeholder="*required
+            <h2 class="description_section" style="color: cornflowerblue;">General Impression</h2>
+            <textarea cols="194" style="margin-right: 282px; margin-left: 252px; height:150px;" placeholder="*required
 " ></textarea>
         </div>
 
         <div class="row">
-            <h2 style="color: cornflowerblue;">Workflow, Leadership & Soft Skills</h2>
-            <textarea style="width:100%; height:150px;" placeholder="Describe the environment in which the candidate works.
+            <h2 class="description_section" style="color: cornflowerblue;">Workflow, Leadership & Soft Skills</h2>
+            <textarea cols="194" style="margin-right: 282px; margin-left: 252px; height:150px;" placeholder="Describe the environment in which the candidate works.
 Describe any guidance or management experience
 " ></textarea>
         </div>
 
-    </div>
-</body>
+        <form class="language_form" style="text-align:center;">
+            <fieldset class="field_section" style="display:inline;">
+                <legend>OOP, Design Patterns:</legend>
+                    <ul style="display: inline-flex; text-align: right">
+                        <li>
+                            Classes <select>
+                            <option selected disabled>Evaluation</option>
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select> <br>
+                            Access modifiers <select>
+                            <option selected disabled>Evaluation</option>
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select> <br>
+                            Polymorphism <select>
+                            <option selected disabled>Evaluation</option>
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                            <br>
+                        </li>
 
+                        <li>
+                            Exception handling <select>
+                            <option selected disabled>Evaluation</option>
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select> <br>
+                            Design patterns <select>
+                            <option selected disabled>Evaluation</option>
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select> <br>
+                            Regex <select>
+                            <option selected disabled>Evaluation</option>
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select> <br>
+                        </li>
+
+                        <li>
+                            Version Control <select>
+                            <option selected disabled>Evaluation</option>
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select> <br>
+                            Issue Tracking <select>
+                            <option selected disabled>Evaluation</option>
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select> <br>
+                        </li>
+                    </ul>
+            </fieldset>
+        </form>
+
+        <form class="language_form" style="text-align:center;">
+            <fieldset class="field_section" style="display:inline;">
+                <legend>HTTP</legend>
+                <ul style="display: inline-flex; text-align: right">
+                         <li>
+                            Protocol <select>
+                             <option selected disabled>Evaluation</option>
+                             <option>0</option>
+                             <option>1</option>
+                             <option>2</option>
+                             <option>3</option>
+                         </select> <br>
+                            Headers <select>
+                             <option selected disabled>Evaluation</option>
+                             <option>0</option>
+                             <option>1</option>
+                             <option>2</option>
+                             <option>3</option>
+                         </select> <br>
+                         </li>
+
+                        <li>
+                            Response codes <select>
+                            <option selected disabled>Evaluation</option>
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select> <br>
+                            Request methods <select>
+                            <option selected disabled>Evaluation</option>
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select> <br>
+                        </li>
+
+                        <li>
+                            REST <select>
+                            <option selected disabled>Evaluation</option>
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select> <br>
+                            Sessions & Cookies <select>
+                            <option selected disabled>Evaluation</option>
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select> <br>
+                        </li>
+                    </ul>
+            </fieldset>
+        </form>
+
+        <form class="language_form" style="text-align:center;">
+            <fieldset class="field_section" style="display:inline;">
+                <legend>HTML:</legend>
+                <ul style="display: inline-flex; text-align: right">
+                    <li>
+                        Doctype <select>
+                        <option selected disabled>Evaluation</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select> <br>
+                        Syntax rules <select>
+                        <option selected disabled>Evaluation</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select> <br>
+                    </li>
+
+                    <li>
+                        Tags <select>
+                        <option selected disabled>Evaluation</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select> <br>
+                        Attributes <select>
+                        <option selected disabled>Evaluation</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select> <br>
+                    </li>
+
+                    <li>
+                        Basic SEO <select>
+                        <option selected disabled>Evaluation</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select> <br>
+
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
+
+        <form class="language_form" style="text-align:center;">
+            <fieldset class="field_section" style="display:inline;">
+                <legend>CSS</legend>
+                <ul style="display: inline-flex; text-align: right">
+                    <li>
+                        Usage <select>
+                        <option selected disabled>Evaluation</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select> <br>
+                        Selectors <select>
+                        <option selected disabled>Evaluation</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select> <br>
+                    </li>
+
+                    <li>
+                        Box modeling <select>
+                        <option selected disabled>Evaluation</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select> <br>
+                        Styling <select>
+                        <option selected disabled>Evaluation</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select> <br>
+                    </li>
+
+                    <li>
+                        CSS 3.0 <select>
+                        <option selected disabled>Evaluation</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select> <br>
+                        Dynamic Stylesheets <select>
+                        <option selected disabled>Evaluation</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select> <br>
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
+
+        <form class="language_form" style="text-align:center;">
+            <fieldset class="field_section" style="display:inline;">
+                <legend>Javascript</legend>
+                <ul style="display: inline-flex; text-align: right">
+                    <li>
+                        Data types & variables <select>
+                        <option selected disabled>Evaluation</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select> <br>
+                        Functions <select>
+                        <option selected disabled>Evaluation</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select> <br>
+                        Prototype & OOP <select>
+                        <option selected disabled>Evaluation</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select> <br>
+                        Debugging <select>
+                        <option selected disabled>Evaluation</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select> <br>
+                        Libraries <select>
+                        <option selected disabled>Evaluation</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select> <br>
+                        Frameworks <select>
+                        <option selected disabled>Evaluation</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select> <br>
+                    </li>
+
+                    <li>
+                        Object manipulation <select>
+                        <option selected disabled>Evaluation</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select> <br>
+                        Templating <select>
+                        <option selected disabled>Evaluation</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select> <br>
+                        Testing(unit, E2E) <select>
+                        <option selected disabled>Evaluation</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select> <br>
+                        Websockets <select>
+                        <option selected disabled>Evaluation</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select> <br>
+                        Promises <select>
+                        <option selected disabled>Evaluation</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select> <br>
+                    </li>
+
+                    <li>
+                        DOM Manipulation <select>
+                        <option>Evaluation</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select> <br>
+                        Event Handling <select>
+                        <option>Evaluation</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select> <br>
+                        AJAX <select>
+                        <option>Evaluation</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select> <br>
+                        Tooling <select>
+                        <option>Evaluation</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select> <br>
+                        Browser Engines <select>
+                        <option>Evaluation</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select> <br>
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
+
+        <form class="language_form" style="text-align:center;">
+            <fieldset class="field_section" style="display:inline;">
+                <legend>NodeJS</legend>
+                <ul style="display: inline-flex; text-align: right">
+                    <li>
+                       Backend frameworks <select>
+                        <option selected disabled>Evaluation</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select> <br>
+                        Unit Testing <select>
+                        <option selected disabled>Evaluation</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select> <br>
+                    </li>
+
+                    <li>
+                        Templating <select>
+                        <option selected disabled>Evaluation</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select> <br>
+                    </li>
+
+                    <li>
+                        DOM Manipulation <select>
+                        <option selected disabled>Evaluation</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select> <br>
+                    </li>
+                </ul>
+            </fieldset> <br>
+            <input class="submit_button" type="submit" value="SUBMIT" style="float: right; margin-top: 30px; padding: 15px 40px; margin-right: 100px;">
+        </form>
+    </div>
+
+    <footer class="container-fluid footer_side" style="margin-top: 80px;">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+            <p style="padding: 25px 350px 20px 0; font-weight:bold; font-size:16px; color: gray; text-align: right; margin-top: 120px;">Copyright@Sofvision 2017</p>
+        </div>
+    </footer>
+</body>
 </html>

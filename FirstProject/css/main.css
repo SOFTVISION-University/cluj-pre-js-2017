@@ -1,5 +1,5 @@
 header {
-    background-image: url(../feedback-banner.jpg);
+    background-image: url(../img/feedback-banner.jpg);
 }
 
 .left_image {
@@ -29,6 +29,7 @@ a {
 
 a:hover {
     border-bottom: 4px solid blue;
+    border-bottom-width: 7px;
 }
 
 
@@ -39,4 +40,51 @@ th, td {
 
 td {
     border-bottom: 1px solid black;
+}
+
+
+footer.footer_section {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li.bullets {
+    padding: 10px;
+}
+
+.submit_button {
+    float: right;
+    margin-top: 30px;
+    padding: 15px 40px;
+    margin-right: 100px;
+    border: 2px solid cornflowerblue;
+    color: white;
+    font-size: 16px;
+    background-color: cornflowerblue;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+form.language_form {
+    margin-top: 70px;
+}
+
+h2.description_section {
+    margin-left: 300px;
+}
+
+/*.row_section {*/
+    /*margin-left:254px;*/
+    /*margin-right: 255px;*/
+/*}*/
+
+fieldset.field_section {
+    text-align: center;
 }
