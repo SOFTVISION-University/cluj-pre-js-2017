@@ -2,289 +2,471 @@
 <html>
 <head>
   <title>New Evaluations</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <header>
-    <p style="margin-left: 10%; margin-right: 10%; display:inline-block;">Softvision</p>
-    <nav style="margin-right: 50%; display:inline-block;">
-      <a href="">Evaluations</a>
-      <a href="">New Evaluation</a>
+    <img src="assets/logo-v2.png" alt="Softvision Logo" style="display: inline-block; width: 10em; height: 2.5em; margin-left: 5em;">
+    <nav style="margin-left: 20em; display:inline-block;">
+      <a style="font-size: x-large; color: #696969; text-decoration: none;" href="">Evaluations</a>
+      <a style="font-size: x-large; color:	#696969; text-decoration: none; margin-left: 0.3em;" href="">New Evaluation</a>
     </nav>
-    <a style="float:right; margin-right: 5%; display: inline-block;" href="">Log out</a>
+    <a style="margin-left: 40em; display: inline-block; font-size: x-large; color: #696969; text-decoration: none;" href="">Log out</a>
   </header>
 
-  <section style="display:inline-block;">
-    <input type="text" placeholder="Candidate">
-    <input type="text" placeholder="Interviewer">
-    <input type="date">
-  </section>
+  <hr>
 
-  <section>
-    <h3>Technical Level</h3>
-    <table>
-      <tr>
-        <th>Trainee</th>
-        <th>Junior</th>
-        <th>Middle</th>
-        <th>Senior</th>
-      </tr>
-      <tr>
-        <td><input type="checkbox" id="T"/></td>
-        <td>
-          <input type="checkbox" id="J1"/>
-          <input type="checkbox" id="J2"/>
-          <input type="checkbox" id="J3"/>
-        </td>
-        <td>
-          <input type="checkbox" id="M1"/>
-          <input type="checkbox" id="M2"/>
-          <input type="checkbox" id="M3"/>
-        </td>
-        <td>
-          <input type="checkbox" id="S1"/>
-          <input type="checkbox" id="S2"/>
-          <input type="checkbox" id="S3"/>
-        </td>
-      </tr>
-    </table>
-  </section>
+  <form class="center">
 
+      <section>
+        <input type="text" placeholder="Candidate">
+        <input type="text" placeholder="Interviewer">
+        <input type="date" style="border: none">
+      </section>
 
-  <section>
-    <h3>Should the candidate be hired?</h3>
-    <textarea rows="10" placeholder="The type of project that is suitable for the candidate
-Is guidance required for the candidate"></textarea>
-  </section>
-
-  <section>
-    <h3>General Impression</h3>
-    <textarea rows="10" required placeholder="*required"></textarea>
-  </section>
-
-  <section>
-    <h3>Workflow, Leadership & Soft Skills</h3>
-    <textarea rows="10" required placeholder="Describe the environment in which the candidate works.
-Describe any guidance or management experience"></textarea>
-  </section>
-
-  <section>
-    <h3>OOP, Design Patterns</h3>
-    <table>
-      <tr>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-      <tr>
-        <td>
-          <label for="classes">Classes</label>
-          <select>
-            <option value="evaluation">Evaluation</option>
-          </select>
-        </td>
-        <td>
-          <label for="exceptions">Exception Handling</label>
-          <select>
-            <option value="evaluation">Evaluation</option>
-          </select>
-        </td>
-        <td>
-          <label for="vcs">Version Control</label>
-          <select>
-            <option value="evaluation">Evaluation</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label for="access">Access Modifiers</label>
-          <select>
-            <option value="evaluation">Evaluation</option>
-          </select>
-        </td>
-        <td>
-          <label for="patterns">Design Patterns</label>
-          <select>
-            <option value="evaluation">Evaluation</option>
-          </select>
-        </td>
-        <td>
-          <label for="issue">Issue Tracking</label>
-          <select>
-            <option value="evaluation">Evaluation</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label for="poly">Polymorphism</label>
-          <select>
-            <option value="evaluation">Evaluation</option>
-          </select>
-        </td>
-        <td>
-          <label for="regex">RegEx</label>
-          <select>
-            <option value="evaluation">Evaluation</option>
-          </select>
-        </td>
-      </tr>
-    </table>
-  </section>
-
-  <section>
-    <h3>HTTP</h3>
-    <table>
-      <tr>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-      <tr>
-        <td>
-          <label for="classes">Protocol</label>
-          <select>
-            <option value="evaluation">Evaluation</option>
-          </select>
-        </td>
-        <td>
-          <label for="exceptions">Response codes</label>
-          <select>
-            <option value="evaluation">Evaluation</option>
-          </select>
-        </td>
-        <td>
-          <label for="vcs">REST</label>
-          <select>
-            <option value="evaluation">Evaluation</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label for="access">Headers</label>
-          <select>
-            <option value="evaluation">Evaluation</option>
-          </select>
-        </td>
-        <td>
-          <label for="patterns">Request Methods</label>
-          <select>
-            <option value="evaluation">Evaluation</option>
-          </select>
-        </td>
-        <td>
-          <label for="issue">Sessions and Cookies</label>
-          <select>
-            <option value="evaluation">Evaluation</option>
-          </select>
-        </td>
-      </tr>
-    </table>
-  </section>
-
-  <section>
-    <h3>HTML</h3>
-    <table>
-      <tr>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-      <tr>
-        <td>
-          <label for="classes">Doctype</label>
-          <select>
-            <option value="evaluation">Evaluation</option>
-          </select>
-        </td>
-        <td>
-          <label for="exceptions">Tags</label>
-          <select>
-            <option value="evaluation">Evaluation</option>
-          </select>
-        </td>
-        <td>
-          <label for="vcs">Basic SEO</label>
-          <select>
-            <option value="evaluation">Evaluation</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label for="access">Syntax Rules</label>
-          <select>
-            <option value="evaluation">Evaluation</option>
-          </select>
-        </td>
-        <td>
-          <label for="patterns">Attributes</label>
-          <select>
-            <option value="evaluation">Evaluation</option>
-          </select>
-        </td>
-      </tr>
-    </table>
-  </section>
-
-  <section>
-    <h3>CSS</h3>
-    <table>
-      <tr>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-      <tr>
-        <td>
-          <label for="classes">Usage</label>
-          <select>
-            <option value="evaluation">Evaluation</option>
-          </select>
-        </td>
-        <td>
-          <label for="exceptions">Box modeling</label>
-          <select>
-            <option value="evaluation">Evaluation</option>
-          </select>
-        </td>
-        <td>
-          <label for="vcs">CSS 3.0</label>
-          <select>
-            <option value="evaluation">Evaluation</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label for="access">Selectors</label>
-          <select>
-            <option value="evaluation">Evaluation</option>
-          </select>
-        </td>
-        <td>
-          <label for="patterns">Styling</label>
-          <select>
-            <option value="evaluation">Evaluation</option>
-          </select>
-        </td>
-        <td>
-          <label for="patterns">Dynamic Stylesheets</label>
-          <select>
-            <option value="evaluation">Evaluation</option>
-          </select>
-        </td>
-      </tr>
-    </table>
-  </section>
+      <section>
+        <h2>Technical Level</h2>
+        <table>
+          <tr>
+            <th>Trainee</th>
+            <th>Junior</th>
+            <th>Middle</th>
+            <th>Senior</th>
+          </tr>
+          <tr class="border-lists">
+            <td><input type="radio" id="T"/></td>
+            <td>
+              <input type="radio" name="J1"/>
+              <input type="radio" name="J2"/>
+              <input type="radio" name="J3"/>
+            </td>
+            <td>
+              <input type="radio" name="M1"/>
+              <input type="radio" name="M2"/>
+              <input type="radio" name="M3"/>
+            </td>
+            <td>
+              <input type="radio" name="S1"/>
+              <input type="radio" name="S2"/>
+              <input type="radio" name="S3"/>
+            </td>
+          </tr>
+        </table>
+      </section>
 
 
+      <section>
+        <h2>Should the candidate be hired?</h2>
+        <textarea rows="6" placeholder="The type of project that is suitable for the candidate
+Is guidance required for the candidate" name="hired"></textarea>
+      </section>
+
+      <section>
+        <h2>General Impression</h2>
+        <textarea rows="6" required placeholder="*required" name="impressions"></textarea>
+      </section>
+
+      <section>
+        <h2>Workflow, Leadership & Soft Skills</h2>
+        <textarea rows="6" required placeholder="Describe the environment in which the candidate works.
+    Describe any guidance or management experience" name="workflow"></textarea>
+      </section>
+
+      <fieldset class="border-lists">
+        <legend>OOP, Design Patterns</legend>
+        <ul>
+          <li>
+            <span>Classes</span>
+            <select>
+              <option value="0" name="classes0">0</option>
+              <option value="1" name="classes1">1</option>
+              <option value="2" name="classes2">2</option>
+              <option value="3" name="classes3">3</option>
+            </select>
+            <span>Exception Handling</span>
+            <select>
+              <option value="0" name="exception0">0</option>
+              <option value="1" name="exception1">1</option>
+              <option value="2" name="exception2">2</option>
+              <option value="3" name="exception3">3</option>
+            </select>
+            <span>Version Control</span>
+            <select>
+              <option value="0" name="vcs0">0</option>
+              <option value="1" name="vcs1">1</option>
+              <option value="2" name="vcs2">2</option>
+              <option value="3" name="vcs3">3</option>
+            </select>
+          </li>
+          <li>
+            <span>Access Modifiers</span>
+            <select>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <span>Design Patterns</span>
+            <select>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <span>Issue Tracking</span>
+            <select>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </li>
+          <li>
+            <span>Polymorphism</span>
+            <select>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <span>RegEx</span>
+            <select>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="border-lists">
+        <legend>HTTP</legend>
+        <ul>
+          <li>
+              <span>Protocol</span>
+              <select>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            <span>Response codes</span>
+              <select>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            <span>REST</span>
+              <select>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+          </li>
+          <li>
+            <span>Headers</span>
+              <select>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            <span>Request Methods</span>
+              <select>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            <span>Sessions and Cookies</span>
+              <select>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+          </li>
+      </fieldset>
+
+      <fieldset class="border-lists">
+        <legend>HTML</legend>
+        <ul>
+          <li>
+              <span>Doctype</span>
+                  <select>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+              <span>Tags</span>
+                  <select>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+              <span>Basic SEO</span>
+                  <select>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+            </li>
+            <li>
+                <span>Syntax Rules</span>
+                  <select>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+               <span>Attributes</span>
+                  <select>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+           </li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="border-lists">
+        <legend>CSS</legend>
+        <ul>
+          <li>
+              <span>Usage</span>
+              <select>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+              <span>Box modeling</span>
+              <select>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+              <span>CSS 3.0</span>
+              <select>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </li>
+                <li>
+                  <span>Selectors</span>
+                  <select>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                  <span>Styling</span>
+                  <select>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                  <span>Dynamic Stylesheets</span>
+                  <select>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </li>
+          </ul>
+      </fieldset>
+
+      <fieldset class="border-lists">
+        <legend>Javascript</legend>
+        <ul>
+          <li>
+              <span>Data types and variables</span>
+                <select>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              <span>Object manipulation</span>
+                <select>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              <span>DOM manipulation</span>
+                <select>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+            </li>
+            <li>
+              <span>Functions</span>
+                <select>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              <span>Templating</span>
+                <select>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              <span>Event Handling</span>
+              <select>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                </select>
+            </li>
+            <li>
+              <span>Prototype & OOP</span>
+              <select>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+              <span>Testing (Unit & E2E)</span>
+              <select>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+              <span>AJAX</span>
+              <select>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </li>
+            <li>
+              <span>Debugging</span>
+              <select>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+              <span>Websockets</span>
+              <select>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+              <span>Tooling</span>
+              <select>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </li>
+            <li>
+              <span>Libraries</span>
+              <select>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+              <span>Promises</span>
+              <select>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+              <span>Browser Engines<span>
+              <select>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </li>
+            <li>
+              <span>Frameworks</span>
+              <select>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </li>
+        </ul>
+      </fieldset>
 
 
+      <fieldset class="border-lists">
+        <legend>NodeJS</legend>
+        <ul>
+          <li>
+              <span>Backend Frameworks</span>
+              <select>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+              <span>Templating</span>
+              <select>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+              <span>DOM manipulation</span>
+              <select>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </li>
+            <li>
+              <span>Unit Testing</span>
+              <select>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </li>
+          </ul>
+      </fieldset>
+      <input type="submit" value="SUBMIT">
+    </form>
 
-
+    <footer>
+      <p style="text-align: right ; margin-top: 100px; margin-right: 100px;">
+        Copyright@Softvision 2017
+      </p>
+    </footer>
 
 </body>
 </html>
