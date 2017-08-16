@@ -1,0 +1,48 @@
+.image{
+  float:left;
+  margin-right: 5%;
+  height: 25%;
+  width: 15%;
+}
+
+.text {
+  margin-top: 10%;
+  margin-left: 10%;
+  float: right;
+}
+
+.text1 {
+  margin-top: 20%;
+  margin-right: 10%;
+  float: left;
+}
+
+br { font-size: 200%; }
+
+#container {
+    position: relative;
+}
+
+.feedback-form {
+  background: #F0FFFF;
+  margin-top: -500px;
+  position:absolute;
+
+  }
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+
+
+}
+
+#top-header {
+  margin-top: -500px;
+  position: absolute;
+}
+
+.content2{
+  margin-top: 10%;
+}
