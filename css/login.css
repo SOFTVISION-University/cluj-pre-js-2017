@@ -1,0 +1,144 @@
+body{
+	background-color: #555555;
+	margin:0;
+}
+
+.rectangle{
+	width:100%;
+	height:640px;
+
+	
+}
+/* First Rectangle*/
+
+.firstRectangle{
+	background-image: url('../img/feed.jpg');
+	background-blend-mode: overlay;
+
+}
+
+.whiteRectangle{
+	width:inherit;
+	height: inherit;
+	background-color: #CBF6FF;
+	opacity:0.3;
+	position: absolute;
+}
+
+.logInBox{
+	width:375px;
+	height:400px;
+	margin-left: 400px;
+	background-color: 	#F5F5F5;
+	opacity: 1!important;
+	position: absolute;
+	margin-top: 140px;
+	box-shadow: 0px 0px 8px black;
+	border-radius:3px;
+}
+.headLogIn{
+	width:inherit;
+	background-color: #1ab2ff;
+	height:75px;
+	box-shadow: 0px 3px 10px grey;
+	display: table;
+}
+
+.headLogIn > div{
+	color:white;
+	height: 75px;
+	font-size:26px;
+	font-family: sans-serif;
+	text-align: center;
+	line-height: 75px;
+}
+.contentLogIn{
+	width:90%;
+	height:70%;
+	margin:0 auto;
+	margin-top:20px;
+}
+
+#log-form{
+margin-top: 20px;
+position: absolute;
+width:inherit;
+background-color: #F5F5F5;
+text-align:center;
+}
+
+#log-form input{
+	border:0;
+	width:100%;
+	height:50px;
+	margin-bottom: 10px;
+	background-color: inherit;
+	padding-left: 10px;
+	font-size: 15px;
+	border-bottom: 1px solid grey;
+
+}
+
+#log-form button{
+	margin:0 auto;
+	width:120px;
+	height:30px;
+	background-color: #1ab2ff;
+	color:white;
+	margin-top: 50px;
+	border:0;
+	box-shadow: 0px 3px 15px grey;
+
+}
+
+/* Second Rectangle */
+
+.secondRectangle{
+	background-color: white;
+	height:450px;
+}
+
+.imgContainer{
+	width:375px;
+	height:375px;
+	margin-left: 400px;
+	float:left;
+	margin-right:150px;
+}
+
+.imgContainer img{
+	width:100%;
+	height:100%;
+
+}
+
+.textContainer{
+	padding:50px 20px  10px  10px;
+}
+
+.tcHead{
+	font-size:28px;
+	font-family:sans-serif;
+	font-weight: 500;
+	margin-bottom:80px;
+}
+
+.textContainer{
+	margin-left: 200px;
+}
+
+.tcBody{
+	margin-right:300px;
+}
+
+.thirdRectangle{
+	background-color: lightgrey;
+}
+
+.textContainerThird{
+	margin-left: 400px;
+	margin-top: 50px;
+	position: absolute;
+	width:500px;
+}
+
