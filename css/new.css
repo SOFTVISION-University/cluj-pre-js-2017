@@ -1,44 +1,137 @@
 body{
 	background-color: #f9f9f9;
 }
+
 .main-section{
-	width:80%;
-	margin:0 auto;
-	min-width:1200px;
+	width: 80%;
+	margin: 0 auto;
+	max-width: 1200px;
 }
+
+form{
+	margin-bottom: 20px;
+	display: inline-block;
+}
+
+.form-section-first{
+    display: flex;
+	justify-content: space-around;
+}
+
 .form-section-first input{
-	width:32.799999%;
-	height:35px;
-	border:0;
+	width: 31%;
+	border: 0;
+	padding-left: 10px;
+	height: 40px;
+	color: lightgrey;
+	font-size: 20px;
+	padding-right: 10px;
+
+
 }
+
+.form-section-first input::placeholder{
+	
+	border-bottom: 1px solid lightgrey;
+	color: lightgrey;
+
+}
+
+.form-section-first input:focus{
+	outline:none;
+}
+
+.form-section span{
+	font-size: 25px;
+	margin-left: 30px;
+	margin-bottom: 30px;
+}
+
 header{
 	margin-bottom: 100px;
 }
+
 fieldset, .form-section, .form-section-first{
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 }
 
 table{
-	width:100%;
+	width: 100%;
 	border-collapse: collapse;
 	text-align: center;
+	margin-top: 10px;
 }
 
 textarea{
-	width:100%;
-	resize:none;
+	width: 100%;
+	resize: none;
+	height: 100px;
+	border: 2px solid darkgrey;
+	width: calc(100% - 25px);
+	padding: 10px;
+	margin-top: 10px;
+	font-size: 15px;
 }
 
 .firstrow {
-text-align:center;	
-	
-
+text-align: center;	
 }
 
 .radio-group{
-	display:inline-flex;
+	display: inline-flex;
 }
 
 td input{
-	width:40px;
+	width: 40px;
+}
+
+.checkBoxes{
+	border: 2px solid darkgrey;
+	height: 50px;
+}
+
+.blue {
+	color: #1ab2ff;
+}
+
+legend{
+	color: #1ab2ff;
+	font-size: 25px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+ul{
+	list-style: none;
+
+}
+
+li{
+	float: left;
+	width: 30%;
+	margin: 0 10px 10px 10px;
+	font-size: 14px;
+	line-height: 30px;
+}
+
+li select{
+	float: right;
+	height: 30px;
+    width: 136px;
+}
+
+.submitButton{
+	float: right;
+	width: 200px;
+    height: 60px;
+    background: #1ab2ff;
+    border: 0;
+    border-radius: 3px;
+    box-shadow: 0px 9px 9px grey;
+    color: white;
+    font-size: 20px;
+}
+
+.inputDate{
+	color:lightgrey!important;
 }

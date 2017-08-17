@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Evaluations-MockUp</title>
+		<title>Log In-MockUp</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/login.css">
-		
 	</head>
 	<body>
 	<!-- First section --> 
@@ -13,10 +13,10 @@
 				<div id="login-box" class="logInBox">
 					<div id="head-logIn" class="headLogIn"><div>Interview FeedBack</div></div>
 					<div id="content-login" class="contentLogIn">
-						<form id="log-form">
-						  <input type="text" name="userName" placeholder="Username"><br>
-						  <input type="password" name="password" placeholder="Password">
-						  <button type="submit value="Submit">Login</button>
+						<form id="log-form" class="logFormClass" action="evaluations.html">
+						  <input class="logFormInput" type="text" name="userName" placeholder="Username"><br>
+						  <input class="logFormInput" type="password" name="password" placeholder="Password">
+						  <button class="logFormButton" type="submit value="Submit">Login</button>
 						</form>
 					</div>
 				</div>
@@ -31,7 +31,7 @@
 				</div>
 				<div id="text-container" class="textContainer">
 					<article>
-						<header><h2>Submit new feedback!</h2>	</header>
+						<h2>Submit new feedback!</h2>
 						<div id="tc-body" class="tcBody">
 							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
 						</div>
@@ -45,7 +45,7 @@
 			<div id="third-div" class="rectangle thirdRectangle">
 				<div id="text-container" class="textContainer textContainerThird">
 					<article>
-						<header><h2>View feedback results!</h2></header>	
+						<h2>View feedback results!</h2>	
 						<div id="tc-body" class="tcBodyThird">
 							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
 						</div>
@@ -59,10 +59,8 @@
 		</section>
 	
 	<!-- Footer -->
-		<footer>
-			<div id="footer" class="footer">
+		<footer class="footer">
 				<h3>Copyright@Softvision 2017</h3>
-			</div>
 		</footer>
 	</body>
 </html>
