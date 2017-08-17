@@ -39,19 +39,19 @@
           <tr class="border-lists">
             <td><input type="radio" id="T"/></td>
             <td>
-              <input type="radio" name="J1"/>
-              <input type="radio" name="J2"/>
-              <input type="radio" name="J3"/>
+              <input type="radio" id="J1"/>
+              <input type="radio" id="J2"/>
+              <input type="radio" id="J3"/>
             </td>
             <td>
-              <input type="radio" name="M1"/>
-              <input type="radio" name="M2"/>
-              <input type="radio" name="M3"/>
+              <input type="radio" id="M1"/>
+              <input type="radio" id="M2"/>
+              <input type="radio" id="M3"/>
             </td>
             <td>
-              <input type="radio" name="S1"/>
-              <input type="radio" name="S2"/>
-              <input type="radio" name="S3"/>
+              <input type="radio" id="S1"/>
+              <input type="radio" id="S2"/>
+              <input type="radio" id="S3"/>
             </td>
           </tr>
         </table>
@@ -61,63 +61,40 @@
       <section>
         <h2>Should the candidate be hired?</h2>
         <textarea rows="6" placeholder="The type of project that is suitable for the candidate
-Is guidance required for the candidate" name="hired"></textarea>
+Is guidance required for the candidate" reqired></textarea>
       </section>
 
       <section>
         <h2>General Impression</h2>
-        <textarea rows="6" required placeholder="*required" name="impressions"></textarea>
+        <textarea rows="6" required placeholder="*required" impressions"></textarea>
       </section>
 
       <section>
         <h2>Workflow, Leadership & Soft Skills</h2>
         <textarea rows="6" required placeholder="Describe the environment in which the candidate works.
-    Describe any guidance or management experience" name="workflow"></textarea>
+    Describe any guidance or management experience" workflow"></textarea>
       </section>
 
-      <fieldset class="border-lists">
+      <fieldset>
         <legend>OOP, Design Patterns</legend>
         <ul>
           <li>
-            <span>Classes</span>
-            <select>
-              <option value="0" name="classes0">0</option>
-              <option value="1" name="classes1">1</option>
-              <option value="2" name="classes2">2</option>
-              <option value="3" name="classes3">3</option>
-            </select>
-            <span>Exception Handling</span>
-            <select>
-              <option value="0" name="exception0">0</option>
-              <option value="1" name="exception1">1</option>
-              <option value="2" name="exception2">2</option>
-              <option value="3" name="exception3">3</option>
-            </select>
-            <span>Version Control</span>
-            <select>
-              <option value="0" name="vcs0">0</option>
-              <option value="1" name="vcs1">1</option>
-              <option value="2" name="vcs2">2</option>
-              <option value="3" name="vcs3">3</option>
-            </select>
-          </li>
-          <li>
-            <span>Access Modifiers</span>
-            <select>
+            <label for="classes">Classes</label>
+            <select name="classes" id="classes">
               <option value="0">0</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
             </select>
-            <span>Design Patterns</span>
-            <select>
+            <label for="exception">Exception Handling</label>
+            <select name="exception" id="exception">
               <option value="0">0</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
             </select>
-            <span>Issue Tracking</span>
-            <select>
+            <label for="vcs">Version Control</label>
+            <select name="vcs" id="vcs">
               <option value="0">0</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -125,15 +102,38 @@ Is guidance required for the candidate" name="hired"></textarea>
             </select>
           </li>
           <li>
-            <span>Polymorphism</span>
-            <select>
+            <label for="access">Access Modifiers</label>
+            <select name="access" id="access">
               <option value="0">0</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
             </select>
-            <span>RegEx</span>
-            <select>
+            <label for="patterns">Design Patterns</label>
+            <select name="patterns" id="patterns">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <label for="issue">Issue Tracking</label>
+            <select name="issue" id="issue">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </li>
+          <li>
+            <label for="poly">Polymorphism</label>
+            <select name="poly" id="poly">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <label for="regex">RegEx</label>
+            <select name="regex" id ="regex">
               <option value="0">0</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -143,26 +143,26 @@ Is guidance required for the candidate" name="hired"></textarea>
         </ul>
       </fieldset>
 
-      <fieldset class="border-lists">
+      <fieldset>
         <legend>HTTP</legend>
         <ul>
           <li>
-              <span>Protocol</span>
-              <select>
+              <label for="protocol">Protocol</label>
+              <select name="protocol" id="protocol">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
               </select>
-            <span>Response codes</span>
-              <select>
+            <label for="codes">Response codes</label>
+              <select name="codes" id="codes">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
               </select>
-            <span>REST</span>
-              <select>
+            <label for="rest">REST</label>
+              <select name="rest" id="rest">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -170,22 +170,22 @@ Is guidance required for the candidate" name="hired"></textarea>
               </select>
           </li>
           <li>
-            <span>Headers</span>
-              <select>
+            <label for="headers">Headers</label>
+              <select name="headers" id="headers">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
               </select>
-            <span>Request Methods</span>
-              <select>
+            <label for="request">Request Methods</label>
+              <select name="request" id="request">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
               </select>
-            <span>Sessions and Cookies</span>
-              <select>
+            <label for="session">Sessions and Cookies</label>
+              <select name="sessions" id="session">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -194,26 +194,26 @@ Is guidance required for the candidate" name="hired"></textarea>
           </li>
       </fieldset>
 
-      <fieldset class="border-lists">
+      <fieldset>
         <legend>HTML</legend>
         <ul>
           <li>
-              <span>Doctype</span>
-                  <select>
+              <label for="doctype">Doctype</label>
+                  <select name="doctype" id="doctype">
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                   </select>
-              <span>Tags</span>
-                  <select>
+              <label for="tags">Tags</label>
+                  <select name="tags" id="tags">
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                   </select>
-              <span>Basic SEO</span>
-                  <select>
+              <label for="seo">Basic SEO</label>
+                  <select name="seo" id="seo">
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -221,15 +221,15 @@ Is guidance required for the candidate" name="hired"></textarea>
                   </select>
             </li>
             <li>
-                <span>Syntax Rules</span>
-                  <select>
+                <label for="syntax">Syntax Rules</label>
+                  <select name="syntax" id="syntax">
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                   </select>
-               <span>Attributes</span>
-                  <select>
+               <label for="attr">Attributes</label>
+                  <select name="attr" id="attr">
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -239,26 +239,26 @@ Is guidance required for the candidate" name="hired"></textarea>
         </ul>
       </fieldset>
 
-      <fieldset class="border-lists">
+      <fieldset>
         <legend>CSS</legend>
         <ul>
           <li>
-              <span>Usage</span>
-              <select>
+              <label for="usage">Usage</label>
+              <select name="usage" id="usage">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
               </select>
-              <span>Box modeling</span>
-              <select>
+              <label for="modeling">Box modeling</label>
+              <select name="modeling" id="modeling">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
               </select>
-              <span>CSS 3.0</span>
-              <select>
+              <label for="css3">CSS 3.0</label>
+              <select name="css3" id="css3">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -266,22 +266,22 @@ Is guidance required for the candidate" name="hired"></textarea>
               </select>
             </li>
                 <li>
-                  <span>Selectors</span>
-                  <select>
+                  <label for="sel">Selectors</label>
+                  <select name="sel" id="sel">
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                   </select>
-                  <span>Styling</span>
-                  <select>
+                  <label for="style">Styling</label>
+                  <select name="style" id="style">
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                   </select>
-                  <span>Dynamic Stylesheets</span>
-                  <select>
+                  <label for="dynamic">Dynamic Stylesheets</label>
+                  <select name="dynamic" id="dynamic">
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -291,26 +291,26 @@ Is guidance required for the candidate" name="hired"></textarea>
           </ul>
       </fieldset>
 
-      <fieldset class="border-lists">
+      <fieldset>
         <legend>Javascript</legend>
         <ul>
           <li>
-              <span>Data types and variables</span>
-                <select>
+              <label for="data">Data types and variables</label>
+                <select name="data" id="data">
                   <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
                 </select>
-              <span>Object manipulation</span>
-                <select>
+              <label for="object">Object manipulation</label>
+                <select name="object" id="object">
                   <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
                 </select>
-              <span>DOM manipulation</span>
-                <select>
+              <label for="dom">DOM manipulation</label>
+                <select name="dom" id="dom">
                   <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -318,22 +318,22 @@ Is guidance required for the candidate" name="hired"></textarea>
                 </select>
             </li>
             <li>
-              <span>Functions</span>
-                <select>
+              <label for="funct">Functions</label>
+                <select name="funct" id="funct">
                   <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
                 </select>
-              <span>Templating</span>
-                <select>
+              <label for="temp">Templating</label>
+                <select name="temp" id="temp">
                   <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
                 </select>
-              <span>Event Handling</span>
-              <select>
+              <label for="eventh">Event Handling</label>
+              <select name="eventh" id="eventh">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -341,45 +341,22 @@ Is guidance required for the candidate" name="hired"></textarea>
                 </select>
             </li>
             <li>
-              <span>Prototype & OOP</span>
-              <select>
+              <label for="prot">Prototype & OOP</label>
+              <select name="prot" id="prot">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
               </select>
-              <span>Testing (Unit & E2E)</span>
-              <select>
+              <label for="test">Testing (Unit & E2E)</label>
+              <select name="test" id="test">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
               </select>
-              <span>AJAX</span>
-              <select>
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-              </select>
-            </li>
-            <li>
-              <span>Debugging</span>
-              <select>
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-              </select>
-              <span>Websockets</span>
-              <select>
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-              </select>
-              <span>Tooling</span>
-              <select>
+              <label for="ajax">AJAX</label>
+              <select name="ajax" id="ajax">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -387,22 +364,22 @@ Is guidance required for the candidate" name="hired"></textarea>
               </select>
             </li>
             <li>
-              <span>Libraries</span>
-              <select>
+              <label for="debug">Debugging</label>
+              <select name="debug" id="debug">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
               </select>
-              <span>Promises</span>
-              <select>
+              <label for="webs">Websockets</label>
+              <select name="webs" id="webs">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
               </select>
-              <span>Browser Engines<span>
-              <select>
+              <label for="tool">Tooling</label>
+              <select name="tool" id="tool">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -410,8 +387,31 @@ Is guidance required for the candidate" name="hired"></textarea>
               </select>
             </li>
             <li>
-              <span>Frameworks</span>
-              <select>
+              <label for="lib">Libraries</label>
+              <select name="lib" id="lib">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+              <label for="prom">Promises</label>
+              <select name="prom" id="prom">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+              <label for="brow">Browser Engines</label>
+              <select name="brow" id="brow">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </li>
+            <li>
+              <label for="frame">Frameworks</label>
+              <select name="frame" id="brow">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -422,26 +422,26 @@ Is guidance required for the candidate" name="hired"></textarea>
       </fieldset>
 
 
-      <fieldset class="border-lists">
+      <fieldset>
         <legend>NodeJS</legend>
         <ul>
           <li>
-              <span>Backend Frameworks</span>
-              <select>
+              <label for="back">Backend Frameworks</label>
+              <select name="back" id="back">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
               </select>
-              <span>Templating</span>
-              <select>
+              <label for="templ">Templating</label>
+              <select name="templ" id="templ">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
               </select>
-              <span>DOM manipulation</span>
-              <select>
+              <label for="domm">DOM manipulation</label>
+              <select name="domm" id="domm">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -449,8 +449,8 @@ Is guidance required for the candidate" name="hired"></textarea>
               </select>
             </li>
             <li>
-              <span>Unit Testing</span>
-              <select>
+              <label for="unit">Unit Testing</label>
+              <select name="unit" id="unit">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -463,7 +463,7 @@ Is guidance required for the candidate" name="hired"></textarea>
     </form>
 
     <footer>
-      <p style="text-align: right ; margin-top: 100px; margin-right: 100px;">
+      <p style="text-align: right ; margin-top: 2%; margin-right: 5%;">
         Copyright@Softvision 2017
       </p>
     </footer>
