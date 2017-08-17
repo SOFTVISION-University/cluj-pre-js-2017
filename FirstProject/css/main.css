@@ -1,5 +1,8 @@
+
+/*Header section*/
 header {
     background-image: url(../img/feedback-banner.jpg);
+    width: 100%;
 }
 
 .left_image {
@@ -15,6 +18,7 @@ header {
     background-color: lightgrey;
 }
 
+/*Body section*/
 body {
     overflow-x:hidden;
 }
@@ -42,7 +46,7 @@ td {
     border-bottom: 1px solid black;
 }
 
-
+/*Footer section*/
 footer.footer_section {
     position: absolute;
     right: 0;
@@ -64,10 +68,10 @@ li.bullets {
     margin-top: 30px;
     padding: 15px 40px;
     margin-right: 100px;
-    border: 2px solid cornflowerblue;
+    border: 2px solid #03A9F4;
     color: white;
     font-size: 16px;
-    background-color: cornflowerblue;
+    background-color: #03A9F4;
     font-weight: bold;
     border-radius: 4px;
 }
@@ -80,11 +84,66 @@ h2.description_section {
     margin-left: 300px;
 }
 
-/*.row_section {*/
-    /*margin-left:254px;*/
-    /*margin-right: 255px;*/
-/*}*/
-
 fieldset.field_section {
     text-align: center;
 }
+
+legend {
+    text-align: left;
+    color: #03A9F4;
+}
+
+input[type='radio']{
+    width: 35px;
+    height: 23px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+footer .footer_area {
+    padding: 25px 350px 20px 0;
+    font-weight:bold;
+    font-size:16px;
+    color: gray;
+    text-align: right;
+    margin-top: 120px;
+}
+
+.col-md-4 .logout_button {
+    float:right;
+}
+
+form fieldset ul li {
+    margin: 0 auto 10px;
+}
+
+form fieldset ul li label {
+    padding: 25px;
+    font-size: 18px;
+}
+
+form fieldset legend h2 {
+    padding-right: 17px;
+    padding-left: 17px;
+}
+
+.col-md-3.bullets_menu {
+    margin: 0 auto 10px 10px;
+}
+
+ul li select {
+    margin-top: 10px;
+}
+
+/*Header form*/
+header form {
+    margin-left: 400px;
+}
+
