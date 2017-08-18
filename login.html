@@ -3,14 +3,14 @@
 	<head>
 		<title>Log In-MockUp</title>
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/grid.css">
 		<link rel="stylesheet" type="text/css" href="css/login.css">
 	</head>
 	<body>
 	<!-- First section --> 
-		<section>
-			<div id="first-div" class="rectangle firstRectangle">
-				<div id="white-rectangle" class="whiteRectangle"></div>
-				<div id="login-box" class="logInBox">
+		<section class="firstRectangle rectangle">
+			<div id="first-div" class=" grid">
+				<div id="login-box" class="col1 logInBox">
 					<div id="head-logIn" class="headLogIn"><div>Interview FeedBack</div></div>
 					<div id="content-login" class="contentLogIn">
 						<form id="log-form" class="logFormClass" action="evaluations.html">
@@ -24,15 +24,15 @@
 		</section>
  	
  	<!-- Second section --> 
-		<section>
-			<div id="second-div" class="rectangle secondRectangle">
-				<div id="img-container" class="imgContainer">
+		<section class="secondRectangle rectangle">
+			<div id="second-div" class="grid secondRectangle">
+				<div id="img-container" class="col1 imgContainer">
 					<img src="img/feed2.jpg">
 				</div>
-				<div id="text-container" class="textContainer">
+				<div id="text-container" class=" col2 textContainer">
 					<article>
 						<h2>Submit new feedback!</h2>
-						<div id="tc-body" class="tcBody">
+						<div id="tc-body">
 							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
 						</div>
 					</article>
@@ -41,8 +41,8 @@
 		</section>
 	
 	<!-- Third section --> 
-		<section>
-			<div id="third-div" class="rectangle thirdRectangle">
+		<section class="grid">
+			<div id="third-div" class="grid rectangle thirdRectangle">
 				<div id="text-container" class="textContainer textContainerThird">
 					<article>
 						<h2>View feedback results!</h2>	
