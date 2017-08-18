@@ -1,0 +1,75 @@
+.footer{
+	width: 100%;
+	
+	line-height: 100px;
+	text-align: center;
+	color: #4d4d4d;
+	background-color: #bababa;	
+}
+
+.logo{
+	width: 200px;
+	height: 37.40px;
+	margin-top: 20px;
+	margin-left: 50px;
+	margin-right: 150px;
+
+	float: left;
+	background-image: url('https://www.softvision.ro/images/common/logo-v2.png');
+	background-size: contain;
+}
+
+.header{
+	width: 100%;
+	height: 80px;
+
+	box-shadow: 0px 3px 10px grey;
+}
+
+.headerSpan{
+	margin-top: 30px;
+	float: right;
+}
+
+.formatted{
+	color: black;
+	font-size: 22px;
+}
+
+.blue {
+	color: #1ab2ff;
+}
+
+.logOutLink{
+	margin-right: 60px;
+
+	color: black;
+	text-decoration: none;
+	
+}
+
+.button{
+	width: 250px;
+	height: 70px;
+
+	float: left;
+	text-align: center;
+	line-height: 70px;
+	cursor: pointer;
+}
+
+.button:hover{
+	cursor: pointer;
+}
+
+.selected{
+	border-bottom: 10px solid #1ab2ff;
+}
+
+.firstRow{
+	height: 60px;
+
+	background-color: #1ab2ff;
+	color: white;
+	border: 1px solid #1ab2ff
+}

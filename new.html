@@ -3,26 +3,25 @@
 <head>
 	<title>New Evaluation-MockUp</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/login.css">
-	<link rel="stylesheet" type="text/css" href="css/evaluations.css">
 	<link rel="stylesheet" type="text/css" href="css/new.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
 </head>
 <body>
 	<!-- Header --> 
-	<header>
-		<nav>
-			<div id="logo" class="logoClass "></div>
+	<header class="header">
+		<nav class="nav">
+			<div id="logo" class="logo "></div>
 			<div id="navigation" class="navigationClass">
 				<a href="evaluations.html">
-					<div id="button1" class="buttoni button1 formated">
+					<div id="button1" class="button button1 formatted">
 					Evaluations
 					</div>
 				</a>
-				<div id="button2" class="buttoni button2 formated selected">
+				<div id="button2" class="button button2 formatted selected">
 					New Evaluation
 				</div>
 		</div>
-		<span class="formated"><a href="login.html">Logout</a></span>
+		<span class="headerSpan formatted"><a class="logOutLink" href="login.html">Logout</a></span>
 	</nav>
 </header>
 
@@ -37,7 +36,7 @@
 					<input type="date" class="inputDate">
 
 				</div>
-				<span class="formated blue">Tehnical level</span></br>
+				<span class="formatted blue">Tehnical level</span></br>
 				<table>
 					<tr class="firstRow">
 						<th>Trainee</th>
@@ -75,15 +74,15 @@
 				</table>
 			</div>
 			<div class="form-section">
-				<span class="formated blue">Should the candidate be hired?</span></br>
+				<span class="formatted blue">Should the candidate be hired?</span></br>
 				<textarea name="beHired" placeholder="The type of project that is suitable for the candidate Is guidance required for the candidate "></textarea>
 			</div>
 			<div class="form-section">
-				<span class="formated blue">General impression</span></br>
+				<span class="formatted blue">General impression</span></br>
 				<textarea name="general" placeholder="*required"></textarea>
 			</div>
 			<div class="form-section">
-				<span class="formated blue">Workflow, leadership and Soft skills</span></br>
+				<span class="formatted blue">Workflow, leadership and Soft skills</span></br>
 				<textarea name="workflow" placeholder="Describe the environment in which the candidate works. Describe any guidance or management experience. "></textarea>
 			</div>
 			<fieldset>
