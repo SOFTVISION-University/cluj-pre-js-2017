@@ -1,0 +1,143 @@
+		html {
+			height: 100%;
+			box-sizing: border-box;
+		}
+
+		body {
+			min-height: 100%;
+			position: relative;
+		
+		}
+		
+		.header {
+			height: 70px;
+			border-bottom: 1px solid grey;
+		}
+
+		#logo {
+			width: auto;
+			height: 50px;
+			line-height: 70px;
+			vertical-align: middle;
+		}
+
+		.div_form {
+			padding-top: 55px;
+			margin: 0 auto ;
+			width: 1000px;
+			height: 40px;
+		}
+
+		.input {
+			border: none;
+			border-bottom: 3px solid #f7f7f7;
+			height: 30px;
+			width: 300px;
+			margin: 7px;
+		}
+
+		.table {
+			border-collapse: collapse;
+			width: 1000px;
+			margin: 20.750px 0px;
+			text-align: center;
+		}
+		
+		th {
+			background-color: #419fe2;
+			height: 40px;
+			color: white;
+			font-family: Arial;
+			font-size: 14px;
+			width: 935px;
+			
+		}
+
+		.tr {
+			border: 1px solid black;
+			height: 40px;
+			width: 934px;
+		}
+
+		a {
+			margin-left: 100px;
+			margin-right: 15px;
+			font: 25px Arial;
+		}
+
+		a:link {
+			text-decoration: none;
+			color: black;
+		}
+
+		a:visited {
+			text-decoration: none;
+			color: black;
+		}
+
+		ul {
+			list-style-type: none;
+		}
+
+		li {
+			float: left;
+			text-align: left;
+			width: 16%;
+			margin: 2px;
+			min-height: 36px;
+			font-family: Arial;
+			font-size: 15px;
+		}
+
+		#submit {
+			float: right;
+			width: 150px;
+			height: 50px;
+			background-color: #419fe2;
+			color: white;
+			border: none;
+			border-radius: 2px;
+			font-size: 20px;
+			box-shadow: 0px 3px 4px grey;
+		}
+
+		#div_footer {
+			height: 60px; 
+			line-height: 60px;
+			vertical-align: middle;
+			text-align: right;
+			padding-right: 50px;
+			background-color: #bcbcaf;
+			color: #686865;
+			font-family: Arial;
+			margin-top: 10px;
+			position: absolute;
+			left: 0;
+			right: 0;
+		
+		}
+
+		h2, legend {
+			font-size: 25px;
+			font-family: Arial;
+			color: #419fe2;
+		}
+
+		select {
+			font-family: Arial;
+			font-size: 15px;
+			width: 140px;
+			height: 30px;
+		}
+
+		textarea {
+			margin: 20.750px 0px;
+			width: 994px;
+		}
+
+		fieldset {
+			width: 996px;
+			padding: 0px;
+			margin: 0px;
+			border: 2px 0px;
+		}

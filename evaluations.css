@@ -1,0 +1,97 @@
+		body {
+			min-width: 100%;
+			position: relative;
+			font-family: Arial;
+			background-color: #ffffff; 
+			margin: auto;
+		}
+
+		header {
+			height: 70px;
+			border-bottom: 1px solid grey;
+		}
+
+		footer {
+			height: 60px; 
+			position: absolute;
+			left: 0;
+			right: 0;
+			line-height: 60px;
+			background-color: #bcbcaf;
+			color: #686865;
+			font-family: Arial;
+			text-align: right;
+			padding-right: 50px;
+		
+		}
+
+		a {
+			vertical-align: middle;
+			line-height: 70px;
+			margin-left: 100px;
+			margin-right: 15px;
+			font-size: 25px;
+		}
+
+		.logo {
+			width: auto;
+			height: 50px;
+			line-height: 70px;
+			vertical-align: middle;
+		}
+
+		.candidates_table {
+			margin: auto;
+			width: 60%;
+			height: 200px;
+			border-collapse: collapse;
+			text-align: left;
+			align-self: center;
+			margin-top: 200px;
+			margin-bottom: 440px;
+			font-family: Arial;
+			font-size: 20px;
+		}
+
+		.candidates_table_header {
+			background-color: #21bcff;
+			border: none;
+			height: 60px;
+			color: white;
+			padding-left: 30px;
+		}
+
+		.current_page {
+			border-bottom: 9px solid #21bcff; 
+			padding-bottom: 12px;
+		}
+
+		.rows {
+			border-bottom: 1px solid #686865;
+			height: 40px;
+		}
+
+		button {
+			border-radius: 100%;
+			background-color: #21bcff;
+			border: none;
+			color: white;
+			font-size: 20px;
+			width: 30px;
+			height: 30px;
+		}
+
+		td {
+			padding-left: 30px;
+		}
+
+
+		a:link {
+			text-decoration: none;
+			color: black;
+		}
+
+		a:visited {
+			text-decoration: none;
+			color: black;
+		}
