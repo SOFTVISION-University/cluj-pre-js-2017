@@ -1,18 +1,44 @@
-code {
-  background: blue;
-  border-radius: 6px;
-  color: #fff;
-  display: block;
-  font: 14px/24px "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
-  padding: 24px 15px;
-  text-align: center;
+body {
+  font: normal medium/1.4 sans-serif;
+    color:darkslategray;
+        
 }
-header,
-section,
-aside,
-footer {
-  margin: 0 1.5% 24px 1.5%;
+table {
+    border-collapse: collapse;
+    width: 100%;
 }
-footer {
-  margin-bottom: 0;
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
 }
+thead { 
+    color:white;
+    background-color: #00BFFF;
+    border-bottom-color:  #00BFFF;
+}
+
+<style>
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+div {
+    border-bottom: 2px solid #DCDCDC;
+    padding-bottom: 15px;
+    border-bottom-style:groove;
+
+    
+
+}
+
+

@@ -49,8 +49,6 @@ input {
 input:focus { outline: none; }
 
 
-/* Label */
-
 label {
 	color: #999; 
 	font-size: 18px;
@@ -65,13 +63,12 @@ label {
 
 
 
-/* Button */
 
 .button {
   position: relative;
   display: inline-block;
   padding: 12px 24px;
-  margin: .3em 0 1em 0;
+  margin: .em 0 1em 0;
   width: 100%;
   vertical-align: middle;
   color: #fff;
