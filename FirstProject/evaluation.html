@@ -2,6 +2,7 @@
 <html class="no-js" lang="">
     <head>
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/evaluation.css">
         <link rel="stylesheet" href="img/">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -11,25 +12,29 @@
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet/less" href="assets/evaluation.less" type="text/css"/>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js"></script>
     </head>
 
     <body>
         <div>
             <div class="row">
                 <!--Navigation bar section-->
-                <nav class="col-md-12" style="border-bottom: 2px solid darkgrey; padding-top: 12px; padding-bottom: 14px;">
-                    <div class="col-md-4" style="text-align:center;">
-                        <!--Softvision logo-->
-                        <a href="new-evaluation.html"><img style="width: 40%;" src="img/logo-v2.png"/> </a>
-                    </div>
+                <nav class="col-md-12 navigation_bar">
                     <div class="col-md-4">
+                        <!--Softvision logo-->
+                        <a href="new-evaluation.html"><img class="logo_image" src="img/logo-v2.png"/> </a>
+                    </div>
+                    <div class="col-md-4 evaluation_button" style="padding-top: 4px;">
                         <!--Evaluation navbar button-->
                         <a href="#">Evaluations</a>
 
                         <!--New Evaluation button-->
-                        <a href="#" style="margin-left: 100px;">New Evaluation</a>
+                        <a class="new_evaluation" href="#" style="margin-left: 100px;">New Evaluation</a>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4" style="padding-top: 4px;">
                         <!--Logout button-->
                         <a class="logout_button" href="#">Logout</a>
                     </div>
@@ -44,42 +49,42 @@
             <!--Table section -->
             <table style="width:100%">
                 <tr>
-                    <th style="background-color: #03A9F4; color: white; padding: 10px 0 10px 0; ">Nume</th>
-                    <th style="background-color: #03A9F4; color: white;">Tehnologie</th>
-                    <th style="background-color: #03A9F4; color: white;">Nivel</th>
-                    <th style="background-color: #03A9F4; color: white;"></th>
+                    <th>Nume</th>
+                    <th>Tehnologie</th>
+                    <th>Nivel</th>
+                    <th></th>
                 </tr>
                 <tr>
                     <td>Popescu Adrian</td>
                     <td>Javascript</td>
                     <td>Mid 2</td>
-                    <td>Detalii <span style="background-color: #03A9F4; border-radius: 20px;">+</span></td>
+                    <td>Detalii <button class="add_button">+</button></td>
                 </tr>
                 <tr>
                     <td>Dragan Roxana</td>
                     <td>PHP</td>
                     <td>Mid 1</td>
-                    <td>Detalii  <span style="background-color: #03A9F4; border-radius: 20px;">+</span></td>
+                    <td>Detalii <button class="add_button">+</button></td>
                 </tr>
                 <tr>
                     <td>Florescu Mihai</td>
                     <td>Javascript</td>
                     <td>Junior 3</td>
-                    <td>Detalii  <span style="background-color: #03A9F4; border-radius: 20px;">+</span></td>
+                    <td>Detalii <button class="add_button">+</button></td>
                 </tr>
 
                 <tr>
                     <td>Gheorghe Andrei</td>
                     <td>Ruby</td>
                     <td>Senior 1</td>
-                    <td>Detalii  <span style="background-color: #03A9F4; border-radius: 20px;">+</span></td>
+                    <td>Detalii <button class="add_button">+</button></td>
                 </tr>
             </table>
         </div>
     </div>
 
         <!--Footer section-->
-        <footer class="container-fluid footer_section" style="margin-top: 80px;">
+        <footer class="container-fluid footer_section">
             <div class="col-md-4">
 
             </div>
@@ -87,7 +92,7 @@
 
             </div>
             <div class="col-md-4">
-                <p style="padding: 25px 0 12px 0; font-weight:bold; font-size:16px; color: gray; ">Copyright@Sofvision 2017</p>
+                <p class="footer_description">Copyright@Sofvision 2017</p>
             </div>
         </footer>
 </body>

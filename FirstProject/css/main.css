@@ -11,6 +11,7 @@ header {
 
 .right_description {
     font-weight: bold;
+    margin-top:50px;
 }
 
 
@@ -47,12 +48,13 @@ td {
 }
 
 /*Footer section*/
-footer.footer_section {
+.footer_section {
     position: absolute;
     right: 0;
     bottom: 0;
     left: 0;
     text-align: center;
+    margin-top: 80px;
 }
 
 ul {
@@ -76,7 +78,7 @@ li.bullets {
     border-radius: 4px;
 }
 
-form.language_form {
+.language_form {
     margin-top: 70px;
 }
 
@@ -120,16 +122,16 @@ footer .footer_area {
     float:right;
 }
 
-form fieldset ul li {
+fieldset ul li {
     margin: 0 auto 10px;
 }
 
-form fieldset ul li label {
+ul li label {
     padding: 25px;
     font-size: 18px;
 }
 
-form fieldset legend h2 {
+fieldset legend h2 {
     padding-right: 17px;
     padding-left: 17px;
 }
@@ -147,3 +149,8 @@ header form {
     margin-left: 400px;
 }
 
+table tr th {
+    background-color: #03A9F4;
+    color: white;
+    padding: 10px 0 10px 0;
+}
