@@ -5,8 +5,17 @@ header {
     width: 100%;
 }
 
+/*Body section*/
+body {
+    overflow-x:hidden;
+}
+
 .left_image {
     height: 290px;
+}
+
+.right_image {
+    float: right;
 }
 
 .right_description {
@@ -14,14 +23,8 @@ header {
     margin-top:50px;
 }
 
-
 .container-fluid {
     background-color: lightgrey;
-}
-
-/*Body section*/
-body {
-    overflow-x:hidden;
 }
 
 a {
@@ -31,12 +34,6 @@ a {
     font-weight: 700;
     font-size: 24px;
 }
-
-a:hover {
-    border-bottom: 4px solid blue;
-    border-bottom-width: 7px;
-}
-
 
 th, td {
     padding-left: 55px!important;
@@ -116,6 +113,7 @@ footer .footer_area {
     color: gray;
     text-align: right;
     margin-top: 120px;
+    margin-bottom: 0;
 }
 
 .col-md-4 .logout_button {

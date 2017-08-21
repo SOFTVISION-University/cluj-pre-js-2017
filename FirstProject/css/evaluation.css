@@ -4,22 +4,19 @@
     background-color: #03A9F4;
     margin:8px 0;
     color: white;
-    width: 16%;
     height: 100%;
     font-size: 20px;
     border-radius: 100%;
     border: 1px solid #03A9F4;
 }
 
-
-/* Desktops and laptops ----------- */
-@media screen and (max-width: 1024px) and (min-width: 768px) {
+/* Large screens ----------- */
+@media screen and (max-width: 1824px) and (min-width: 1200px) {
     /* Styles */
     .add_button {
         background-color: #03A9F4;
         margin: 8px 0;
         color: white;
-        width: 19%;
         height: 100%;
         font-size: 20px;
         border-radius: 100%;
@@ -30,8 +27,53 @@
         float: none!important;
     }
 
-    .new_evaluation {
-        float: right;
+    .border_bottom {
+        font-size: 17px;
+    }
+}
+
+/* Desktops and laptops ----------- */
+@media screen and (max-width: 1200px) and (min-width: 1024px) {
+    /* Styles */
+    .add_button {
+        background-color: #03A9F4;
+        margin: 8px 0;
+        color: white;
+        height: 100%;
+        font-size: 20px;
+        border-radius: 100%;
+        border: 1px solid #03A9F4;
+    }
+
+    .logout_button {
+        float: none!important;
+    }
+
+    .border_bottom {
+        font-size: 16px;
+    }
+
+}
+
+/* Desktops and laptops ----------- */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    /* Styles */
+    .add_button {
+        background-color: #03A9F4;
+        margin: 8px 0;
+        color: white;
+        height: 100%;
+        font-size: 20px;
+        border-radius: 100%;
+        border: 1px solid #03A9F4;
+    }
+
+    .logout_button {
+        float: none!important;
+    }
+
+    .border_bottom {
+        font-size: 14px;
     }
 }
 
@@ -45,11 +87,18 @@
         background-color: #03A9F4;
         margin: 8px 0;
         color: white;
-        width: 23%;
         height: 100%;
         font-size: 20px;
         border-radius: 100%;
         border: 1px solid #03A9F4;
+    }
+
+    .border_bottom {
+        font-size: 14px;
+    }
+
+    .navigation_bar .col-md-4 {
+        margin-bottom: 30px;
     }
 }
 
@@ -63,12 +112,20 @@
         background-color: #03A9F4;
         margin: 8px 0;
         color: white;
-        width: 37%;
         height: 100%;
         font-size: 20px;
         border-radius: 100%;
         border: 1px solid #03A9F4;
     }
+
+    .border_bottom {
+        font-size: 14px;
+    }
+
+    .navigation_bar .col-md-4 {
+        margin-bottom: 30px;
+    }
+
 }
 
 /*Screen between 320px and 520px*/
@@ -76,4 +133,13 @@
     .logout_button {
         float: none!important;
     }
+
+    .border_bottom {
+        font-size: 14px;
+    }
+
+    .navigation_bar .col-md-4 {
+        margin-bottom: 30px;
+    }
+
 }
