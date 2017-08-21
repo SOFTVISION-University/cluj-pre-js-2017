@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Evaluation-MockUp</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/new.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+</head>
+<body>
+	<!-- Header --> 
+	<header class="header headerSkin">
+		<nav class="nav">
+			<div id="logo" class="logo logoSkin"></div>
+			<div id="navigation" class="navigationClass">
+				<a href="evaluations.html">
+					<div id="button1" class="button button1 formatted">
+					Evaluations
+					</div>
+				</a>
+				<div id="button2" class="button button2 formatted selected">
+					New Evaluation
+				</div>
+		</div>
+		<span class="headerSpan formatted"><a class="logOutLink logOutLinkSkin" href="login.html">Logout</a></span>
+	</nav>
+</header>
+
+<!-- Main section --> 
+<section>
+	<div class="mainSection">
+		<form class="formNew" action="" method="">
+			<div class="formSection">
+				<div class="formSectionFirst">
+					<input class="formSectionFirstInput formSectionFirstInputSkin" type="text" placeholder="Candidate">
+					<input class="formSectionFirstInput formSectionFirstInputSkin" type="text" placeholder="Interviewer">
+					<input class="formSectionFirstInput formSectionFirstInputSkin" type="date" class="inputDate">
+
+				</div>
+				<span class="formSectionSpan formatted blue">Tehnical level</span></br>
+				<table class="levelTable">
+					<tr>
+						<th>Trainee</th>
+						<th>Junior</th> 
+						<th>Middle</th>
+						<th>Senior</th>
+					</tr>
+					<tr class="checkBoxes checkBoxesSkin">
+						<td>
+							<input class="levelInput" type="radio" name="level" value="trainee"><br>
+						</td>
+
+						<td>
+							<div class="radioGroup">
+								<input class="levelInput" type="radio" name="level" value="junior1"><br>
+								<input class="levelInput" type="radio" name="level" value="junior2"><br>
+								<input class="levelInput" type="radio" name="level" value="junior3"><br> 
+							</div> 
+						</td> 
+						<td>
+							<div class="radioGroup">
+								<input class="levelInput" type="radio" name="level" value="mid1"><br>
+								<input class="levelInput" type="radio" name="level" value="mid2"><br>
+								<input class="levelInput" type="radio" name="level" value="mid3"><br>  
+							</div>
+						</td>
+						<td>
+							<div class="radioGroup">
+								<input class="levelInput" type="radio" name="level" value="senior1"><br>
+								<input class="levelInput" type="radio" name="level" value="senior2"><br>
+								<input class="levelInput" type="radio" name="level" value="senior3"><br>  
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="formSection">
+				<span class="formSectionSpan formatted blue">Should the candidate be hired?</span></br>
+				<textarea class="textarea textareaSkin" name="beHired" placeholder="The type of project that is suitable for the candidate Is guidance required for the candidate "></textarea>
+			</div>
+			<div class="formSection">
+				<span class="formSectionSpan formatted blue">General impression</span></br>
+				<textarea class="textarea textareaSkin" name="general" placeholder="*required"></textarea>
+			</div>
+			<div class="formSection">
+				<span class="formSectionSpan formatted blue">Workflow, leadership and Soft skills</span></br>
+				<textarea class="textarea textareaSkin" name="workflow" placeholder="Describe the environment in which the candidate works. Describe any guidance or management experience. "></textarea>
+			</div>
+			<fieldset class="fieldset">
+				<legend class="legend legendSkin">OOP, Design Patterns</legend>
+				<ul class="fieldsetUl">
+					<li class="fieldsetLi">
+						Classes
+						<select class="fieldsetSelect" name="classes">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						Exception handling
+						<select class="fieldsetSelect" name="exceptionHandling">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						Version Control
+						<select class="fieldsetSelect" name="versionControl">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						Access Modifiers
+						<select class="fieldsetSelect" name="accessModifier">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						Design Patterns
+						<select class="fieldsetSelect" name="designPatterns">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						Issue Tracking
+						<select class="fieldsetSelect" name="issueTracking">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						Polymorphism
+						<select class="fieldsetSelect" name="polymorphism">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						RegEx
+						<select class="fieldsetSelect" name="regEx">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+				</ul>
+			</fieldset>
+
+			<fieldset class="fieldset">
+				<legend class="legend class="legend legendSkin"">Http</legend>
+				<ul class="fieldsetUl">
+					<li class="fieldsetLi">
+						Protocol
+						<select class="fieldsetSelect" name="protocol">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						Response codes
+						<select class="fieldsetSelect" name="responseCodes">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						REST
+						<select class="fieldsetSelect" name="rest">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						Headers
+						<select class="fieldsetSelect" name="headers">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						Request methods
+						<select class="fieldsetSelect" name="requestMethods">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						Sessions &amp; Cookies
+						<select class="fieldsetSelect" name="sessions">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+				</ul>
+			</fieldset>
+
+			<fieldset class="fieldset">
+				<legend class="legend legendSkin">HTML</legend>
+				<ul class="fieldsetUl">
+					<li class="fieldsetLi">
+						Doctype
+						<select class="fieldsetSelect" name="doctype">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						Tags
+						<select class="fieldsetSelect" name=tags>
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						Basic SEO
+						<select class="fieldsetSelect" name="basicSEO">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						Syntax rules
+						<select class="fieldsetSelect" name="syntaxRules">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						Attributes
+						<select class="fieldsetSelect" name="attributes">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+				</ul>
+			</fieldset>
+
+			<fieldset class="fieldset">
+				<legend class="legend legendSkin">CSS</legend>
+				<ul class="fieldsetUl">
+					<li class="fieldsetLi">
+						Usage
+						<select class="fieldsetSelect" name="usage">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						Box modeling
+						<select class="fieldsetSelect" name="boxModeling">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						CSS 3.0
+						<select class="fieldsetSelect" name="css3">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						Selectors
+						<select class="fieldsetSelect" name="selectors">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						Styling
+						<select class="fieldsetSelect" name="styling">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						Dynamic Stylesheet
+						<select class="fieldsetSelect" name="dynamicStylesheet">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+				</ul>
+			</fieldset>
+			<fieldset class="fieldset">
+				<legend class="legend legendSkin">JavaScript</legend>
+				<ul class="fieldsetUl">
+					<li class="fieldsetLi">
+						Data types &amp; variables
+						<select class="fieldsetSelect" name="dataTypes">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						Object manipulation
+						<select class="fieldsetSelect" name="objectManipulation">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						DOM Manipulation
+						<select class="fieldsetSelect" name="DOM">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						Functions
+						<select class="fieldsetSelect" name="functions">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						Templating
+						<select class="fieldsetSelect" name="templating">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						Event Handling
+						<select class="fieldsetSelect" name="eventHandling">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+					<li class="fieldsetLi">
+						Prototype &amp; OOP
+						<select class="fieldsetSelect" name="prototype">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						Testing (unit, E2E)
+						<select class="fieldsetSelect" name="testing">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						AJAX
+						<select class="fieldsetSelect" name="ajax">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						Debugging
+						<select class="fieldsetSelect" name="debugging">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						Websockets
+						<select class="fieldsetSelect" name="websockets">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						Tooling
+						<select class="fieldsetSelect" name="tooling">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+					<li class="fieldsetLi">
+						Libraries
+						<select class="fieldsetSelect" name="libraries">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						Promises
+						<select class="fieldsetSelect" name="promises">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						Browser Engines
+						<select class="fieldsetSelect" name="browserEngines">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						Selectors
+						<select class="fieldsetSelect" name="selectors">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						Frameworks
+						<select class="fieldsetSelect" name="frameworks">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+				</ul>
+			</fieldset>
+
+			<fieldset class="fieldset">
+				<legend class="legend legendSkin">NodeJs</legend>
+				<ul class="fieldsetUl">
+					<li class="fieldsetLi">
+						Backend frameworks
+						<select class="fieldsetSelect" name="backend">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						Templating
+						<select class="fieldsetSelect" name="templating">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						DOM Manipulation
+						<select class="fieldsetSelect" name="DOMNodeJs">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li class="fieldsetLi">
+						Unit Testing
+						<select class="fieldsetSelect" name="unitTesting">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+				</fieldset>
+				<input class="submitButton submitButtonSkin" type="submit" value="SUBMIT">
+			</form>
+		</ul>
+	</div>
+</section>
+
+
+
+<!-- Footer -->
+		<footer class="footer footerSkin">
+				<p>Copyright@Softvision 2017</p>
+		</footer>
+</body>
+</html>
