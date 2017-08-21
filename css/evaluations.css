@@ -1,45 +1,42 @@
-
-.footer{
-	margin-bottom: 0;
+.mainTable {
+    width: 60%;
+    margin: 100px auto;
 }
 
-.mainTable{
-	width: 60%;
-	margin: 100px auto;
-
-	font-size: 20px;
-	border-collapse: collapse;
+.mainTableSkin {
+    font-size: 20px;
+    border-collapse: collapse;
 }
 
-.mainTable th{
-	text-align: left;
+.mainTable th {
+    text-align: left;
 }
 
-.mainTable tr{
-	height: 50px;
-
-	border-bottom: 1px solid black;
+.mainTable tr {
+    height: 50px;
+    border-bottom: 1px solid black;
 }
 
-.mainTable th,td{
-	padding-left: 40px;
+.mainTable th,
+td {
+    padding-left: 40px;
 }
 
-.detailsCell{
-	float: right;
-	line-height: 50px;
+.detailsCell {
+    float: right;
+    line-height: 50px;
 }
 
-.imageForDetails{
-	width: 40px;
-	height: 40px;
-	margin-left: 10px;
-	margin-top: 5px;
-
-	background-image: url('https://maxcdn.icons8.com/Share/icon/Very_Basic//plus_filled1600.png');
-	background-size: contain;
-	float: right;
-	
+.imageForDetails {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 5px;
+    float: right;
 }
 
+.imageForDetailsSkin {
+    background-image: url('https://maxcdn.icons8.com/Share/icon/Very_Basic//plus_filled1600.png');
+    background-size: contain;
+}
 
