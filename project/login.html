@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
         <title>Login</title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
         <link rel="stylesheet" type="text/css" href="assets/normalize.css" />
         <link rel="stylesheet/less" type="text/css" href="assets/grid.less" />
@@ -13,19 +15,19 @@
 
 
 
-<body>
+<body class="body-structure body-skin">
 
   <header>
       <div class="grid">
-        <div class="login-form">
+        <div class="login-form login-form-skin">
               <form>
-                  <div class="login-form-header">
-                    <h3>Interview Feedback</h3>
+                  <div class="login-form-header-skin">
+                    <h3 class="login-form-header-text">Interview Feedback</h3>
                   </div>
                   <div class="login-form-items">
-                      <input type="text" placeholder="Username">
-                      <input type="password" placeholder="Password">
-                      <button class="button">Login</button>
+                      <input type="text" placeholder="Username" name="username">
+                      <input type="password" placeholder="Password" name="password">
+                      <input class="login-form-button login-form-button-skin" type="submit" value="Login">
                   </div>
               </form>
             </div>
@@ -33,9 +35,9 @@
 </header>
 
 <section>
-    <div class="grid login-section-1">
+    <div class="grid login-section-1 login-section-1-skin">
         <div class="col-1">
-            <img src="assets/images/new%20feedback.jpg" alt="NewFeedback" width="75%">
+            <img src="assets/images/new%20feedback.jpg" alt="NewFeedback" width="400">
         </div>
 
         <div class="col-2">
@@ -68,21 +70,14 @@
          </div>
 
         <div class="col-1">
-            <img src="assets/images/results.jpg" alt="NewFeedback" width="75%">
+            <img src="assets/images/results.jpg" alt="NewFeedback" width="400">
         </div>
     </div>
 </section>
 
-
-</body>
-
-<footer>
-    <div class="col-3">
-        <p>Copyright@Softvision 2017</p>
-    </div>
+<footer class="footer-skin col-3">
+    <p>Copyright@Softvision 2017</p>
 </footer>
-
-
 
 </body>
 </html>
