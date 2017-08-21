@@ -1,0 +1,50 @@
+body{
+	background-color: white;
+}
+
+.footer{
+	margin-bottom: 0;
+}
+
+.mainTableClass{
+	width: 60%;
+	margin: 0 auto;
+	margin-top: 100px;
+	margin-bottom: 100px;
+
+	font-size: 20px;
+	border-collapse: collapse;
+}
+
+.mainTableClass th{
+	text-align: left;
+}
+
+.mainTableClass tr{
+	height: 50px;
+
+	border-bottom: 1px solid black;
+}
+
+.mainTableClass th,td{
+	padding-left: 40px;
+}
+
+.detailsCell{
+	float: right;
+	line-height: 50px;
+}
+
+.imageForDetails{
+	width: 40px;
+	height: 40px;
+	margin-left: 10px;
+	margin-top: 5px;
+
+	background-image: url('https://maxcdn.icons8.com/Share/icon/Very_Basic//plus_filled1600.png');
+	background-size: contain;
+	float: right;
+	
+}
+
+

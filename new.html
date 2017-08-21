@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Evaluation-MockUp</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/new.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+</head>
+<body>
+	<!-- Header --> 
+	<header class="header">
+		<nav class="nav">
+			<div id="logo" class="logo "></div>
+			<div id="navigation" class="navigationClass">
+				<a href="evaluations.html">
+					<div id="button1" class="button button1 formatted">
+					Evaluations
+					</div>
+				</a>
+				<div id="button2" class="button button2 formatted selected">
+					New Evaluation
+				</div>
+		</div>
+		<span class="headerSpan formatted"><a class="logOutLink" href="login.html">Logout</a></span>
+	</nav>
+</header>
+
+<!-- Main section --> 
+<section>
+	<div class="main-section">
+		<form action="" method="">
+			<div class="form-section">
+				<div class="form-section-first">
+					<input type="text" placeholder="Candidate">
+					<input type="text" placeholder="Interviewer">
+					<input type="date" class="inputDate">
+
+				</div>
+				<span class="formatted blue">Tehnical level</span></br>
+				<table>
+					<tr class="firstRow">
+						<th>Trainee</th>
+						<th>Junior</th> 
+						<th>Middle</th>
+						<th>Senior</th>
+					</tr>
+					<tr class="checkBoxes">
+						<td>
+							<input type="radio" name="level" value="trainee"><br>
+						</td>
+
+						<td>
+							<div class="radio-group">
+								<input type="radio" name="level" value="junior1"><br>
+								<input type="radio" name="level" value="junior2"><br>
+								<input type="radio" name="level" value="junior3"><br> 
+							</div> 
+						</td> 
+						<td>
+							<div class="radio-group">
+								<input type="radio" name="level" value="mid1"><br>
+								<input type="radio" name="level" value="mid2"><br>
+								<input type="radio" name="level" value="mid3"><br>  
+							</div>
+						</td>
+						<td>
+							<div class="radio-group">
+								<input type="radio" name="level" value="senior1"><br>
+								<input type="radio" name="level" value="senior2"><br>
+								<input type="radio" name="level" value="senior3"><br>  
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="form-section">
+				<span class="formatted blue">Should the candidate be hired?</span></br>
+				<textarea name="beHired" placeholder="The type of project that is suitable for the candidate Is guidance required for the candidate "></textarea>
+			</div>
+			<div class="form-section">
+				<span class="formatted blue">General impression</span></br>
+				<textarea name="general" placeholder="*required"></textarea>
+			</div>
+			<div class="form-section">
+				<span class="formatted blue">Workflow, leadership and Soft skills</span></br>
+				<textarea name="workflow" placeholder="Describe the environment in which the candidate works. Describe any guidance or management experience. "></textarea>
+			</div>
+			<fieldset>
+				<legend>OOP, Design Patterns</legend>
+				<ul>
+					<li>
+						Classes
+						<select name="classes">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						Exception handling
+						<select name="exceptionHandling">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						Version Control
+						<select name="versionControl">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						Access Modifiers
+						<select name="accessModifier">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						Design Patterns
+						<select name="designPatterns">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						Issue Tracking
+						<select name="issueTracking">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						Polymorphism
+						<select name="polymorphism">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						RegEx
+						<select name="regEx">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+				</ul>
+			</fieldset>
+
+			<fieldset>
+				<legend>Http</legend>
+				<ul>
+					<li>
+						Protocol
+						<select name="protocol">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						Response codes
+						<select name="responseCodes">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						REST
+						<select name="rest">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						Headers
+						<select name="headers">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						Request methods
+						<select name="requestMethods">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						Sessions &amp; Cookies
+						<select name="sessions">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+				</ul>
+			</fieldset>
+
+			<fieldset>
+				<legend>HTML</legend>
+				<ul>
+					<li>
+						Doctype
+						<select name="doctype">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						Tags
+						<select name=tags>
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						Basic SEO
+						<select name="basicSEO">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						Syntax rules
+						<select name="syntaxRules">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						Attributes
+						<select name="attributes">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+				</ul>
+			</fieldset>
+
+			<fieldset>
+				<legend>CSS</legend>
+				<ul>
+					<li>
+						Usage
+						<select name="usage">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						Box modeling
+						<select name="boxModeling">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						CSS 3.0
+						<select name="css3">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						Selectors
+						<select name="selectors">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						Styling
+						<select name="styling">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						Dynamic Stylesheet
+						<select name="dynamicStylesheet">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+				</ul>
+			</fieldset>
+			<fieldset>
+				<legend>JavaScript</legend>
+				<ul>
+					<li>
+						Data types &amp; variables
+						<select name="dataTypes">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						Object manipulation
+						<select name="objectManipulation">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						DOM Manipulation
+						<select name="DOM">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						Functions
+						<select name="functions">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						Templating
+						<select name="templating">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						Event Handling
+						<select name="eventHandling">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+					<li>
+						Prototype &amp; OOP
+						<select name="prototype">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						Testing (unit, E2E)
+						<select name="testing">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						AJAX
+						<select name="ajax">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						Debugging
+						<select name="debugging">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						Websockets
+						<select name="websockets">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						Tooling
+						<select name="tooling">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+					<li>
+						Libraries
+						<select name="libraries">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						Promises
+						<select name="promises">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						Browser Engines
+						<select name="browserEngines">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						Selectors
+						<select name="selectors">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						Frameworks
+						<select name="frameworks">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+				</ul>
+			</fieldset>
+
+			<fieldset>
+				<legend>NodeJs</legend>
+				<ul>
+					<li>
+						Backend frameworks
+						<select name="backend">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						Templating
+						<select name="templating">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						DOM Manipulation
+						<select name="DOMNodeJs">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+
+					<li>
+						Unit Testing
+						<select name="unitTesting">
+							<option value="Evaluation">Evaluation</option>
+							<option value="0">Beginner</option>
+							<option value="1">Intermediate</option>
+							<option value="2">Advanced</option>
+						</select>
+					</li>
+				</fieldset>
+				<input class="submitButton" type="submit" value="SUBMIT">
+			</form>
+		</ul>
+	</div>
+</section>
+
+
+
+<!-- Footer -->
+		<footer class="footer">
+				<h3>Copyright@Softvision 2017</h3>
+		</footer>
+</body>
+</html>
