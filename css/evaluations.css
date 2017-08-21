@@ -1,32 +1,27 @@
-body{
-	background-color: white;
-}
 
 .footer{
 	margin-bottom: 0;
 }
 
-.mainTableClass{
+.mainTable{
 	width: 60%;
-	margin: 0 auto;
-	margin-top: 100px;
-	margin-bottom: 100px;
+	margin: 100px auto;
 
 	font-size: 20px;
 	border-collapse: collapse;
 }
 
-.mainTableClass th{
+.mainTable th{
 	text-align: left;
 }
 
-.mainTableClass tr{
+.mainTable tr{
 	height: 50px;
 
 	border-bottom: 1px solid black;
 }
 
-.mainTableClass th,td{
+.mainTable th,td{
 	padding-left: 40px;
 }
 

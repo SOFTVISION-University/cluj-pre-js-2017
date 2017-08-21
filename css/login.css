@@ -35,8 +35,7 @@ body{
 
 .logInBoxContent{
 	width: 90%;
-	margin: 0 auto;
-	margin-top: 20px;
+	margin: 20px auto;
 }
 
 .logInForm{
@@ -61,8 +60,7 @@ body{
 .logInFormButton{
 	width: 120px;
 	height: 30px;
-	margin: 0 auto;
-	margin-top: 50px;
+	margin: 50px auto;
 	border: 0;
 	
 	background-color: #1ab2ff;
