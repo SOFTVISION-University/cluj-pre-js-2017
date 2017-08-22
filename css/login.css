@@ -1,0 +1,131 @@
+/*------------------ Global ---------------*/
+.grid{
+  width: 1200px;
+  display: flex;
+  margin:0 auto;
+  height: 600px;
+}
+
+
+
+
+
+/*------------------ Header --------------------*/
+
+.pageHeaderT{
+  background: url(/assets/feedback-banner.jpg) center center no-repeat;
+  background-size: cover;
+}
+.pageHeader{
+  position: relative;
+  height: 600px;
+  width: 100%;
+}
+
+.login-box{
+  position: relative;
+  width: 33%;
+  align-self: center;
+}
+.login-boxT{
+  box-shadow: 5px 5px 5px #000000;
+}
+
+.login-box-headerT{
+  font-weight: 400;
+  background-color: #03a8f3;
+  color: #ffffff;
+}
+.login-box-header{
+  line-height: 3em;
+  text-align: center;
+  margin: 0;
+}
+
+.credential-boxT{
+  background: #ffffff;
+}
+
+.credential-box{
+  line-height: 4em;
+  text-align: center;
+  padding-top: 2em;
+}
+
+
+.credential-field {
+  display: block;
+  width:85%;
+  margin: 1.5em 0 0em 2em;
+  border: 0;
+  height: 1.5em;
+}
+
+.credential-fieldT{
+  font-size: 18px;
+  font-weight: 100;
+}
+.credential-fieldT:focus{
+  outline:none;
+}
+
+.credential-login-button{
+  font-size: 16px;
+  color: #ffffff;
+  background-color:#03a8f3;
+  box-shadow:0px 10px 5px #888888;
+  margin-top:3em;
+}
+.credential-login-buttonT{
+  border:0;
+  padding: 0.25em 2em;
+}
+
+
+
+/*----------------- Text Area ---------------------------*/
+
+
+
+.grid-text{
+  width:66%;
+  display: inline-block;
+}
+.grid-image{
+  width: 33%;
+  display: inline-block;
+}
+.grid-image img{
+  width: 100%;
+}
+.grid-text-content{
+  padding:50px 100px 0px 100px;
+  word-wrap:break-word;
+}
+.grid-text-padding{
+  margin-left: 100px;
+}
+
+
+
+.special-color{
+  background-color: #F6F5F5;
+}
+
+
+/*-----------------   Footer -----------------*/
+
+.footer{
+  bottom:0;
+  position:fixed;
+  z-index:150;
+  height:35px;
+  width:100%;  
+  padding-bottom: 1em;
+  color:#828384;
+}
+.footerT{
+  background-color: #dfdfdf;
+  text-align: center; 
+  vertical-align: middle;
+}
