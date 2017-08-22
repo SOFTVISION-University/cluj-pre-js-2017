@@ -1,7 +1,7 @@
 /*Feedback HTML*/
 
 .footer_section {
-    padding: 25px 0 12px 0;
+    padding: 25px 0 19px 0;
     font-weight:bold;
     font-size:16px;
     color: gray;
@@ -32,15 +32,7 @@ h1.interview_text_area {
     padding: 27px;
 }
 
-.username_area_input {
-    width: 80%;
-    margin-top: 30px;
-    border-right: none;
-    border-left: none;
-    border-top: none;
-}
-
-.password_area_input {
+.username_area_input, .password_area_input {
     width: 80%;
     margin-top: 30px;
     border-right: none;
@@ -65,17 +57,14 @@ h1.interview_text_area {
     margin-top:150px;
 }
 
-.results_image {
-    float:right;
-}
-
 .footer_margin {
-    margin-top: 80px;
+    margin-top: 120px;
 }
 
 .footer_section{
     text-align: center;
     background-color: lightgray;
+    margin: 0;
 }
 
 /*Adding style for mobile devices/ tablets / large monitors*/
@@ -89,7 +78,7 @@ h1.interview_text_area {
     }
 
     .left_image {
-        float: left!important;
+        width: 100%;
     }
 
     header form {
@@ -97,7 +86,8 @@ h1.interview_text_area {
     }
 
     .header_form_section {
-        width: 94%!important;
+        width: 87%;
+        margin: 0 40px auto auto;
     }
 }
 
@@ -117,7 +107,8 @@ h1.interview_text_area {
     }
 
     .header_form_section {
-        width: 94%!important;
+        width: 57%;
+        margin: 0 145px auto auto;
     }
 }
 
@@ -137,7 +128,8 @@ h1.interview_text_area {
     }
 
     .header_form_section {
-        width: 94%!important;
+        width: 57%;
+        margin: 0 auto;
     }
 }
 
@@ -157,6 +149,28 @@ h1.interview_text_area {
     }
 
     .header_form_section {
-        width: 94%!important;
+        width: 45%;
+        margin: 0 230px auto auto;
+    }
+}
+
+/*Screen between 992px and 1200px*/
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+    /* Styles */
+
+    .footer_section{
+        text-align: center;
+    }
+    .left_image {
+        float: left!important;
+    }
+
+    header form {
+        margin-left: 0!important;
+    }
+
+    .header_form_section {
+        width: 34%;
+        margin: 0 auto;
     }
 }
