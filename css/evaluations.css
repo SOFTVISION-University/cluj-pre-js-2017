@@ -1,33 +1,33 @@
-.mainTable {
+.main-table {
     width: 60%;
     margin: 100px auto;
 }
 
-.mainTableSkin {
+.main-table-skin {
     font-size: 20px;
     border-collapse: collapse;
 }
 
-.mainTable th {
+.main-table th {
     text-align: left;
 }
 
-.mainTable tr {
+.main-table tr {
     height: 50px;
     border-bottom: 1px solid black;
 }
 
-.mainTable th,
-td {
+.main-table th,
+.main-table td {
     padding-left: 40px;
 }
 
-.detailsCell {
+.details-cell {
     float: right;
     line-height: 50px;
 }
 
-.imageForDetails {
+.image-for-details {
     width: 40px;
     height: 40px;
     margin-left: 10px;
@@ -35,7 +35,7 @@ td {
     float: right;
 }
 
-.imageForDetailsSkin {
+.image-for-details-skin {
     background-image: url('https://maxcdn.icons8.com/Share/icon/Very_Basic//plus_filled1600.png');
     background-size: contain;
 }

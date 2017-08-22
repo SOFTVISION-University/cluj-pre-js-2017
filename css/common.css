@@ -4,7 +4,7 @@
     text-align: center;
 }
 
-.footerSkin {
+.footer-skin {
     color: #4d4d4d;
     background-color: #bababa;
 }
@@ -18,7 +18,7 @@
     float: left;
 }
 
-.logoSkin {
+.logo-skin {
     background-image: url('https://www.softvision.ro/images/common/logo-v2.png');
     background-size: contain;
 }
@@ -28,11 +28,11 @@
     height: 80px;
 }
 
-.headerSkin {
+.header-skin {
     box-shadow: 0 3px 10px grey;
 }
 
-.headerSpan {
+.log-in-cont {
     margin-top: 30px;
     float: right;
 }
@@ -42,15 +42,15 @@
     font-size: 22px;
 }
 
-.blue {
+.primaryColor {
     color: #1ab2ff;
 }
 
-.logOutLink {
+.log-out-link {
     margin-right: 60px;
 }
 
-.logOutLinkSkin {
+.log-out-link-skin {
     color: black;
     text-decoration: none;
 }
@@ -77,4 +77,8 @@ table tr:first-child {
     background-color: #1ab2ff;
     color: white;
     border: 1px solid #1ab2ff;
+}
+
+.copyright {
+    margin: 0;
 }

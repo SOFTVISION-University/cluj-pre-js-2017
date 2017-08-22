@@ -2,28 +2,28 @@ body {
     background-color: #f9f9f9;
 }
 
-.mainSection {
+.main-section {
     width: 80%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.formNew {
+.form-new {
     margin-bottom: 20px;
     display: inline-block;
 }
 
-.formSection {
+.form-section {
     margin-bottom: 30px;
 }
 
-.formSectionFirst {
+.form-section-first {
     margin-bottom: 30px;
     display: flex;
     justify-content: space-around;
 }
 
-.formSectionFirstInput {
+.form-section-first-input {
     width: 31%;
     height: 40px;
     padding-left: 10px;
@@ -31,21 +31,21 @@ body {
     border: 0;
 }
 
-.formSectionFirstInputSkin {
+.form-section-first-input-skin {
     color: lightgrey;
     font-size: 20px;
 }
 
-.formSectionFirstInput::placeholder {
+.form-section-first-input::placeholder {
     border-bottom: 1px solid lightgrey;
     color: lightgrey;
 }
 
-.formSectionFirstInput:focus {
+.form-section-first-input:focus {
     outline: none;
 }
 
-.formSectionSpan {
+.form-section-span {
     margin-left: 30px;
     margin-bottom: 30px;
     font-size: 25px !important;
@@ -59,7 +59,7 @@ body {
     margin-bottom: 30px;
 }
 
-.levelTable {
+.level-table {
     width: 100%;
     margin-top: 10px;
     border-collapse: collapse;
@@ -75,24 +75,24 @@ body {
     resize: none;
 }
 
-.textareaSkin {
+.textarea-skin {
     border: 2px solid darkgrey;
     font-size: 15px;
 }
 
-.radioGroup {
+.radio-group {
     display: inline-flex;
 }
 
-.levelInput {
+.level-input {
     width: 40px;
 }
 
-.checkBoxes {
+.check-boxes {
     height: 50px;
 }
 
-.checkBoxesSkin {
+.check-boxes-skin {
     border: 2px solid darkgrey;
 }
 
@@ -101,16 +101,16 @@ body {
     padding-right: 20px;
 }
 
-.legendSkin {
+.legend-skin {
     color: #1ab2ff;
     font-size: 25px;
 }
 
-.fieldsetUl {
+.fieldset-ul {
     list-style: none;
 }
 
-.fieldsetLi {
+.fieldset-list {
     width: 30%;
     margin: 0 10px 10px;
     float: left;
@@ -118,20 +118,20 @@ body {
     font-size: 14px;
 }
 
-.fieldsetSelect {
+.fieldset-select {
     width: 136px;
     height: 30px;
     float: right;
 }
 
-.submitButton {
+.submit-button {
     width: 200px;
     height: 60px;
     float: right;
     border: 0;
 }
 
-.submitButtonSkin {
+.submit-button-skin {
     background: #1ab2ff;
     border-radius: 3px;
     box-shadow: 0 9px 9px grey;
@@ -139,7 +139,7 @@ body {
     font-size: 20px;
 }
 
-.inputDate {
+.input-date {
     color: lightgrey !important;
 }
 
