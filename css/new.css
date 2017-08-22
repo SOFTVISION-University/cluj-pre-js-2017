@@ -1,137 +1,145 @@
-body{
-	background-color: #f9f9f9;
+body {
+    background-color: #f9f9f9;
 }
 
-.main-section{
-	width: 80%;
-	margin: 0 auto;
-	max-width: 1200px;
+.mainSection {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-form{
-	margin-bottom: 20px;
-	display: inline-block;
+.formNew {
+    margin-bottom: 20px;
+    display: inline-block;
 }
 
-.form-section-first{
+.formSection {
+    margin-bottom: 30px;
+}
+
+.formSectionFirst {
+    margin-bottom: 30px;
     display: flex;
-	justify-content: space-around;
+    justify-content: space-around;
 }
 
-.form-section-first input{
-	width: 31%;
-	border: 0;
-	padding-left: 10px;
-	height: 40px;
-	color: lightgrey;
-	font-size: 20px;
-	padding-right: 10px;
-}
-
-.form-section-first input::placeholder{
-	
-	border-bottom: 1px solid lightgrey;
-	color: lightgrey;
-
-}
-
-.form-section-first input:focus{
-	outline:none;
-}
-
-.form-section span{
-	font-size: 25px;
-	margin-left: 30px;
-	margin-bottom: 30px;
-}
-
-header{
-	margin-bottom: 100px;
-}
-
-fieldset, .form-section, .form-section-first{
-	margin-bottom: 30px;
-}
-
-table{
-	width: 100%;
-	border-collapse: collapse;
-	text-align: center;
-	margin-top: 10px;
-}
-
-textarea{
-	resize: none;
-	height: 100px;
-	border: 2px solid darkgrey;
-	box-sizing: border-box;
-	padding: 10px;
-	margin-top: 10px;
-	font-size: 15px;
-	width:100%;
-}
-
-.firstrow {
-text-align: center;	
-}
-
-.radio-group{
-	display: inline-flex;
-}
-
-td input{
-	width: 40px;
-}
-
-.checkBoxes{
-	border: 2px solid darkgrey;
-	height: 50px;
-}
-
-
-
-legend{
-	color: #1ab2ff;
-	font-size: 25px;
-	padding-left: 20px;
-	padding-right: 20px;
-}
-
-ul{
-	list-style: none;
-
-}
-
-li{
-	float: left;
-	width: 30%;
-	margin: 0 10px 10px 10px;
-	font-size: 14px;
-	line-height: 30px;
-}
-
-li select{
-	float: right;
-	height: 30px;
-    width: 136px;
-}
-
-.submitButton{
-	float: right;
-	width: 200px;
-    height: 60px;
-    background: #1ab2ff;
+.formSectionFirstInput {
+    width: 31%;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
     border: 0;
+}
+
+.formSectionFirstInputSkin {
+    color: lightgrey;
+    font-size: 20px;
+}
+
+.formSectionFirstInput::placeholder {
+    border-bottom: 1px solid lightgrey;
+    color: lightgrey;
+}
+
+.formSectionFirstInput:focus {
+    outline: none;
+}
+
+.formSectionSpan {
+    margin-left: 30px;
+    margin-bottom: 30px;
+    font-size: 25px !important;
+}
+
+.header {
+    margin-bottom: 100px;
+}
+
+.fieldset {
+    margin-bottom: 30px;
+}
+
+.levelTable {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.textarea {
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.textareaSkin {
+    border: 2px solid darkgrey;
+    font-size: 15px;
+}
+
+.radioGroup {
+    display: inline-flex;
+}
+
+.levelInput {
+    width: 40px;
+}
+
+.checkBoxes {
+    height: 50px;
+}
+
+.checkBoxesSkin {
+    border: 2px solid darkgrey;
+}
+
+.legend {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.legendSkin {
+    color: #1ab2ff;
+    font-size: 25px;
+}
+
+.fieldsetUl {
+    list-style: none;
+}
+
+.fieldsetLi {
+    width: 30%;
+    margin: 0 10px 10px;
+    float: left;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+.fieldsetSelect {
+    width: 136px;
+    height: 30px;
+    float: right;
+}
+
+.submitButton {
+    width: 200px;
+    height: 60px;
+    float: right;
+    border: 0;
+}
+
+.submitButtonSkin {
+    background: #1ab2ff;
     border-radius: 3px;
-    box-shadow: 0px 9px 9px grey;
+    box-shadow: 0 9px 9px grey;
     color: white;
     font-size: 20px;
 }
 
-.inputDate{
-	color:lightgrey!important;
+.inputDate {
+    color: lightgrey !important;
 }
 
-section{
-	width:100%;
-}
