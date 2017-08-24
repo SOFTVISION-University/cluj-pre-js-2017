@@ -67,11 +67,9 @@
         `;
     };
 
-    const Footer = function(options) {
+    const FooterContainer = function(options) {
         return `
-            <footer class="footer footer-skin">
-                 <p class="copyright">Copyright@Softvision 2017</p>
-            </footer>
+        ${Footer()}
         `;
     };
 
@@ -80,7 +78,7 @@
             ${LogInHeader()}
             ${SubmitFeedbackSection()}
             ${SubmitFeedBackResults()}
-            ${Footer()}
+            ${FooterContainer()}
         `;
     };
 
