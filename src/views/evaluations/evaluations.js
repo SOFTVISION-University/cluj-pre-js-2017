@@ -26,7 +26,6 @@ function EvaluationsPage(options) {
     }
 ];
     return `
-    ]
     ${NAV()}
     ${EvaluationsTable({
         items: rows,
@@ -47,8 +46,8 @@ function EvaluationsTableHeader(options) {
         });
 
         const headingsEl = `
-        ${headings.join('')}
-`;
+        ${headings.join('')}`;
+
         return `
         <tr>
         ${headingsEl}
