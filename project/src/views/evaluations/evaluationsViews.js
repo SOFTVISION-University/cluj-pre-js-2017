@@ -1,45 +1,21 @@
 const EvaluationsPage = function(options = {}) {
-    const rows = [{
-        name: "Popescu Adrian",
-        technology: "Javascript",
-        level: "Mid2"
-    },
-    {
-        name: "Popescu Adrian",
-        technology: "Javascript",
-        level: "Mid2"
-    },
-    {
-        name: "Popescu Adrian",
-        technology: "Javascript",
-        level: "Mid2"
-    },
-    {
-        name: "Popescu Adrian",
-        technology: "Javascript",
-        level: "Mid2"
-    }];
-    const headings = ['Nume', 'Tehnologie', 'Nivel', ''];
     return `
         ${NAV()}
         ${EvaluationsTable({
-            itemsHeadings: headings,
-            items: rows
+            itemsHeadings: getHeadings(),
+            items: getRows()
         })}
         ${Footer()}
     `;
 }
 
 const EvaluationsTableHeader = function(options){
-    const headings = [];
-    options.headings.forEach(function(el) {
-        const generatedEl = ` <th>${el}</th>`;
-        headings.push(generatedEl);
+    const headings = options.headings.map(function(el) {
+        return `<th>${el}</th>`;
     });
-    const headingsEl = headings.join('');
     return `
     <tr>
-       ${headingsEl}
+       ${headings.join('')}
     </tr>
     `;
 }
