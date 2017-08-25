@@ -14,9 +14,10 @@ const NAV = function(options={}) {
     
         <img src="assets/logo.png" style="width:200%; height:40px">
      
-        <a ref="/Evaluation/">Evaluations</a> 
-              <a ref="/New Evaluation/">New Evaluation</a> 
+        <a href="/Evaluation/">Evaluations</a> 
+              <a href="/New Evaluation/">New Evaluation</a> 
          <a style="float:right" ref="/Logout/">Logout</a> 
     </section>
     `;
+    
 }
