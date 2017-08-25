@@ -81,10 +81,10 @@
             ${FooterContainer()}
         `;
     };
-
-window.onload = function() {
     
+window.onload = function() {
+ 
     const fullString = FullPage();
 
-    document.querySelector('.app').innerHTML=fullString;
+    document.querySelector('#app').innerHTML=fullString;
 };

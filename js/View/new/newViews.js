@@ -138,8 +138,3 @@ const DropDown = (options) => {
     </li>
     `;
 };
-
-window.onload = () => {
-    const fullString = NewEvaluationPage();
-    document.querySelector('#app').innerHTML=fullString;
-};
