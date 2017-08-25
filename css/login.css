@@ -124,3 +124,8 @@ body {
     margin-top: 100px;
     margin-right: 300px;
 }
+
+.alert {
+    color: red;
+    font-weight: bold;
+}

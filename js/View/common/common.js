@@ -1,4 +1,4 @@
-const Footer = function() {
+const Footer = function () {
     return `
         <!-- Footer -->
         <footer class="footer footer-skin">
@@ -7,7 +7,7 @@ const Footer = function() {
     `;
 };
 
-const Navigation = function(options={}) {
+const Navigation = function (options = {}) {
     return `
         <!-- Header --> 
         <header class="header header-skin">
