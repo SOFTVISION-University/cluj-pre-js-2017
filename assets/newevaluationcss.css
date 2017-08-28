@@ -1,0 +1,106 @@
+
+  textarea {
+    align-content: center;
+    width: 70%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+  }
+    .button {
+        background-color:#0CB3EE;
+        border: none;
+        color: white;
+        float:right;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        transition-duration: 0.4s;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+
+        .topnav {
+            background-color:white;
+            overflow: hidden;
+           
+        }/* Style the links inside the navigation bar */
+        .topnav a {
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 18px 20px;
+            text-decoration: none;
+            font-size: 17px;
+            border-bottom: 8px solid transparent;
+        }
+        /* Change the color of links on hover */
+        .topnav a:hover {
+         
+            border-bottom-color: #0CB3EE;
+            
+        }
+    
+}
+table {
+
+    border-collapse: collapse;
+    width: 70%;
+    display: center;
+    height: 150px;
+}
+
+th, td {
+    text-align:center;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color:  #0CB3EE;
+    color: white;
+}
+
+.formdimension {
+    width: 100%;
+    height: 300 px;
+    background-color: white;
+
+}
+.legend {
+    color: #0CB3EE;
+    font-size: 25px;
+    font-style: italic;
+}
+
+.container {
+    
+        position:fixed;
+        left:0px;
+        bottom:0px;
+        height:60px;
+        width:100%;
+        background:lightgray;
+     }
+
+.footer-paragraph {
+    font-size: 20px;
+    float:right;
+}
+
+.fieldset {
+    position:center;
+    width: 70%;
+    height: 150px;
+}
+.height {
+    height: 200px;
+}
