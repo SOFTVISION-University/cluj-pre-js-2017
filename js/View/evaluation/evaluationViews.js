@@ -87,8 +87,4 @@ const EvaluationsTable = function(options = {}) {
     </section>
     `;
 };
-window.onload = function() {
-    const app = document.querySelector('#app');
-    app.innerHTML = EvaluationsPage();
-};
 

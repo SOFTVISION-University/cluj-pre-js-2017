@@ -19,15 +19,17 @@ const Textarea = (options) => {
     `;
 };
 
+const TextareaGroup =(options) => {
+    return options.data.map(el => Textarea(el)).join('');
+};
+
 const Form = (options) => {
-    var textAreas = options.data.map((el) => {
-        return Textarea(el);
-    });
+    
     
     return`
     <form class="form-new" action="" method="">
         ${CandidateAndTechnical({})} 
-        ${textAreas.join('')}
+        ${TextareaGroup(options)}
         ${FieldsetList(getDataForNewPage())}
         <input class="submit-button submit-button-skin" type="submit" value="SUBMIT">      
     </form>  
@@ -64,10 +66,12 @@ const RadioGroup = (options) => {
     `;
 };
 
+const TechnicalLevelPickerBody = (options) => {
+    return options.map((el) => 
+         RadioGroup(el.inputLevels)).join('');
+};
 const TechnicalLevelPicker = (options) => {
-    const result = options.columnData.map((el) => {
-        return RadioGroup(el.inputLevels);
-    });
+    
     
     return `
     <span class="form-section-span formatted primaryColor">${options.title}</span></br>
@@ -76,7 +80,7 @@ const TechnicalLevelPicker = (options) => {
             ${TechnicalLevelPickerHead(options.headers)}
         </tr>
         <tr class="check-boxes check-boxes-skin">
-            ${result.join('')}
+            ${TechnicalLevelPickerBody(options.columnData)}
         </tr>
     </table>
     `;
@@ -116,22 +120,21 @@ const FieldsetList = (options) => {
 };
 
 
+const Options = (options) => {
+    return `<option value="${options.value}">${options.label}</option>`;
+};
+
+const OptionGroup = (options) => {
+    return options.map( (el)=> Options(el)).join('');
+};
 
 const DropDown = (options) => {
     return `
     <li class="fieldset-list">
     ${options.label}
     <select class="fieldset-select" name="${options.name}">
-        <option value="Evaluation">Evaluation</option>
-        <option value="0">Beginner</option>
-        <option value="1">Intermediate</option>
-        <option value="2">Advanced</option>
+    ${OptionGroup(options.val_lab)}    
     </select>
     </li>
     `;
-};
-
-window.onload = () => {
-    const fullString = NewEvaluationPage();
-    document.querySelector('#app').innerHTML=fullString;
 };
