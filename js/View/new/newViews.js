@@ -1,21 +1,21 @@
 const NewEvaluationPage = (options) => {
     return `
-    ${Navigation("new")}
-        <section>
-            <div class="main-section">
-                ${Form(getDataForTextArea())}
-            </div>
-        </section>      
-        ${Footer()}
+        ${Navigation("new")}
+            <section>
+                <div class="main-section">
+                    ${Form(getDataForTextArea())}
+                </div>
+            </section>      
+            ${Footer()}
     `;
 };
 
 const Textarea = (options) => {
     return `
-    <div class="form-section">
-        <span class="form-section-span formatted primaryColor">${options.label}</span></br>
-        <textarea class="textarea textarea-skin" name="${options.name}" placeholder="${options.placeholder}"></textarea>
-    </div>
+        <div class="form-section">
+            <span class="form-section-span formatted primaryColor">${options.label}</span></br>
+            <textarea class="textarea textarea-skin" name="${options.name}" placeholder="${options.placeholder}"></textarea>
+        </div>
     `;
 };
 
@@ -25,24 +25,23 @@ const TextareaGroup =(options) => {
 
 const Form = (options) => {
     
-    
     return`
-    <form class="form-new" action="" method="">
-        ${CandidateAndTechnical({})} 
-        ${TextareaGroup(options)}
-        ${FieldsetList(getDataForNewPage())}
-        <input class="submit-button submit-button-skin" type="submit" value="SUBMIT">      
-    </form>  
+        <form class="form-new" id="formNew" action="" method="">
+            ${CandidateAndTechnical({})} 
+            ${TextareaGroup(options)}
+            ${FieldsetList(getDataForNewPage())}
+            <input class="submit-button submit-button-skin" type="submit" value="SUBMIT">      
+        </form>  
     `;
 };
 
 const CandidateDetailsForm = (options) => {
     return `
-    <div class="form-section-first">
-        <input class="form-section-first-input form-section-first-input-skin" type="text" placeholder="Candidate">
-        <input class="form-section-first-input form-section-first-input-skin" type="text" placeholder="Interviewer">
-        <input class="form-section-first-input form-section-first-input-skin" type="date" class="inputDate">
-    </div>
+        <div class="form-section-first">
+            <input name="candidate" class="form-section-first-input form-section-first-input-skin" type="text" placeholder="Candidate">
+            <input name="interviewer" class="form-section-first-input form-section-first-input-skin" type="text" placeholder="Interviewer">
+            <input name="date" class="form-section-first-input form-section-first-input-skin" type="date" class="inputDate">
+        </div>
     `;
 };
 
@@ -60,9 +59,9 @@ const RadioGroup = (options) => {
     });
 
     return `
-    <td><div class="radio-group">
-    ${result.join('')}
-    </div></td>
+        <td><div class="radio-group">
+        ${result.join('')}
+        </div></td>
     `;
 };
 
@@ -74,24 +73,24 @@ const TechnicalLevelPicker = (options) => {
     
     
     return `
-    <span class="form-section-span formatted primaryColor">${options.title}</span></br>
-    <table class="level-table">
-        <tr>
-            ${TechnicalLevelPickerHead(options.headers)}
-        </tr>
-        <tr class="check-boxes check-boxes-skin">
-            ${TechnicalLevelPickerBody(options.columnData)}
-        </tr>
-    </table>
+        <span class="form-section-span formatted primaryColor">${options.title}</span></br>
+        <table class="level-table">
+            <tr>
+                ${TechnicalLevelPickerHead(options.headers)}
+            </tr>
+            <tr class="check-boxes check-boxes-skin">
+                ${TechnicalLevelPickerBody(options.columnData)}
+            </tr>
+        </table>
     `;
 };
 
 const CandidateAndTechnical = (options) => {
     return `
-    <div class="form-section">
-        ${CandidateDetailsForm({})}
-        ${TechnicalLevelPicker(getDataForTechnicalTable())}
-    </div>
+        <div class="form-section">
+            ${CandidateDetailsForm({})}
+            ${TechnicalLevelPicker(getDataForTechnicalTable())}
+        </div>
     `;
 };
 
@@ -101,12 +100,12 @@ const Fieldset = (options) => {
     });
 
     return `
-    <fieldset class="fieldset">
-    <legend class="legend legend-skin">${options.groupName}</legend>
-    <ul class="fieldset-ul">
-        ${arrGroup.join('')}
-    </ul>
-    </fieldset>
+        <fieldset class="fieldset">
+        <legend class="legend legend-skin">${options.groupName}</legend>
+        <ul class="fieldset-ul">
+            ${arrGroup.join('')}
+        </ul>
+        </fieldset>
     `;
 };
 
@@ -130,11 +129,11 @@ const OptionGroup = (options) => {
 
 const DropDown = (options) => {
     return `
-    <li class="fieldset-list">
-    ${options.label}
-    <select class="fieldset-select" name="${options.name}">
-    ${OptionGroup(options.val_lab)}    
-    </select>
-    </li>
-    `;
+        <li class="fieldset-list">
+        ${options.label}
+        <select class="fieldset-select" name="${options.name}">
+        ${OptionGroup(options.val_lab)}    
+        </select>
+        </li>
+        `;
 };

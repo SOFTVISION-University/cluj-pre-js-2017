@@ -1,17 +1,13 @@
 function EvaluationsPage(options) {
     const newOptions = options || {};
-
-
     const headings = ['Nume', 
-                'Tehnologie', 
-                'Nivel',
-                '' ];
-    
-        
-    const rows =  [{
-                        name : "Popescu Adrian",
-                        tehnology : 'Javascript',
-                        level : "Mid 2"
+        'Tehnologie', 
+        'Nivel',
+        ''];     
+    const rows = [{
+                    name : "Popescu Adrian",
+                    tehnology : 'Javascript',
+                    level : "Mid 2"
                     },
                     {
                         name : "Dragan Roxana",
@@ -27,9 +23,8 @@ function EvaluationsPage(options) {
                         name : "Gherghe Andrei",
                         tehnology : 'Ruby',
                         level : "Senior 1"
-                    }];
+                }];
     
-
     return `
     ${Navigation()}
     ${EvaluationsTable({
@@ -42,22 +37,23 @@ function EvaluationsPage(options) {
 
 function EvaluationTableRow(options = {}) {
     return `
-    <tr>
-        <td>${options.name}</td>
-        <td>${options.tehnology}</td> 
-        <td>${options.level}</td>
-        <td class="details-cell"><text>Detalii</text><div class="image-for-details image-for-details-skin"></div></td>
-    </tr>
+        <tr>
+            <td>${options.name}</td>
+            <td>${options.tehnology}</td> 
+            <td>${options.level}</td>
+            <td class="details-cell"><text>Detalii</text><div class="image-for-details image-for-details-skin"></div></td>
+        </tr>
     `;
 };
+
 function EvaluationsTableBody(options = {}) {
- 
     const arr = options.optionsItems.map(function(el){
         return EvaluationTableRow(el);
     });
 
     return arr.join('');
 };
+
 function EvaluationsTableHeader(options) {
     const headings =  [];
 
@@ -79,12 +75,12 @@ const EvaluationsTable = function(options = {}) {
     return `
         <!-- Main section --> 
         <section>
-        <table id="main-table" class="main-table main-table-skin">
-            ${EvaluationsTableHeader({optionsHead: options.head})}
-            ${EvaluationsTableBody({optionsItems: options.items})}
-           
-        </table>
-    </section>
+            <table id="main-table" class="main-table main-table-skin">
+                ${EvaluationsTableHeader({optionsHead: options.head})}
+                ${EvaluationsTableBody({optionsItems: options.items})}
+            
+            </table>
+        </section>
     `;
 };
 
