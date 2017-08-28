@@ -7,20 +7,29 @@ const Footer = function () {
     `;
 };
 
-const Navigation = function (options = {}) {
+const Navigation = function (options = "evaluations") {
+
+    var EvalSelected = "";
+    var NewSelected = "";
+    if(options == 'evaluations'){
+        EvalSelected = "selected";
+    } else {
+        NewSelected = "selected";
+    }
+
     return `
         <!-- Header --> 
         <header class="header header-skin">
             <nav class="nav">
                 <div id="logo" class="logo logo-skin"></div>
                 <div id="navigation" class="navigation-class">
-                    <div id="button1" class="button button1 formatted selected">
+                    <div id="button1" class="button button1 formatted ${EvalSelected}">
                     Evaluations
                     </div>
-                    <a href="new.html"><div id="button2" class="button button2 formatted">
+                    <div id="button2" class="button button2 formatted ${NewSelected}">
                     New Evaluation
                     </div>
-                    </a>
+                    
                 </div>
                 <span class="log-in-cont formatted"><a class="log-out-link log-out-link-skin" href="login.html">Logout</a></span>
             </nav>

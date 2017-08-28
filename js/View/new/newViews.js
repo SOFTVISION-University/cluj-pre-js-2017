@@ -1,6 +1,6 @@
 const NewEvaluationPage = (options) => {
     return `
-    ${Navigation()}
+    ${Navigation("new")}
         <section>
             <div class="main-section">
                 ${Form(getDataForTextArea())}
