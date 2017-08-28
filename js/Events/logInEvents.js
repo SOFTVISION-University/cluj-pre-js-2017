@@ -12,7 +12,9 @@ const addEventsLogIn = function (){
     const passwordValue = passwordInput.value;
 
     if(checkCredentials(userNameValue, passwordValue)){
-        event.target.submit();
+        const app = document.querySelector('#app');
+        app.innerHTML = EvaluationsPage();
+        addEventsEvaluations();
     } else {
         displayAlert(event.target, "Wrong username or password!");
     }
@@ -21,10 +23,14 @@ const addEventsLogIn = function (){
 };
 
 const displayAlert = function(parent, message) {
-    var alertLabel = document.createElement('p');
-    alertLabel.className = "alert";
-    alertLabel.innerHTML = message;
-    parent.appendChild(alertLabel);
+    var alert = document.querySelector('.alert');
+    if(!alert){
+        const alertLabel = document.createElement('p');
+        alertLabel.className = "alert";
+        alertLabel.innerHTML = message;
+        parent.appendChild(alertLabel);
+    }
+    
 };
 
 const checkCredentials = function(username, password){
@@ -37,8 +43,6 @@ const checkCredentials = function(username, password){
 };
 
 const logInForm = document.querySelector('#logInForm');
-
 logInForm.addEventListener('submit',submitFormEvent);
+
 };
-
-
