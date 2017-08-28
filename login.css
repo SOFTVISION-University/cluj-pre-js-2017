@@ -1,0 +1,57 @@
+.grid
+{
+    display: flex;
+    margin: 0 auto;
+}
+
+.headerSection
+{
+    flex: 0 0 66.66%;
+    background-image: url("./assets/feedback-banner.jpg");
+    height: 700px;
+}
+
+.submitSection
+{
+    flex: 0 0 33.33%;
+    display:inline-flex;
+    background-color: #ffffff;
+    padding: 0px 400px;
+}
+
+.feedbackSection
+{
+    flex: 0 0 33.33%;
+    display:inline-flex;
+    background-color: #A9A9A9;
+    padding: 0px 400px;
+}
+
+.article2
+{
+    display:inline-flex;
+}
+
+.loginForm
+{
+    height: 200px;
+    width: 200px;
+    border: 2px solid #03A9F4;
+}
+
+.loginForm th
+{
+    background-color: #03A9F4;  
+}
+
+.content 
+{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.feedbackImg
+{
+    width: 800px;
+    height: 400px;
+}
