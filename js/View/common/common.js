@@ -10,9 +10,9 @@ const Footer = function () {
 };
 
 const Navigation = function (options = "evaluations") {
-    var EvalSelected = "";
-    var NewSelected = "";
-    
+    var EvalSelected ;
+    var NewSelected ;
+
     if(options == 'evaluations'){
         EvalSelected = "selected";
     } else {
@@ -31,7 +31,6 @@ const Navigation = function (options = "evaluations") {
                     <div id="button2" class="button button2 formatted ${NewSelected}">
                     New Evaluation
                     </div>
-                    
                 </div>
                 <span class="log-in-cont formatted"><a class="log-out-link log-out-link-skin" href="login.html">Logout</a></span>
             </nav>

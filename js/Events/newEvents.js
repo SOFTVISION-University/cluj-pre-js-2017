@@ -62,6 +62,7 @@ const addEventsNew = function() {
             dataObject[name] = value;
 
         });
+
         
     };
 
