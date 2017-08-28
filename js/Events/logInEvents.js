@@ -34,8 +34,8 @@ const displayAlert = function(parent, message) {
 };
 
 const checkCredentials = function(username, password){
-    
-    if(username ==="adrian" && password ==="frunza"){
+    var logInObj = getLogInData();
+    if(username === logInObj.username && password === logInObj.password){
         return true;
     } else {
         return false;
