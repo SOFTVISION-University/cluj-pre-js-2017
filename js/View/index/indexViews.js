@@ -4,7 +4,4 @@ window.onload = function () {
     document.querySelector('#app').innerHTML = fullString;
     addEventsLogIn();
 
-   
-       
-   
 };
