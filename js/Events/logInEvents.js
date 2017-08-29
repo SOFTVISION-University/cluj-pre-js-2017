@@ -1,6 +1,11 @@
 const addEventsLogIn = function (){
     const submitFormListener = function (event) {
-    
+        var alert = document.querySelector('.alert');
+         if(alert) {
+             
+             event.target.removeChild(alert);
+         }
+
         event.stopPropagation();
         event.preventDefault();
 
@@ -9,6 +14,10 @@ const addEventsLogIn = function (){
         const userNameValue = userNameInput.value;
         const passwordValue = passwordInput.value;
 
+        if(userNameValue.length === 0 || passwordValue.length === 0){
+            displayAlert(event.target, "Please complete both fields!")
+        } else
+        
         if(checkCredentials(userNameValue, passwordValue)){
             const app = document.getElementById('app');
             app.innerHTML = EvaluationsPage();
@@ -20,15 +29,12 @@ const addEventsLogIn = function (){
     };
 
     const displayAlert = function(parent, message) {
-        var alert = document.querySelector('.alert');
-
-        if(!alert){
+       
             const alertLabel = document.createElement('p');
             alertLabel.className = "alert";
             alertLabel.innerHTML = message;
             parent.appendChild(alertLabel);
-        }  
-
+    
     };
 
     const checkCredentials = function(username, password){
