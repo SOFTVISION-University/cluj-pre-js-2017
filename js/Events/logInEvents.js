@@ -33,11 +33,8 @@ const addEventsLogIn = function (){
 
     const checkCredentials = function(username, password){
         var logInObj = getLogInData();
-        if(username === logInObj.username && password === logInObj.password){
-            return true;
-        } else {
-            return false;
-        }
+        return (username === logInObj.username && password === logInObj.password) ? true : false ;
+      
 
     };
 

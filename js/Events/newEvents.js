@@ -55,15 +55,10 @@ const addEventsNew = function() {
         iterateOver(textInputsNewForm);
         iterateOver(textAreas);
         iterateOver(radioInputsNewForm);
+        iterateOver(selectInputs);
 
-        selectInputs.forEach(function(selectInput){
-            let name = selectInput.name;
-            let value = selectInput.value;
-            dataObject[name] = value;
-
-        });
-
-        
+      console.log(dataObject);
+  
     };
 
     const submitNewForm = function(event) {
