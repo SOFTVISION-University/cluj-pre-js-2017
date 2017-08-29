@@ -10,5 +10,4 @@ const addEventsEvaluations = function() {
 
     buttonNew.addEventListener('click', newButtonEvent);
         
-        
 };

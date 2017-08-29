@@ -40,7 +40,7 @@ const addEventsNew = function() {
         const radioInputsNewForm = [];
         const inputsNewForm = document.querySelectorAll('input');
         const textAreas = document.querySelectorAll('textarea');
-        const selectInputs = document.querySelectorAll('select');
+        const selectInputs = document.getElementsByTagName('select');
 
         inputsNewForm.forEach(function(el){
             if(el.type === "text" || el.type === "date"){
