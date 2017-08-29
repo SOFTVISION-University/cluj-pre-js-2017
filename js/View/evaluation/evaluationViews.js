@@ -4,26 +4,7 @@ function EvaluationsPage(options) {
         'Tehnologie', 
         'Nivel',
         ''];     
-    const rows = [{
-                    name : "Popescu Adrian",
-                    tehnology : 'Javascript',
-                    level : "Mid 2"
-                    },
-                    {
-                        name : "Dragan Roxana",
-                        tehnology : 'PHP',
-                        level : "Mid 1"
-                    },
-                    {
-                        name : "Florescu Mihai",
-                        tehnology : 'Javascript',
-                        level : "Junior3"
-                    },
-                    {
-                        name : "Gherghe Andrei",
-                        tehnology : 'Ruby',
-                        level : "Senior 1"
-                }];
+    const rows = JSON.parse(localStorage.getItem('evaluations'));
     
     return `
     ${Navigation()}
@@ -38,8 +19,8 @@ function EvaluationsPage(options) {
 function EvaluationTableRow(options = {}) {
     return `
         <tr>
-            <td>${options.name}</td>
-            <td>${options.tehnology}</td> 
+            <td>${options.candidate}</td>
+            <td>JS</td> 
             <td>${options.level}</td>
             <td class="details-cell"><text>Detalii</text><div class="image-for-details image-for-details-skin"></div></td>
         </tr>

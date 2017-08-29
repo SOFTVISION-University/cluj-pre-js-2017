@@ -23,21 +23,8 @@ const addEventsNew = function() {
 
     };
 
-    const iterateOverRadio = function(array){
-        array.forEach(function (radioInput){
-            let name = radioInput.name;
-            let value = radioInput.value;
-            if(radioInput.checked){
-                dataObject[name] = value;
-            }
-
-        });
-
-    };
-
     const getDataFromForm = function(){
         const textInputsNewForm = [];
-        const radioInputsNewForm = [];
         const inputsNewForm = document.querySelectorAll('input');
         const textAreas = document.querySelectorAll('textarea');
         const selectInputs = document.querySelectorAll('select');
@@ -46,15 +33,14 @@ const addEventsNew = function() {
             if(el.type === "text" || el.type === "date"){
                 textInputsNewForm.push(el);
             }
-            if(el.type === "radio"){
-                radioInputsNewForm.push(el);
+            if(el.type === "radio" && el.checked){
+                textInputsNewForm.push(el);
             }
             
         });
 
         iterateOver(textInputsNewForm);
         iterateOver(textAreas);
-        iterateOver(radioInputsNewForm);
         iterateOver(selectInputs);
 
         //ADD OBJECT TO LOCALSTORAGE
