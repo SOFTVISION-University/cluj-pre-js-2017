@@ -10,14 +10,13 @@ const Footer = function() {
 }
 const NAV = function(options={}) {
     return `
-    <section style="width:100%; height:300px">
-    
-        <img src="assets/logo.png" style="width:200%; height:40px">
-     
-        <a href="/Evaluation/">Evaluations</a> 
-              <a href="/New Evaluation/">New Evaluation</a> 
-         <a style="float:right" ref="/Logout/">Logout</a> 
-    </section>
+    <section class="topnav" id="Topnav">
+    <img src="assets/logo.png" style="width:15%; height:30px;float:left">
+    <a href="#evaluations">Evaluations</a>
+    <a href="#new evaluation">New Evaluations</a>
+    <a style="float:right" href="#about">Logout</a>
+    <hr class="eval-header-bottom eval-header-bottom-skin">
+  </section>
     `;
     
 }

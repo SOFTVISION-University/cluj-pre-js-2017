@@ -1,0 +1,59 @@
+body {
+  font: normal medium/1.4 sans-serif;
+    color:darkslategray;
+        
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+thead { 
+    color:white;
+    background-color: #00BFFF;
+    border-bottom-color:  #00BFFF;
+}
+
+
+
+ .topnav {
+    background-color:white;
+    overflow: hidden;
+   
+}/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 18px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    border-bottom: 8px solid transparent;
+}
+/* Change the color of links on hover */
+.topnav a:hover {
+ 
+    border-bottom-color: #0CB3EE;
+    
+}
+.container {
+    
+        position:fixed;
+        left:0px;
+        bottom:0px;
+        height:60px;
+        width:100%;
+        background:lightgray;
+     }
+
+.footer-paragraph {
+    font-size: 20px;
+    float:right;
+}
+

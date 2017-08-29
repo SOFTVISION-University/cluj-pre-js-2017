@@ -21,7 +21,7 @@ thead {
 
 <style>
 .button {
-    background-color: #4CAF50; /* Green */
+    background-color: #0DB4ED; /* Green */
     border: none;
     color: white;
     text-align: center;
@@ -32,12 +32,6 @@ thead {
     cursor: pointer;
 }
 
-div {
-    border-bottom: 2px solid #DCDCDC;
-    padding-bottom: 15px;
-    border-bottom-style:groove;
-
-    
 
 }
 
