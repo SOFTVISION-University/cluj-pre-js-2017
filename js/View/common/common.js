@@ -25,10 +25,10 @@ const Navigation = function (options = "evaluations") {
             <nav class="nav">
                 <div id="logo" class="logo logo-skin"></div>
                 <div id="navigation" class="navigation-class">
-                    <div id="button1" class="button button1 formatted ${EvalSelected}">
+                    <div id="evaluationButton" class="button evaluationButton formatted ${EvalSelected}">
                     Evaluations
                     </div>
-                    <div id="button2" class="button button2 formatted ${NewSelected}">
+                    <div id="newEvaluationButton" class="button newEvaluationButton formatted ${NewSelected}">
                     New Evaluation
                     </div>
                 </div>

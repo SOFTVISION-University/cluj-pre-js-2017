@@ -1,5 +1,5 @@
 const addEventsLogIn = function (){
-    const submitFormEvent = function (event) {
+    const submitFormListener = function (event) {
     
         event.stopPropagation();
         event.preventDefault();
@@ -33,12 +33,11 @@ const addEventsLogIn = function (){
 
     const checkCredentials = function(username, password){
         var logInObj = getLogInData();
-        return (username === logInObj.username && password === logInObj.password) ? true : false ;
+        return username === logInObj.username && password === logInObj.password ;
       
-
     };
 
     const logInForm = document.getElementById('logInForm');
-    logInForm.addEventListener('submit',submitFormEvent);
+    logInForm.addEventListener('submit',submitFormListener);
 
 };

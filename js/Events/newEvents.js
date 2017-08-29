@@ -1,9 +1,9 @@
 const addEventsNew = function() {
     const dataObject = {};
-    const buttonEval = document.getElementById('button1');
+    const buttonEval = document.getElementById('evaluationButton');
     const formNew = document.getElementById('formNew');
 
-    const evalButtonEvent = function(event){
+    const evalButtonListener = function(event){
         event.preventDefault();
         const app = document.getElementById('app');
         app.innerHTML = EvaluationsPage();
@@ -11,7 +11,7 @@ const addEventsNew = function() {
 
     };
         
-    buttonEval.addEventListener('click', evalButtonEvent);
+    buttonEval.addEventListener('click', evalButtonListener);
     
     const iterateOver = function(array){
         array.forEach(function(textInput){
@@ -54,7 +54,7 @@ const addEventsNew = function() {
   
     };
 
-    const submitNewForm = function(event) {
+    const submitNewFormListener = function(event) {
         event.stopPropagation();
         event.preventDefault();
 
@@ -62,6 +62,6 @@ const addEventsNew = function() {
 
     };
 
-    formNew.addEventListener('submit', submitNewForm);
+    formNew.addEventListener('submit', submitNewFormListener);
         
 };
