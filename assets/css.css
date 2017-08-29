@@ -1,7 +1,7 @@
 
   textarea {
     align-content: center;
-    width: 1200px;
+    width: 70%;
     height: 150px;
     padding: 12px 20px;
     box-sizing: border-box;
@@ -45,12 +45,14 @@
 .topnav a:hover {
     background-color: #0CB3EE;
     color: black;
+    border-bottom: 20px;
+    border-bottom-color: black;
     
 }
 table {
 
     border-collapse: collapse;
-    width: 1200px;
+    width: 70%;
     display: center;
     height: 150px;
 }
@@ -73,7 +75,32 @@ th {
     background-color: white;
 
 }
-.sectioncls {
+.legend {
+    color: #0CB3EE;
+    font-size: 25px;
+    font-style: italic;
+}
+
+.container {
     
-    height: 400px;
+        position:fixed;
+        left:0px;
+        bottom:0px;
+        height:60px;
+        width:100%;
+        background:lightgray;
+     }
+
+.footer-paragraph {
+    font-size: 20px;
+    float:right;
+}
+
+.fieldset {
+    position:center;
+    width: 70%;
+    height: 150px;
+}
+.height {
+    height: 200px;
 }
