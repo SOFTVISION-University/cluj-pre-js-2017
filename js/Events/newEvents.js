@@ -57,7 +57,14 @@ const addEventsNew = function() {
         iterateOver(radioInputsNewForm);
         iterateOver(selectInputs);
 
-      console.log(dataObject);
+        //ADD OBJECT TO LOCALSTORAGE
+        const localStorageLength = localStorage.length;
+        var evaluations = [];
+        if(localStorageLength !== 0){
+             evaluations = JSON.parse(localStorage.getItem("evaluations"));
+        }
+        evaluations.push(dataObject);
+        localStorage.setItem("evaluations", JSON.stringify(evaluations));
   
     };
 
