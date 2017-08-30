@@ -1,4 +1,4 @@
-const NewEvaluationPage = (options) => {
+const NewEvaluationPageMarkUp = (options) => {
     return `
         ${Navigation("new")}
             <section>

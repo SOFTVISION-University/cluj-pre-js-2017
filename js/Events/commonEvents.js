@@ -1,5 +1,6 @@
 const EventsCommon = function(){
     const logOutButton = document.getElementById('logOut');
+    
     const logOutListener = function(event){
         event.preventDefault();
         RedirectTo('logIn');

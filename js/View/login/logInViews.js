@@ -69,7 +69,7 @@ const FooterContainer = function (options) {
         `;
 };
 
-const FullPage = function () {
+const LogInPageMarkUp = function () {
     return `
             ${LogInHeader()}
             ${SubmitFeedbackSection()}
