@@ -6,8 +6,7 @@ const addEventsNew = function() {
     const evalButtonListener = function(event){
         event.preventDefault();
         const app = document.getElementById('app');
-        app.innerHTML = EvaluationsPage();
-        addEventsEvaluations();
+        RedirectTo('evaluations');
 
     };
         

@@ -20,8 +20,7 @@ const addEventsLogIn = function (){
         
         if(checkCredentials(userNameValue, passwordValue)){
             const app = document.getElementById('app');
-            app.innerHTML = EvaluationsPage();
-            addEventsEvaluations();
+            RedirectTo('evaluations');
         } else {
             displayAlert(event.target, "Wrong username or password!");
         }

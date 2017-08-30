@@ -1,3 +1,3 @@
 const AddEventsCommon = function() {
-    const logOutButton = 
+    const logOutButton = 0;
 };

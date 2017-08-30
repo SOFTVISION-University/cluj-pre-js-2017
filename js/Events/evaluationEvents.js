@@ -4,8 +4,7 @@ const addEventsEvaluations = function() {
     const newButtonListener = function(event){
         event.preventDefault();
         const app = document.getElementById('app');
-        app.innerHTML = NewEvaluationPage();
-        addEventsNew();
+        RedirectTo('new');
     };
 
     newEvaluationButton.addEventListener('click', newButtonListener);
