@@ -1,11 +1,19 @@
-const addEventsEvaluations = function() {
+const EventsEvaluations = function(){
     const newEvaluationButton = document.getElementById('newEvaluationButton');
-
     const newButtonListener = function(event){
         event.preventDefault();
         RedirectTo('new');
     };
 
-    newEvaluationButton.addEventListener('click', newButtonListener);
-        
+    const addEventsEvaluations = function() {
+        newEvaluationButton.addEventListener('click', newButtonListener);      
+    };
+    
+    const removeEventsEvaluations = function(){
+        newEvaluationButton && newEvaluationButton.removeEventListener('click', newButtonListener);
+    };
+
+    return {add:addEventsEvaluations,
+            remove:removeEventsEvaluations};
 };
+

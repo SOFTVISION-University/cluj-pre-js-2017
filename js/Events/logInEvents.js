@@ -1,4 +1,4 @@
-const addEventsLogIn = function (){
+const EventsLogIn = function(){
     const submitFormListener = function (event) {
         var alert = document.querySelector('.alert');
          if(alert) {
@@ -43,6 +43,16 @@ const addEventsLogIn = function (){
     };
 
     const logInForm = document.getElementById('logInForm');
-    logInForm.addEventListener('submit',submitFormListener);
+    const addEventsLogIn = function (){
+        
+        logInForm.addEventListener('submit',submitFormListener);
+    
+    };
+    
+    const removeEventsLogIn = function() {
+        logInForm && logInForm.removeEventListener('submit',submitFormListener);
+    };
+    return {add:addEventsLogIn,
+            remove:removeEventsLogIn};
 
 };

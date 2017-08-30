@@ -14,18 +14,21 @@ function RedirectTo(page){
     const app = document.querySelector('#app');
     switch (page) {
         case 'evaluations':
+            EventsCommon().removeAll();
             app.innerHTML = EvaluationsPage();
-            AddEventsCommon();
-            addEventsEvaluations();
+            EventsCommon().add();
+            EventsEvaluations().add();
             break;
         case 'new':
+            EventsCommon().removeAll();
             app.innerHTML = NewEvaluationPage();
-            AddEventsCommon();
-            addEventsNew();
+            EventsCommon().add();
+            EventsNew().add();
             break;
         case 'logIn':
+            EventsCommon().removeAll();
             app.innerHTML = FullPage();
-            addEventsLogIn();
+            EventsLogIn().add();
             break;
     }
 }
