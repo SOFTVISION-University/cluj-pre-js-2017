@@ -1,9 +1,9 @@
 const addEventsNew = function() {
     const dataObject = {};
-    const buttonEval = document.getElementById('button1');
+    const buttonEval = document.getElementById('evaluationButton');
     const formNew = document.getElementById('formNew');
 
-    const evalButtonEvent = function(event){
+    const evalButtonListener = function(event){
         event.preventDefault();
         const app = document.getElementById('app');
         app.innerHTML = EvaluationsPage();
@@ -11,7 +11,7 @@ const addEventsNew = function() {
 
     };
         
-    buttonEval.addEventListener('click', evalButtonEvent);
+    buttonEval.addEventListener('click', evalButtonListener);
     
     const iterateOver = function(array){
         array.forEach(function(textInput){
@@ -23,21 +23,8 @@ const addEventsNew = function() {
 
     };
 
-    const iterateOverRadio = function(array){
-        array.forEach(function (radioInput){
-            let name = radioInput.name;
-            let value = radioInput.value;
-            if(radioInput.checked){
-                dataObject[name] = value;
-            }
-
-        });
-
-    };
-
     const getDataFromForm = function(){
         const textInputsNewForm = [];
-        const radioInputsNewForm = [];
         const inputsNewForm = document.querySelectorAll('input');
         const textAreas = document.querySelectorAll('textarea');
         const selectInputs = document.querySelectorAll('select');
@@ -46,27 +33,28 @@ const addEventsNew = function() {
             if(el.type === "text" || el.type === "date"){
                 textInputsNewForm.push(el);
             }
-            if(el.type === "radio"){
-                radioInputsNewForm.push(el);
+            if(el.type === "radio" && el.checked){
+                textInputsNewForm.push(el);
             }
             
         });
 
         iterateOver(textInputsNewForm);
         iterateOver(textAreas);
-        iterateOver(radioInputsNewForm);
+        iterateOver(selectInputs);
 
-        selectInputs.forEach(function(selectInput){
-            let name = selectInput.name;
-            let value = selectInput.value;
-            dataObject[name] = value;
-
-        });
-
-        
+        //ADD OBJECT TO LOCALSTORAGE
+        const localStorageLength = localStorage.length;
+        var evaluations = [];
+        if(localStorageLength !== 0){
+             evaluations = JSON.parse(localStorage.getItem("evaluations"));
+        }
+        evaluations.push(dataObject);
+        localStorage.setItem("evaluations", JSON.stringify(evaluations));
+  
     };
 
-    const submitNewForm = function(event) {
+    const submitNewFormListener = function(event) {
         event.stopPropagation();
         event.preventDefault();
 
@@ -74,6 +62,6 @@ const addEventsNew = function() {
 
     };
 
-    formNew.addEventListener('submit', submitNewForm);
+    formNew.addEventListener('submit', submitNewFormListener);
         
 };

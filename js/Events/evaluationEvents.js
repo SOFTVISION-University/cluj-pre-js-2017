@@ -1,13 +1,13 @@
 const addEventsEvaluations = function() {
-    const buttonNew = document.getElementById('button2');
+    const newEvaluationButton = document.getElementById('newEvaluationButton');
 
-    const newButtonEvent = function(event){
+    const newButtonListener = function(event){
         event.preventDefault();
         const app = document.getElementById('app');
         app.innerHTML = NewEvaluationPage();
         addEventsNew();
     };
 
-    buttonNew.addEventListener('click', newButtonEvent);
+    newEvaluationButton.addEventListener('click', newButtonListener);
         
 };
