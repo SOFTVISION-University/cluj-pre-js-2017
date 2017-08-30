@@ -35,6 +35,7 @@
 .log-in-cont {
     margin-top: 30px;
     float: right;
+    cursor: pointer;
 }
 
 .formatted {

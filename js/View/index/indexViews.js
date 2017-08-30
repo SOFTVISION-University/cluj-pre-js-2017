@@ -15,6 +15,7 @@ function RedirectTo(page){
     switch (page) {
         case 'evaluations':
             app.innerHTML = EvaluationsPage();
+            AddEventsCommon();
             addEventsEvaluations();
             break;
         case 'new':
@@ -24,7 +25,6 @@ function RedirectTo(page){
             break;
         case 'logIn':
             app.innerHTML = FullPage();
-            AddEventsCommon();
             addEventsLogIn();
             break;
     }
