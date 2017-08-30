@@ -3,7 +3,6 @@ const addEventsEvaluations = function() {
 
     const newButtonListener = function(event){
         event.preventDefault();
-        const app = document.getElementById('app');
         RedirectTo('new');
     };
 

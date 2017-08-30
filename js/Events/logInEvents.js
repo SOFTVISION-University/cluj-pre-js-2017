@@ -19,8 +19,8 @@ const addEventsLogIn = function (){
         } else
         
         if(checkCredentials(userNameValue, passwordValue)){
-            const app = document.getElementById('app');
             RedirectTo('evaluations');
+            sessionStorage.setItem('loggedUser', userNameValue);
         } else {
             displayAlert(event.target, "Wrong username or password!");
         }

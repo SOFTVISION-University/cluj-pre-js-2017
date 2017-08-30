@@ -1,13 +1,13 @@
 window.onload = function () {
     const fullString = FullPage();
 
-    const isLoggedIn = !!localStorage.getItem('loggedUser');
+    const isLoggedIn = !!sessionStorage.getItem('loggedUser');
     if(isLoggedIn){
         RedirectTo('evaluations');
     }else{
         RedirectTo('logIn');
     }
-    
+
 };
 
 function RedirectTo(page){
