@@ -40,6 +40,7 @@ const EventsNew = function(){
         iterateOver(selectInputs);
 
         //ADD OBJECT TO LOCALSTORAGE
+        dataObject.id = (dataObject.candidate + dataObject.date + (new Date).getTime()).replace(/\s/g, '');
         const localStorageLength = localStorage.length;
         var evaluations = [];
         if(localStorageLength !== 0){
@@ -58,6 +59,8 @@ const EventsNew = function(){
         getDataFromForm();
 
     };
+
+    
     
     const addEventsNew = function() { 
         buttonEval.addEventListener('click', evalButtonListener);

@@ -7,12 +7,24 @@ const EventsEvaluations = function(){
         RedirectTo('new');
     };
 
+    const plusButtons = document.querySelectorAll('.image-for-details');
+
+    const detailsListener = function(e) {
+       RedirectTo('new',e.target.dataset.id);
+    };    
+
     const addEventsEvaluations = function() {
-        newEvaluationButton.addEventListener('click', newButtonListener);      
+        newEvaluationButton.addEventListener('click', newButtonListener);
+        plusButtons.forEach(function(el){
+            el.addEventListener('click', detailsListener);
+        });      
     };
     
     const removeEventsEvaluations = function(){
         newEvaluationButton && newEvaluationButton.removeEventListener('click', newButtonListener);
+        plusButtons && plusButtons.forEach(function(el){
+            el.removeEventListener('click', detailsListener);
+        }); 
     };
 
     return {add:addEventsEvaluations,
