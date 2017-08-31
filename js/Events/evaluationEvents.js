@@ -1,5 +1,7 @@
 const EventsEvaluations = function(){
+
     const newEvaluationButton = document.getElementById('newEvaluationButton');
+
     const newButtonListener = function(event){
         event.preventDefault();
         RedirectTo('new');

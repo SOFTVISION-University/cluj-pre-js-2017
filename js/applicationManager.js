@@ -12,6 +12,8 @@ function RedirectTo(page){
         case 'new':
             EventsCommon().removeAll();
             app.innerHTML = NewEvaluationPageMarkUp();
+            const dateInput = document.getElementById('date');
+            dateInput.valueAsDate = new Date();
             EventsCommon().add();
             EventsNew().add();
             break;

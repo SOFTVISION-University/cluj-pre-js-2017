@@ -47,6 +47,7 @@ const EventsNew = function(){
         }
         evaluations.push(dataObject);
         localStorage.setItem("evaluations", JSON.stringify(evaluations));
+        RedirectTo('evaluations');
   
     };
 

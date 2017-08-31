@@ -1,3 +1,4 @@
+
 const NewEvaluationPageMarkUp = (options) => {
     return `
         ${Navigation("new")}
@@ -40,7 +41,7 @@ const CandidateDetailsForm = (options) => {
         <div class="form-section-first">
             <input name="candidate" class="form-section-first-input form-section-first-input-skin" type="text" placeholder="Candidate">
             <input name="interviewer" class="form-section-first-input form-section-first-input-skin" type="text" placeholder="Interviewer">
-            <input name="date" class="form-section-first-input form-section-first-input-skin" type="date" class="inputDate">
+            <input id="date" name="date" class="form-section-first-input form-section-first-input-skin" type="date" class="inputDate">
         </div>
     `;
 };

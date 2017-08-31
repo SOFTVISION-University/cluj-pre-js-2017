@@ -1,4 +1,4 @@
-window.onload = function () {
+(function () {
 
     const isLoggedIn = !!sessionStorage.getItem('loggedUser');
     if(isLoggedIn){
@@ -7,6 +7,6 @@ window.onload = function () {
         RedirectTo('logIn');
     }
 
-};
+})();
 
 
