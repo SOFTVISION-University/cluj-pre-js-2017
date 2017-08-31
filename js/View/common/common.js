@@ -32,7 +32,7 @@ const Navigation = function (options = "evaluations") {
                     New Evaluation
                     </div>
                 </div>
-                <span class="log-in-cont formatted"><a class="log-out-link log-out-link-skin" href="login.html">Logout</a></span>
+                <span id="logOut" class="log-in-cont formatted"><a class="log-out-link log-out-link-skin">Logout</a></span>
             </nav>
         </header>
     `;

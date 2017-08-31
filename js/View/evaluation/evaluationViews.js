@@ -1,7 +1,7 @@
-function EvaluationsPage(options) {
+function EvaluationsPageMarkUp(options) {
     const newOptions = options || {};
     const headings = ['Nume', 
-        'Tehnologie', 
+        'Data', 
         'Nivel',
         ''];     
     const rows = JSON.parse(localStorage.getItem('evaluations'));
@@ -20,7 +20,7 @@ function EvaluationTableRow(options = {}) {
     return `
         <tr>
             <td>${options.candidate}</td>
-            <td>JS</td> 
+            <td>${options.date}</td> 
             <td>${options.level}</td>
             <td class="details-cell"><text>Detalii</text><div class="image-for-details image-for-details-skin"></div></td>
         </tr>

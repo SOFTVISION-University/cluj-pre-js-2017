@@ -1,7 +1,12 @@
 window.onload = function () {
-    const fullString = FullPage();
 
-    document.querySelector('#app').innerHTML = fullString;
-    addEventsLogIn();
+    const isLoggedIn = !!sessionStorage.getItem('loggedUser');
+    if(isLoggedIn){
+        RedirectTo('evaluations');
+    }else{
+        RedirectTo('logIn');
+    }
 
 };
+
+
