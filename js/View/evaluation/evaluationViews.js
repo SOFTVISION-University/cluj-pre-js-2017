@@ -17,12 +17,21 @@ function EvaluationsPageMarkUp(options) {
 };
 
 function EvaluationTableRow(options = {}) {
+    for (var property in options) {
+        if (options.hasOwnProperty(property)) {
+            
+            if(!options[property] || typeof options[property] == 'undefined' ){
+                
+                options[property] = 'No info available';
+            }
+        }
+    }
     return `
         <tr>
             <td>${options.candidate}</td>
             <td>${options.date}</td> 
-            <td>${options.level}</td>
-            <td class="details-cell"><text>Detalii</text><div class="image-for-details image-for-details-skin"></div></td>
+            <td>${options.level || 'No info available'}</td>
+            <td class="details-cell"><text >Detalii</text><div data-id="${options.id}" class="image-for-details image-for-details-skin"></div></td>
         </tr>
     `;
 };
