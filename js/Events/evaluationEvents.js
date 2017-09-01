@@ -7,7 +7,7 @@ const EventsEvaluations = function(){
         RedirectTo('new');
     };
 
-    const plusButtons = document.querySelectorAll('.image-for-details');
+    const plusButtons = document.querySelectorAll('.details-button');
 
     const detailsListener = function(e) {
        RedirectTo('new',e.target.dataset.id);

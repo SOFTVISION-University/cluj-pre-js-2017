@@ -52,12 +52,37 @@ const EventsNew = function(){
   
     };
 
+    const isCandidateFilled = function() {
+        const candidate = document.getElementsByName('candidate')[0]; 
+        if(!!candidate.value.trim()){
+            return true;
+        }else{
+            displayAlertEmpty(candidate);
+            return false;
+        }
+        
+    };
+
+    const isDateFilled = function() {
+        const date = document.getElementsByName('date')[0]; 
+        if(!!date.value.trim()){
+            return true;
+        }else{
+            displayAlertEmpty(date);
+            return false;
+        }
+    };
+    const displayAlertEmpty = function(element) {
+        window.scrollTo(0,0);
+        element.className += ' empty';
+
+    };
     const submitNewFormListener = function(event) {
         event.stopPropagation();
         event.preventDefault();
-
-        getDataFromForm();
-
+        
+        isCandidateFilled() && isDateFilled() && getDataFromForm();
+       
     };
 
     

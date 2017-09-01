@@ -142,3 +142,12 @@ body {
     color: lightgrey !important;
 }
 
+.empty {
+    border: 1px solid rgba(255, 0, 0, 0.19);
+    background-color: rgba(255, 0, 0, 0.21);
+}
+
+.empty::placeholder {
+    color: rgba(255, 0, 0, 0.21);
+}
+
