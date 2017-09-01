@@ -19,12 +19,7 @@ function RedirectTo(page, id = ''){
                 EventsCommon().add();
                 EventsNew().add();
             }else{
-                EventsCommon().removeAll();
-                const evaluations = JSON.parse(localStorage.getItem('evaluations'));
-                evaluations.forEach(function(evaluation){
-                    if(evaluation.id === id){
-                        app.innerHTML = NewEvaluationPageMarkUp();
-                    }
+                    app.innerHTML = NewEvaluationPageMarkUp();
                     const localStorageArray = JSON.parse(localStorage.getItem('evaluations'));
                     let requiredEvaluation;
                     localStorageArray.forEach(function(evaluation){
@@ -58,7 +53,6 @@ function RedirectTo(page, id = ''){
                         ta.value = requiredEvaluation[ta.name];
                         ta.setAttribute('readonly', true);
                     
-                });
                 });
                 
                 EventsCommon().add();
