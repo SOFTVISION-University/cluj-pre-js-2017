@@ -23,7 +23,7 @@ function RedirectTo(page, id = ''){
                 const evaluations = JSON.parse(localStorage.getItem('evaluations'));
                 evaluations.forEach(function(evaluation){
                     if(evaluation.id === id){
-                        app.innerHTML = NewEvaluationPageMarkUp(id);
+                        app.innerHTML = NewEvaluationPageMarkUp();
                     }
                     const localStorageArray = JSON.parse(localStorage.getItem('evaluations'));
                     let requiredEvaluation;
