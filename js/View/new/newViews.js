@@ -1,5 +1,6 @@
 
 const NewEvaluationPageMarkUp = (options) => {
+    const isIdSet = !!options;
     return `
         ${Navigation("new")}
             <section>
