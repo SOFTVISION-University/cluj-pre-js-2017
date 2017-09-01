@@ -16,8 +16,7 @@ const LoginEvents = function () {
         loginButton.addEventListener('click', login.bind(null, redirectToFunction));
     };
     this.destroyEvents = function () {
-        const loginButton = document.getElementById('login');
-        loginButton.removeEventListener('click', login);
+        removeEvents('login', login);
     };
 };
 
@@ -26,5 +25,7 @@ const login = function (redirectToFunction, e) {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
     const pagesObject = checkCredentials(username, password);
-    if (pagesObject != null) redirectToFunction(pagesObject);
+    if (pagesObject != null) {
+        redirectToFunction(pagesObject);
+    }
 };

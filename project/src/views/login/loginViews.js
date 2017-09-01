@@ -11,8 +11,8 @@ const LoginForm = function () {
                     Wrong credentials. Try again!
               </div>
               <div class="login-form-items default-font">
-                  <input class="login-form-items-input login-form-items-input-skin" id="username" type="text" placeholder="Username" name="username">
-                  <input class="login-form-items-input login-form-items-input-skin" id="password" type="password" placeholder="Password" name="password" >
+                  <input class="login-form-items-input login-form-items-input-skin login-input" id="username" type="text" placeholder="Username" name="username">
+                  <input class="login-form-items-input login-form-items-input-skin login-input" id="password" type="password" placeholder="Password" name="password" >
                   <input class="login-form-button login-form-button-skin default-font" id="login" type="submit" value="Login">
               </div>
           </form>

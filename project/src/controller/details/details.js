@@ -1,8 +1,13 @@
 const DetailsEvents = function (options = {}) {
     this.initEvents = function (redirectToFunction) {
-        setEvent('new-evaluation', 'newEvaluation', redirectToFunction);
-        setEvent('evaluations', 'evaluations', redirectToFunction);
-        setEvent('logout', 'login', redirectToFunction);
+        setNavEvent('new-evaluation', addEvent.bind(null, 'newEvaluation', redirectToFunction));
+        setNavEvent('evaluations', addEvent.bind(null, 'evaluations', redirectToFunction));
+        setNavEvent('logout', addEvent.bind(null, 'login', redirectToFunction));
+    };
+    this.destroyEvents = function (redirectToFunction) {
+        removeEvents('new-evaluation', addEvent.bind(null, 'newEvaluation', redirectToFunction));
+        removeEvents('evaluations', addEvent.bind(null, 'newEvaluation', redirectToFunction));
+        removeEvents('logout', addEvent.bind(null, 'login', redirectToFunction));
     };
     this.populate = function () {
         const currentCandidateData = getCurrentCandidateData(options);
@@ -13,7 +18,10 @@ const DetailsEvents = function (options = {}) {
 
         document.getElementById(currentCandidateData[0].technicalLevel).checked = true;
         document.getElementsByName('level').forEach((el) => {
-            if (!el.checked) el.disabled = true;
+            const elem = el;
+            if (!elem.checked) {
+                elem.disabled = true;
+            }
         });
 
         currentCandidateData[0].textarea.forEach((el) => {
@@ -34,7 +42,8 @@ const DetailsEvents = function (options = {}) {
 
 const getCurrentCandidateData = function (pagesObject) {
     const evaluationsArray = localStorageGetter('evaluationsArray');
-    const finalArr = evaluationsArray.filter((el) => constructId(el.inputData.candidate) === constructId(pagesObject.details.name));
+    const finalArr = evaluationsArray.filter(el =>
+        constructId(el.inputData.candidate) === constructId(pagesObject.details.name));
     return finalArr;
 };
 

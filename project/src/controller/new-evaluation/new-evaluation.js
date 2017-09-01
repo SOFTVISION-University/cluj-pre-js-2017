@@ -1,15 +1,23 @@
 const NewEvaluationEvents = function () {
     this.initEvents = function (redirectToFunction) {
-        setEvent('evaluations', 'evaluations', redirectToFunction);
-        setEvent('logout', 'login', redirectToFunction);
+        setNavEvent('evaluations', addEvent.bind(null, 'evaluations', redirectToFunction));
+        document.getElementById('evaluations').classList.remove('navigation-bar-active');
+        document.getElementById('new-evaluation').classList.add('navigation-bar-active');
+        setNavEvent('logout', addEvent.bind(null, 'login', redirectToFunction));
+
         const submitBtn = document.getElementById('submit-button');
-        submitBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            getFormData();
-        });
+        submitBtn.addEventListener('click', addSubmitEvent);
+    };
+    this.destroyEvents = function (redirectToFunction) {
+        removeEvents('evaluations', addEvent.bind(null, 'evaluations', redirectToFunction));
+        removeEvents('logout', addEvent.bind(null, 'login', redirectToFunction));
+        removeEvents('submit-button', addSubmitEvent);
     };
 };
-
+function addSubmitEvent(e) {
+    e.preventDefault();
+    getFormData();
+}
 function getSelected(selectId) {
     const e = document.getElementById(`${selectId}`);
     return e.options[e.selectedIndex].value;
@@ -43,7 +51,7 @@ function getFieldset() {
     return fieldsetArr;
 }
 
-function getFormData(e) {
+function getFormData() {
     inputData = {
         candidate: document.getElementById('candidate').value,
         interviewer: document.getElementById('interviewer').value,

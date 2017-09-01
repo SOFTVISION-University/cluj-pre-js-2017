@@ -12,17 +12,28 @@ textarea {
     border: 0.5px solid @black;
 }
 
-input[type=date],
-input[type=text] {
+.input-form {
     width: 30%;
     display: inline-block;
     outline: 0;
     border-width: 0 0 2px;
     border-color: @grey-2;
+    background-color: @grey-1;
+}
+
+.input-form-date {
+    width: 30%;
+    display: inline-block;
+    outline: 0;
+    border-width: 0 0 2px;
+    background-color: @grey-1;
 }
 
 input[type=radio] {
     border-color: @grey-2;
+    margin: 0 15px;
+    width: 45px;
+    height: 16px;
 }
 
 table {

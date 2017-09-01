@@ -1,9 +1,9 @@
 const DetailsCandidateDetailsForm = function (options) {
     return `
     <section> 
-        <input type="text" id="candidate" placeholder="Candidate" name="candidate" readonly>
-        <input type="text" id="interviewer" placeholder="Interviewer" name="interviewer" readonly>
-        <input type="date" id="date" name="date" readonly>
+        <input type="text" id="candidate" class="input-form" placeholder="Candidate" name="candidate">
+        <input type="text" id="interviewer" class="input-form" placeholder="Interviewer" name="interviewer">
+        <input type="date" id="date" class="input-form-date" name="date">
     </section>
     `;
 };

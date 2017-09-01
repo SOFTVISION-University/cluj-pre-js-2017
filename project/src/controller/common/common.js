@@ -23,3 +23,22 @@ function setPagesObject(objectAttribute) {
     return pagesObject;
 }
 
+function setNavEvent(idName, addListenerFunction) {
+    const element = document.getElementById(idName);
+    element.addEventListener('click', addListenerFunction);
+}
+
+function removeEvents(idName, eventFunction) {
+    const newEvaluationNav = document.getElementById(idName);
+    newEvaluationNav.removeEventListener('click', eventFunction);
+}
+
+const addEvent = function (pageAttribute, redirectToFunction) {
+    const pagesObject = setPagesObject();
+    pagesObject[pageAttribute] = true;
+    if (pageAttribute === 'login') {
+        localStorageSetter('isLogged', false);
+    }
+    redirectToFunction(pagesObject);
+};
+
