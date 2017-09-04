@@ -31,7 +31,7 @@ function EvaluationTableRow(options = {}) {
             <td>${options.candidate}</td>
             <td>${options.date}</td> 
             <td>${options.level || 'No info available'}</td>
-            <td class="details-cell"><text >Detalii</text><div data-id="${options.id}" class="image-for-details image-for-details-skin"></div></td>
+            <td class="details-cell"><text >Detalii</text><div data-id="${options.id}" class="details-button image-for-details image-for-details-skin"></div></td>
         </tr>
     `;
 };

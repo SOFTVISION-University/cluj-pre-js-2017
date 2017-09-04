@@ -32,7 +32,6 @@ body {
 }
 
 .form-section-first-input-skin {
-    color: lightgrey;
     font-size: 20px;
 }
 
@@ -141,5 +140,14 @@ body {
 
 .input-date {
     color: lightgrey !important;
+}
+
+.empty {
+    border: 1px solid rgba(255, 0, 0, 0.19);
+    background-color: rgba(255, 0, 0, 0.21);
+}
+
+.empty::placeholder {
+    color: rgba(255, 0, 0, 0.21);
 }
 

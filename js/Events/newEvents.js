@@ -3,6 +3,7 @@ const EventsNew = function(){
     const buttonEval = document.getElementById('evaluationButton');
     const formNew = document.getElementById('formNew');
 
+
     const evalButtonListener = function(event){
         event.preventDefault();
         RedirectTo('evaluations');
@@ -52,24 +53,85 @@ const EventsNew = function(){
   
     };
 
+    const isCandidateEmpty = function() {
+        const candidate = document.getElementsByName('candidate')[0]; 
+        if(!!candidate.value.trim()){
+            return false;
+        }else{
+            
+            return candidate;
+        }
+        
+    };
+
+    const checkEmptyFields = function() {
+        const arr = [];
+        const candidate = isCandidateEmpty();
+        const date = isDateEmpty();
+
+        candidate && arr.push(candidate);
+        date && arr.push(date);
+        return arr;
+      
+    }
+
+    const displayAlertEmpty = function(fields) {
+        window.scrollTo(0,0);
+        fields.forEach(function(field){
+            field.className += ' empty';
+        });
+
+    };
+
+    
+
+    
+
+    const isDateEmpty = function() {
+        const date = document.getElementsByName('date')[0]; 
+        if(!!date.value.trim()){
+            return false;
+        }else{
+            return date;
+        }
+    };
+    
+    
     const submitNewFormListener = function(event) {
         event.stopPropagation();
         event.preventDefault();
-
-        getDataFromForm();
-
+        !!checkEmptyFields().length ? displayAlertEmpty(checkEmptyFields()) : getDataFromForm();
+       
     };
+
+    const candidate =  document.getElementsByName('candidate')[0];
+    const date = document.getElementsByName('date')[0];
+
+    const candidateListener = function(event) {
+
+        event.target.classList.remove('empty');
+        
+    }; 
+
+    const dateListener = function(event) {
+        event.target.classList.remove('empty');
+    }; 
+
 
     
     
     const addEventsNew = function() { 
         buttonEval.addEventListener('click', evalButtonListener);
-        formNew.addEventListener('submit', submitNewFormListener);    
+        formNew.addEventListener('submit', submitNewFormListener);
+        candidate.addEventListener('focus', candidateListener);
+        date.addEventListener('focus', dateListener);    
     };
     
     const removeEventsNew = function(){
         buttonEval &&  buttonEval.removeEventListener('click', evalButtonListener);
         formNew && formNew.removeEventListener('submit', submitNewFormListener);
+        candidate && candidate.removeEventListener('focus', candidateListener);
+        date && date.removeEventListener('focus', dateListener);
     }
     return {
         add: addEventsNew,

@@ -1,11 +1,10 @@
 
 const NewEvaluationPageMarkUp = (options) => {
-    const isIdSet = !!options;
     return `
         ${Navigation("new")}
             <section>
                 <div class="main-section">
-                    ${Form(getDataForTextArea())}
+                    ${Form(getDataForTextArea(),options)}
                 </div>
             </section>      
             ${Footer()}
@@ -25,10 +24,10 @@ const TextareaGroup =(options) => {
     return options.data.map(el => Textarea(el)).join('');
 };
 
-const Form = (options) => {
+const Form = (options,id='') => {
     
     return`
-        <form class="form-new" id="formNew" action="" method="">
+        <form class="form-new" data-id="${id}" id="formNew" action="" method="">
             ${CandidateAndTechnical({})} 
             ${TextareaGroup(options)}
             ${FieldsetList(getDataForNewPage())}
