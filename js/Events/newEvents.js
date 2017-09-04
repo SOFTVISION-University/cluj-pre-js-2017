@@ -1,12 +1,18 @@
 const EventsNew = function () {
     const dataObject = {};
     const buttonEval = document.getElementById('evaluationButton');
+    const buttonNewEvaluations = document.getElementById('newEvaluationButton');
     const formNew = document.getElementById('formNew');
 
 
     const evalButtonListener = function (event) {
         event.preventDefault();
         RedirectTo('evaluations');
+    };
+
+    const newEvalButtonListener = function (event) {
+        event.preventDefault();
+        RedirectTo('new');
     };
 
     const iterateOver = function (array) {
@@ -52,7 +58,7 @@ const EventsNew = function () {
 
     const isCandidateEmpty = function() {
         const candidate = document.getElementsByName('candidate')[0]; 
-        
+
         if(!!candidate.value.trim()){
             return false;
         }
@@ -110,6 +116,7 @@ const EventsNew = function () {
 
     const addEventsNew = function () {
         buttonEval.addEventListener('click', evalButtonListener);
+        buttonNewEvaluations.addEventListener('click', newEvalButtonListener);
         formNew.addEventListener('submit', submitNewFormListener);
         candidate.addEventListener('focus', candidateListener);
         date.addEventListener('focus', dateListener);
@@ -117,6 +124,7 @@ const EventsNew = function () {
 
     const removeEventsNew = function () {
         buttonEval && buttonEval.removeEventListener('click', evalButtonListener);
+        buttonNewEvaluations && buttonNewEvaluations.addEventListener('click', newEvalButtonListener);
         formNew && formNew.removeEventListener('submit', submitNewFormListener);
         candidate && candidate.removeEventListener('focus', candidateListener);
         date && date.removeEventListener('focus', dateListener);

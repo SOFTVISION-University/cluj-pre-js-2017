@@ -7,7 +7,7 @@ function EvaluationsPageMarkUp(options) {
     const rows = JSON.parse(localStorage.getItem('evaluations'));
 
     return `
-    ${Navigation()}
+    ${Navigation('evaluations')}
     ${EvaluationsTable({
         items: rows,
         head: headings,

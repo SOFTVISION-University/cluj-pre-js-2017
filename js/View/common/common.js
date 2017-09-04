@@ -13,9 +13,12 @@ const Navigation = function (options = 'evaluations') {
 
     if (options == 'evaluations') {
         EvalSelected = 'selected';
-    } else {
+    } 
+    if (options == 'new'){
         NewSelected = 'selected';
     }
+    
+
 
     return `
         <!-- Header --> 
