@@ -62,12 +62,12 @@ interviewApp.EvaluationsPageMarkUp = function (options) {
 
 
     return `
-    ${interviewApp.commonComponents().Navigation('evaluations')}
+    ${this.commonComponents().Navigation('evaluations')}
     ${EvaluationsTable({
         items: rows,
         head: headings,
     })}
-    ${interviewApp.commonComponents().Footer()}
+    ${this.commonComponents().Footer()}
     `;
 };
 

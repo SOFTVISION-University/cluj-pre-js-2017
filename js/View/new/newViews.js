@@ -13,7 +13,7 @@ const Form = (options, id = '') => `
     <form class="form-new" data-id="${id}" id="formNew" action="" method="">
         ${CandidateAndTechnical({})} 
         ${TextareaGroup(options)}
-        ${FieldsetList(interviewApp.getDataForNewPage())}
+        ${FieldsetList(this.getDataForNewPage())}
         <input class="submit-button submit-button-skin" type="submit" value="SUBMIT">      
     </form>  
 `;
@@ -61,7 +61,7 @@ const TechnicalLevelPicker = (options) => `
 const CandidateAndTechnical = (options) => `
     <div class="form-section">
         ${CandidateDetailsForm({})}
-        ${TechnicalLevelPicker(interviewApp.getDataForTechnicalTable())}
+        ${TechnicalLevelPicker(this.getDataForTechnicalTable())}
     </div>
 `;
 
@@ -102,13 +102,13 @@ const DropDown = (options) => `
     `;
 
     return `
-        ${interviewApp.commonComponents().Navigation("new")}
+        ${this.commonComponents().Navigation("new")}
             <section>
                 <div class="main-section">
-                    ${Form(interviewApp.getDataForTextArea(),options)}
+                    ${Form(this.getDataForTextArea(),options)}
                 </div>
             </section>      
-            ${interviewApp.commonComponents().Footer()}
+            ${this.commonComponents().Footer()}
     `;
 }
 
