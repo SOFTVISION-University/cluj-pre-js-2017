@@ -1,4 +1,4 @@
-interviewApp.EventsLogIn = function () {
+interviewApp.Events.EventsLogIn = function () {
     const submitFormListener = function (event) {
         let alert = document.querySelector('.alert');
         if (alert) {
@@ -33,7 +33,7 @@ interviewApp.EventsLogIn = function () {
     };
 
     const checkCredentials = function (username, password) {
-        let logInObj = interviewApp.getLogInData();
+        let logInObj = interviewApp.Data.getLogInData();
         return username === logInObj.username && password === logInObj.password;
     };
 

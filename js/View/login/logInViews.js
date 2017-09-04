@@ -1,5 +1,5 @@
 
-interviewApp.LogInPageMarkUp = function () {
+interviewApp.Views.LogInPageMarkUp = function () {
     const LogInBox = function (options) {
         return `
                 <div class="col1 log-in-box log-in-box-skin">
@@ -67,7 +67,7 @@ interviewApp.LogInPageMarkUp = function () {
     
     const FooterContainer = function (options) {
         return `
-            ${interviewApp.commonComponents().Footer()}
+            ${interviewApp.Views.commonComponents().Footer()}
             `;
     };
     

@@ -1,4 +1,4 @@
-interviewApp.commonComponents = function () {
+interviewApp.Views.commonComponents = function () {
     const Footer = function () {
         return `
             <!-- Footer -->

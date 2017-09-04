@@ -1,4 +1,4 @@
-interviewApp.EventsCommon = function () {
+interviewApp.Events.EventsCommon = function () {
     const logOutButton = document.getElementById('logOut');
 
     const logOutListener = function (event) {
@@ -17,9 +17,9 @@ interviewApp.EventsCommon = function () {
 
     const RemoveAllEvents = function () {
         RemoveEventsCommon();
-        interviewApp.EventsEvaluations().remove();
-        interviewApp.EventsNew().remove();
-        interviewApp.EventsLogIn().remove();
+        interviewApp.Events.EventsEvaluations().remove();
+        interviewApp.Events.EventsNew().remove();
+        interviewApp.Events.EventsLogIn().remove();
     };
 
     return { add: AddEventsCommon,

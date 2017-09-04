@@ -1,3 +1,3 @@
-interviewApp.AddEvaluationsLogic = function () {
+interviewApp.Logics.AddEvaluationsLogic = function () {
 
 };

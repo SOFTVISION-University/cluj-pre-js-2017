@@ -1,4 +1,4 @@
-interviewApp.EventsNew = function () {
+interviewApp.Events.EventsNew = function () {
     const dataObject = {};
     const buttonEval = document.getElementById('evaluationButton');
     const buttonNewEvaluations = document.getElementById('newEvaluationButton');

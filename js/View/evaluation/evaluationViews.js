@@ -1,5 +1,5 @@
 
-interviewApp.EvaluationsPageMarkUp = function (options) {
+interviewApp.Views.EvaluationsPageMarkUp = function (options) {
     const newOptions = options || {};
     const headings = ['Nume',
         'Data',
@@ -62,12 +62,12 @@ interviewApp.EvaluationsPageMarkUp = function (options) {
 
 
     return `
-    ${this.commonComponents().Navigation('evaluations')}
+    ${interviewApp.Views.commonComponents().Navigation('evaluations')}
     ${EvaluationsTable({
         items: rows,
         head: headings,
     })}
-    ${this.commonComponents().Footer()}
+    ${interviewApp.Views.commonComponents().Footer()}
     `;
 };
 

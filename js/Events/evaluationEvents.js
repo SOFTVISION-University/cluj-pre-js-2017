@@ -1,4 +1,4 @@
-interviewApp.EventsEvaluations = function () {
+interviewApp.Events.EventsEvaluations = function () {
     const newEvaluationButton = document.getElementById('newEvaluationButton');
 
     const newButtonListener = function (event) {

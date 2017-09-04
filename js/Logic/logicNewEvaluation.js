@@ -1,4 +1,4 @@
-interviewApp.AddNewEvaluationLogic = function (id) {
+interviewApp.Logics.AddNewEvaluationLogic = function (id) {
     document.getElementById('newEvaluationButton').classList.remove('selected');
     const localStorageArray = JSON.parse(localStorage.getItem('evaluations'));
     let requiredEvaluation;

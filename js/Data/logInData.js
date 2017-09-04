@@ -1,4 +1,4 @@
-interviewApp.getLogInData = function () {
+interviewApp.Data.getLogInData = function () {
     const obj = {
         username: 'adrian',
         password: 'frunza',

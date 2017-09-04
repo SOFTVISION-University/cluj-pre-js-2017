@@ -3,17 +3,17 @@ interviewApp.Modules.NewModule = {
         const isIdSet = !!id;
         
                 if (!isIdSet) {
-                    interviewApp.EventsCommon().removeAll();
-                    app.innerHTML = interviewApp.NewEvaluationPageMarkUp();
+                    interviewApp.Events.EventsCommon().removeAll();
+                    app.innerHTML = interviewApp.Views.NewEvaluationPageMarkUp();
                     const dateInput = document.getElementById('date');
                     dateInput.valueAsDate = new Date();
-                    interviewApp.EventsCommon().add();
-                    interviewApp.EventsNew().add();
+                    interviewApp.Events.EventsCommon().add();
+                    interviewApp.Events.EventsNew().add();
                 } else {
-                    app.innerHTML = interviewApp.NewEvaluationPageMarkUp();
-                    interviewApp.AddNewEvaluationLogic(id);
-                    interviewApp.EventsCommon().add();
-                    interviewApp.EventsNew().add();
+                    app.innerHTML = interviewApp.Views.NewEvaluationPageMarkUp();
+                    interviewApp.Logics.AddNewEvaluationLogic(id);
+                    interviewApp.Events.EventsCommon().add();
+                    interviewApp.Events.EventsNew().add();
                 }
         
     }

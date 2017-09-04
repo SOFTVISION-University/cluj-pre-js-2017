@@ -1,4 +1,4 @@
-interviewApp.getDataForTextArea = function() {
+interviewApp.Data.getDataForTextArea = function() {
     const obj = {
         data: [
             {
@@ -19,7 +19,7 @@ interviewApp.getDataForTextArea = function() {
     return obj;
 }
 
-interviewApp.getDataForTechnicalTable = function() {
+interviewApp.Data.getDataForTechnicalTable = function() {
     const obj = {
         title: 'Technical level',
         headers: ['Trainee', 'Junior', 'Middle', 'Senior'],
@@ -42,7 +42,7 @@ interviewApp.getDataForTechnicalTable = function() {
     return obj;
 }
 
-interviewApp.getDataForNewPage = function() {
+interviewApp.Data.getDataForNewPage = function() {
     const obj = [{
         groupName: 'OOP, Design Patterns',
         items: [{

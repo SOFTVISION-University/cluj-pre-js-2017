@@ -1,9 +1,9 @@
 interviewApp.Modules.EvaluationsModule = {
     init: function(){
-        interviewApp.EventsCommon().removeAll();
-        app.innerHTML = interviewApp.EvaluationsPageMarkUp();
-        interviewApp.AddEvaluationsLogic();
-        interviewApp.EventsCommon().add();
-        interviewApp.EventsEvaluations().add();
+        interviewApp.Events.EventsCommon().removeAll();
+        app.innerHTML = interviewApp.Views.EvaluationsPageMarkUp();
+        interviewApp.Logics.AddEvaluationsLogic();
+        interviewApp.Events.EventsCommon().add();
+        interviewApp.Events.EventsEvaluations().add();
     }
 };
