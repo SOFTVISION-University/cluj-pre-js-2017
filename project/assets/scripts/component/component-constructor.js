@@ -1,24 +1,24 @@
 const ComponentConstructor = function (options) {
-    if (options.login) {
+    if (options === 'login') {
         return {
             view: new LoginPage(),
-            setEvents: new LoginEvents(),
+            events: new LoginEvents(),
         };
     } else
-    if (options.evaluations) {
+    if (options === 'evaluations') {
         return {
             view: new EvaluationsPage(),
-            setEvents: new EvaluationsEvents(),
+            events: new EvaluationsEvents(),
         };
     } else
-    if (options.newEvaluation) {
+    if (options === 'newEvaluation') {
         return {
             view: new NewEvaluationPage(),
-            setEvents: new NewEvaluationEvents(),
+            events: new NewEvaluationEvents(),
         };
     }
     return {
         view: new DetailsPage(),
-        setEvents: new DetailsEvents(options),
+        events: new DetailsEvents(options),
     };
 };

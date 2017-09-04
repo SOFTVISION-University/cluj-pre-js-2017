@@ -1,23 +1,20 @@
 const NewEvaluationEvents = function () {
-    this.initEvents = function (redirectToFunction) {
+    this.init = function (redirectToFunction) {
         setNavEvent('evaluations', addEvent.bind(null, 'evaluations', redirectToFunction));
         document.getElementById('evaluations').classList.remove('navigation-bar-active');
         document.getElementById('new-evaluation').classList.add('navigation-bar-active');
         setNavEvent('logout', addEvent.bind(null, 'login', redirectToFunction));
 
         const submitBtn = document.getElementById('submit-button');
-        submitBtn.addEventListener('click', addSubmitEvent);
+        submitBtn.addEventListener('click', getFormData);
     };
-    this.destroyEvents = function (redirectToFunction) {
+    this.destroy = function (redirectToFunction) {
         removeEvents('evaluations', addEvent.bind(null, 'evaluations', redirectToFunction));
         removeEvents('logout', addEvent.bind(null, 'login', redirectToFunction));
-        removeEvents('submit-button', addSubmitEvent);
+        removeEvents('submit-button', getFormData);
     };
 };
-function addSubmitEvent(e) {
-    e.preventDefault();
-    getFormData();
-}
+
 function getSelected(selectId) {
     const e = document.getElementById(`${selectId}`);
     return e.options[e.selectedIndex].value;

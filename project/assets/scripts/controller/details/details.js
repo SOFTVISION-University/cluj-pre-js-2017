@@ -1,17 +1,17 @@
 const DetailsEvents = function (options = {}) {
-    this.initEvents = function (redirectToFunction) {
+    this.init = function (redirectToFunction) {
         setNavEvent('new-evaluation', addEvent.bind(null, 'newEvaluation', redirectToFunction));
         setNavEvent('evaluations', addEvent.bind(null, 'evaluations', redirectToFunction));
         setNavEvent('logout', addEvent.bind(null, 'login', redirectToFunction));
     };
-    this.destroyEvents = function (redirectToFunction) {
+    this.destroy = function (redirectToFunction) {
         removeEvents('new-evaluation', addEvent.bind(null, 'newEvaluation', redirectToFunction));
         removeEvents('evaluations', addEvent.bind(null, 'newEvaluation', redirectToFunction));
         removeEvents('logout', addEvent.bind(null, 'login', redirectToFunction));
     };
-    this.populate = function () {
-        const currentCandidateData = getCurrentCandidateData(options);
-
+    this.populate = function (currentName) {
+        const currentCandidateData = getCurrentCandidateData(currentName);
+        console.log(currentName);
         document.getElementById('candidate').value = currentCandidateData[0].inputData.candidate;
         document.getElementById('interviewer').value = currentCandidateData[0].inputData.interviewer;
         document.getElementById('date').value = currentCandidateData[0].inputData.date;
@@ -40,10 +40,10 @@ const DetailsEvents = function (options = {}) {
 }
 ;
 
-const getCurrentCandidateData = function (pagesObject) {
+const getCurrentCandidateData = function (currentName) {
     const evaluationsArray = localStorageGetter('evaluationsArray');
     const finalArr = evaluationsArray.filter(el =>
-        constructId(el.inputData.candidate) === constructId(pagesObject.details.name));
+        constructId(el.inputData.candidate) === currentName);
     return finalArr;
 };
 
