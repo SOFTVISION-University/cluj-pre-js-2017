@@ -5,6 +5,7 @@ function RedirectTo(page, id = ''){
         case 'evaluations':
             EventsCommon().removeAll();
             app.innerHTML = EvaluationsPageMarkUp();
+            AddEvaluationsLogic();
             EventsCommon().add();
             EventsEvaluations().add();
             break;
