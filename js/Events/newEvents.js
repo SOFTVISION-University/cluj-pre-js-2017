@@ -7,12 +7,12 @@ interviewApp.EventsNew = function () {
 
     const evalButtonListener = function (event) {
         event.preventDefault();
-        interviewApp.RedirectTo('evaluations');
+        interviewApp.Modules.EvaluationsModule.init();
     };
 
     const newEvalButtonListener = function (event) {
         event.preventDefault();
-        interviewApp.RedirectTo('new');
+        interviewApp.Modules.EvaluationsModule.init();
     };
 
     const iterateOver = function (array) {
@@ -53,7 +53,7 @@ interviewApp.EventsNew = function () {
         }
         evaluations.push(dataObject);
         localStorage.setItem('evaluations', JSON.stringify(evaluations));
-        interviewApp.RedirectTo('evaluations');
+        interviewApp.Modules.EvaluationsModule.init();
     };
 
     const isCandidateEmpty = function() {

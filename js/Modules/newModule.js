@@ -1,4 +1,4 @@
-interviewApp.NewModule = {
+interviewApp.Modules.NewModule = {
     init: function(id=''){
         const isIdSet = !!id;
         

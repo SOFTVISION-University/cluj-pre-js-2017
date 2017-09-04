@@ -3,13 +3,13 @@ interviewApp.EventsEvaluations = function () {
 
     const newButtonListener = function (event) {
         event.preventDefault();
-        interviewApp.RedirectTo('new');
+        interviewApp.Modules.NewModule.init();
     };
 
     const plusButtons = document.querySelectorAll('.details-button');
 
     const detailsListener = function (e) {
-        interviewApp.RedirectTo('new', e.target.dataset.id);
+        interviewApp.Modules.NewModule.init(e.target.dataset.id);
     };
 
     const addEventsEvaluations = function () {

@@ -1,4 +1,4 @@
-interviewApp.EvaluationsModule = {
+interviewApp.Modules.EvaluationsModule = {
     init: function(){
         interviewApp.EventsCommon().removeAll();
         app.innerHTML = interviewApp.EvaluationsPageMarkUp();

@@ -18,7 +18,7 @@ interviewApp.EventsLogIn = function () {
         } else
 
         if (checkCredentials(userNameValue, passwordValue)) {
-            interviewApp.RedirectTo('evaluations');
+            interviewApp.Modules.EvaluationsModule.init();
             sessionStorage.setItem('loggedUser', userNameValue);
         } else {
             displayAlert(event.target, 'Wrong username or password!');

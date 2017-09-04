@@ -3,7 +3,7 @@ interviewApp.EventsCommon = function () {
 
     const logOutListener = function (event) {
         event.preventDefault();
-        interviewApp.RedirectTo('logIn');
+        interviewApp.Modules.LogInModule.init();
         sessionStorage.removeItem('loggedUser');
     };
 
