@@ -1,27 +1,25 @@
 function EvaluationsPageMarkUp(options) {
     const newOptions = options || {};
-    const headings = ['Nume', 
-        'Data', 
+    const headings = ['Nume',
+        'Data',
         'Nivel',
-        ''];     
+        ''];
     const rows = JSON.parse(localStorage.getItem('evaluations'));
-    
+
     return `
     ${Navigation()}
     ${EvaluationsTable({
-        items : rows,
-        head : headings
+        items: rows,
+        head: headings,
     })}
     ${Footer()}
     `;
-};
+}
 
 function EvaluationTableRow(options = {}) {
-    for (var property in options) {
+    for (const property in options) {
         if (options.hasOwnProperty(property)) {
-            
-            if(!options[property] || typeof options[property] == 'undefined' ){
-                
+            if (!options[property] || typeof options[property] === 'undefined') {
                 options[property] = 'No info available';
             }
         }
@@ -34,20 +32,18 @@ function EvaluationTableRow(options = {}) {
             <td class="details-cell"><text >Detalii</text><div data-id="${options.id}" class="details-button image-for-details image-for-details-skin"></div></td>
         </tr>
     `;
-};
+}
 
 function EvaluationsTableBody(options = {}) {
-    const arr = options.optionsItems.map(function(el){
-        return EvaluationTableRow(el);
-    });
+    const arr = options.optionsItems.map((el) => EvaluationTableRow(el));
 
     return arr.join('');
-};
+}
 
 function EvaluationsTableHeader(options) {
-    const headings =  [];
+    const headings = [];
 
-    options.optionsHead.forEach(function(el){
+    options.optionsHead.forEach((el) => {
         headings.push(`<th>${el}</th>`);
     });
 
@@ -58,16 +54,15 @@ function EvaluationsTableHeader(options) {
             ${headingsEl}
         </tr>
     `;
-};
+}
 
-const EvaluationsTable = function(options = {}) {
-    
+const EvaluationsTable = function (options = {}) {
     return `
         <!-- Main section --> 
         <section>
             <table id="main-table" class="main-table main-table-skin">
-                ${EvaluationsTableHeader({optionsHead: options.head})}
-                ${EvaluationsTableBody({optionsItems: options.items})}
+                ${EvaluationsTableHeader({ optionsHead: options.head })}
+                ${EvaluationsTableBody({ optionsItems: options.items })}
             
             </table>
         </section>

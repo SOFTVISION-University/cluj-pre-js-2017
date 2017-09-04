@@ -1,7 +1,7 @@
-const getLogInData = function(){
+const getLogInData = function () {
     const obj = {
-        username: "adrian",
-        password: "frunza"
+        username: 'adrian',
+        password: 'frunza',
     };
 
     return obj;

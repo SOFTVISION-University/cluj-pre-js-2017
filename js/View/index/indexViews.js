@@ -1,7 +1,5 @@
 (function () {
     const isLoggedIn = !!sessionStorage.getItem('loggedUser');
-    isLoggedIn ? RedirectTo('evaluations') : RedirectTo('logIn')
-
-})();
-
+    isLoggedIn ? RedirectTo('evaluations') : RedirectTo('logIn');
+}());
 

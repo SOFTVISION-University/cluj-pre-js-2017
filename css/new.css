@@ -150,4 +150,35 @@ body {
 .empty::placeholder {
     color: rgba(255, 0, 0, 0.21);
 }
+input[type=radio] {
+    transform: scale(1.5);
+}
+
+input[type='radio']::after {
+    width: 10px;
+    height: 10px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: white;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid #1ab2ff;
+    margin-left: 12px;
+}
+input[type='radio']:checked::after {
+    width: 10px;
+    height: 10px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #1ab2ff;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid grey;
+}
 

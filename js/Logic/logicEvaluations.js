@@ -1,3 +1,3 @@
-const AddEvaluationsLogic = function(){
-  
+const AddEvaluationsLogic = function () {
+
 };

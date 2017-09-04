@@ -78,4 +78,3 @@ const LogInPageMarkUp = function () {
         `;
 };
 
-

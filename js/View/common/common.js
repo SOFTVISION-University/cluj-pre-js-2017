@@ -1,22 +1,20 @@
 const Footer = function () {
-
     return `
         <!-- Footer -->
         <footer class="footer footer-skin">
                 <p>Copyright@Softvision 2017</p>
         </footer>
     `;
-
 };
 
-const Navigation = function (options = "evaluations") {
-    var EvalSelected ;
-    var NewSelected ;
+const Navigation = function (options = 'evaluations') {
+    let EvalSelected;
+    let NewSelected;
 
-    if(options == 'evaluations'){
-        EvalSelected = "selected";
+    if (options == 'evaluations') {
+        EvalSelected = 'selected';
     } else {
-        NewSelected = "selected";
+        NewSelected = 'selected';
     }
 
     return `
