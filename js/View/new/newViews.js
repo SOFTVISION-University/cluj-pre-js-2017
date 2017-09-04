@@ -1,99 +1,90 @@
 
-const NewEvaluationPageMarkUp = (options) => `
-        ${Navigation("new")}
-            <section>
-                <div class="main-section">
-                    ${Form(getDataForTextArea(),options)}
-                </div>
-            </section>      
-            ${Footer()}
-    `;
-
-const Textarea = (options) => `
-        <div class="form-section">
-            <span class="form-section-span formatted primaryColor">${options.label}</span></br>
-            <textarea class="textarea textarea-skin" name="${options.name}" placeholder="${options.placeholder}"></textarea>
-        </div>
-    `;
+interviewApp.NewEvaluationPageMarkUp = function(options){
+    const Textarea = (options) => `
+    <div class="form-section">
+        <span class="form-section-span formatted primaryColor">${options.label}</span></br>
+        <textarea required class="textarea textarea-skin" name="${options.name}" placeholder="${options.placeholder}"></textarea>
+    </div>
+`;
 
 const TextareaGroup = (options) => options.data.map(el => Textarea(el)).join('');
 
 const Form = (options, id = '') => `
-        <form class="form-new" data-id="${id}" id="formNew" action="" method="">
-            ${CandidateAndTechnical({})} 
-            ${TextareaGroup(options)}
-            ${FieldsetList(getDataForNewPage())}
-            <input class="submit-button submit-button-skin" type="submit" value="SUBMIT">      
-        </form>  
-    `;
+    <form class="form-new" data-id="${id}" id="formNew" action="" method="">
+        ${CandidateAndTechnical({})} 
+        ${TextareaGroup(options)}
+        ${FieldsetList(interviewApp.getDataForNewPage())}
+        <input class="submit-button submit-button-skin" type="submit" value="SUBMIT">      
+    </form>  
+`;
 
 const CandidateDetailsForm = (options) => `
-        <div class="form-section-first">
-            <input name="candidate" class="form-section-first-input form-section-first-input-skin" type="text" placeholder="Candidate">
-            <input name="interviewer" class="form-section-first-input form-section-first-input-skin" type="text" placeholder="Interviewer">
-            <input id="date" name="date" class="form-section-first-input form-section-first-input-skin" type="date" class="inputDate">
-        </div>
-    `;
+    <div class="form-section-first">
+        <input required name="candidate" class="form-section-first-input form-section-first-input-skin" type="text" placeholder="Candidate">
+        <input required name="interviewer" class="form-section-first-input form-section-first-input-skin" type="text" placeholder="Interviewer">
+        <input required id="date" name="date" class="form-section-first-input form-section-first-input-skin" type="date" class="inputDate">
+    </div>
+`;
 
 const TechnicalLevelPickerHead = (options) => {
-    const result = options.map((el) => {
-        return `<th>${el}</th>`;
-    });
+const result = options.map((el) => {
+    return `<th>${el}</th>`;
+});
 
-    return result.join('');
+return result.join('');
 };
 
 const RadioGroup = (options) => {
-    const result = options.map((el) => `<input class="level-input" type="radio" name="level" value="${el}"><br>`);
+const result = options.map((el) => `<input class="level-input" type="radio" name="level" value="${el}"><br>`);
 
-    return `
-        <td><div class="radio-group">
-        ${result.join('')}
-        </div></td>
-    `;
+return `
+    <td><div class="radio-group">
+    ${result.join('')}
+    </div></td>
+`;
 };
 
 const TechnicalLevelPickerBody = (options) => options.map((el) => 
-         RadioGroup(el.inputLevels)).join('');
+     RadioGroup(el.inputLevels)).join('');
 const TechnicalLevelPicker = (options) => `
-        <span class="form-section-span formatted primaryColor">${options.title}</span></br>
-        <table class="level-table">
-            <tr>
-                ${TechnicalLevelPickerHead(options.headers)}
-            </tr>
-            <tr class="check-boxes check-boxes-skin">
-                ${TechnicalLevelPickerBody(options.columnData)}
-            </tr>
-        </table>
-    `;
+    <span class="form-section-span formatted primaryColor">${options.title}</span></br>
+    <table class="level-table">
+        <tr>
+            ${TechnicalLevelPickerHead(options.headers)}
+        </tr>
+        <tr class="check-boxes check-boxes-skin">
+            ${TechnicalLevelPickerBody(options.columnData)}
+        </tr>
+    </table>
+`;
 
 const CandidateAndTechnical = (options) => `
-        <div class="form-section">
-            ${CandidateDetailsForm({})}
-            ${TechnicalLevelPicker(getDataForTechnicalTable())}
-        </div>
-    `;
+    <div class="form-section">
+        ${CandidateDetailsForm({})}
+        ${TechnicalLevelPicker(interviewApp.getDataForTechnicalTable())}
+    </div>
+`;
 
 const Fieldset = (options) => {
-    const arrGroup = options.items.map((el) => DropDown(el));
+const arrGroup = options.items.map((el) => DropDown(el));
 
-    return `
-        <fieldset class="fieldset">
-        <legend class="legend legend-skin">${options.groupName}</legend>
-        <ul class="fieldset-ul">
-            ${arrGroup.join('')}
-        </ul>
-        </fieldset>
-    `;
+return `
+    <fieldset class="fieldset">
+    <legend class="legend legend-skin">${options.groupName}</legend>
+    <ul class="fieldset-ul">
+        ${arrGroup.join('')}
+    </ul>
+    </fieldset>
+`;
 };
 
 const FieldsetList = (options) => {
-    const fieldsetString = options.map((el) => {
-        const result = Fieldset(el);
-        return result;
-    }).join('');
+const fieldsetString = options.map((el) => {
+    const result = Fieldset(el);
+    return result;
+}).join('');
 
-    return fieldsetString;
+return fieldsetString;
 };
 
 
@@ -102,10 +93,22 @@ const Options = (options) => `<option value="${options.value}">${options.label}<
 const OptionGroup = (options) => options.map( (el)=> Options(el)).join('');
 
 const DropDown = (options) => `
-        <li class="fieldset-list">
-        ${options.label}
-        <select class="fieldset-select" name="${options.name}">
-        ${OptionGroup(options.val_lab)}    
-        </select>
-        </li>
-        `;
+    <li class="fieldset-list">
+    ${options.label}
+    <select class="fieldset-select" name="${options.name}">
+    ${OptionGroup(options.val_lab)}    
+    </select>
+    </li>
+    `;
+
+    return `
+        ${interviewApp.commonComponents().Navigation("new")}
+            <section>
+                <div class="main-section">
+                    ${Form(interviewApp.getDataForTextArea(),options)}
+                </div>
+            </section>      
+            ${interviewApp.commonComponents().Footer()}
+    `;
+}
+

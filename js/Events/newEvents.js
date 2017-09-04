@@ -1,4 +1,4 @@
-const EventsNew = function () {
+interviewApp.EventsNew = function () {
     const dataObject = {};
     const buttonEval = document.getElementById('evaluationButton');
     const buttonNewEvaluations = document.getElementById('newEvaluationButton');
@@ -7,12 +7,12 @@ const EventsNew = function () {
 
     const evalButtonListener = function (event) {
         event.preventDefault();
-        RedirectTo('evaluations');
+        interviewApp.RedirectTo('evaluations');
     };
 
     const newEvalButtonListener = function (event) {
         event.preventDefault();
-        RedirectTo('new');
+        interviewApp.RedirectTo('new');
     };
 
     const iterateOver = function (array) {
@@ -53,7 +53,7 @@ const EventsNew = function () {
         }
         evaluations.push(dataObject);
         localStorage.setItem('evaluations', JSON.stringify(evaluations));
-        RedirectTo('evaluations');
+        interviewApp.RedirectTo('evaluations');
     };
 
     const isCandidateEmpty = function() {

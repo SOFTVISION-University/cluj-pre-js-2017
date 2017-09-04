@@ -1,4 +1,4 @@
-const EventsLogIn = function () {
+interviewApp.EventsLogIn = function () {
     const submitFormListener = function (event) {
         let alert = document.querySelector('.alert');
         if (alert) {
@@ -18,7 +18,7 @@ const EventsLogIn = function () {
         } else
 
         if (checkCredentials(userNameValue, passwordValue)) {
-            RedirectTo('evaluations');
+            interviewApp.RedirectTo('evaluations');
             sessionStorage.setItem('loggedUser', userNameValue);
         } else {
             displayAlert(event.target, 'Wrong username or password!');
@@ -33,7 +33,7 @@ const EventsLogIn = function () {
     };
 
     const checkCredentials = function (username, password) {
-        let logInObj = getLogInData();
+        let logInObj = interviewApp.getLogInData();
         return username === logInObj.username && password === logInObj.password;
     };
 

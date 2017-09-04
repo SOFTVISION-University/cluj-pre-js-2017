@@ -1,15 +1,15 @@
-const EventsEvaluations = function () {
+interviewApp.EventsEvaluations = function () {
     const newEvaluationButton = document.getElementById('newEvaluationButton');
 
     const newButtonListener = function (event) {
         event.preventDefault();
-        RedirectTo('new');
+        interviewApp.RedirectTo('new');
     };
 
     const plusButtons = document.querySelectorAll('.details-button');
 
     const detailsListener = function (e) {
-        RedirectTo('new', e.target.dataset.id);
+        interviewApp.RedirectTo('new', e.target.dataset.id);
     };
 
     const addEventsEvaluations = function () {

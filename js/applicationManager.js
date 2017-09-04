@@ -1,39 +1,39 @@
-function RedirectTo(page, id = '') {
+const interviewApp = {};
+interviewApp.RedirectTo = function (page, id = '') {
     const app = document.querySelector('#app');
 
     switch (page) {
     case 'evaluations':
-        EventsCommon().removeAll();
-        app.innerHTML = EvaluationsPageMarkUp();
-        AddEvaluationsLogic();
-        EventsCommon().add();
-        EventsEvaluations().add();
+    interviewApp.EventsCommon().removeAll();
+        app.innerHTML = interviewApp.EvaluationsPageMarkUp();
+        interviewApp.AddEvaluationsLogic();
+        interviewApp.EventsCommon().add();
+        interviewApp.EventsEvaluations().add();
         break;
 
     case 'new':
         const isIdSet = !!id;
+
         if (!isIdSet) {
-            EventsCommon().removeAll();
-            app.innerHTML = NewEvaluationPageMarkUp();
+            interviewApp.EventsCommon().removeAll();
+            app.innerHTML = interviewApp.NewEvaluationPageMarkUp();
             const dateInput = document.getElementById('date');
             dateInput.valueAsDate = new Date();
-            EventsCommon().add();
-            EventsNew().add();
+            interviewApp.EventsCommon().add();
+            interviewApp.EventsNew().add();
         } else {
-            app.innerHTML = NewEvaluationPageMarkUp();
-            AddNewEvaluationLogic(id);
-
-            EventsCommon().add();
-            EventsNew().add();
+            app.innerHTML = interviewApp.NewEvaluationPageMarkUp();
+            interviewApp.AddNewEvaluationLogic(id);
+            interviewApp.EventsCommon().add();
+            interviewApp.EventsNew().add();
         }
+
         break;
 
     case 'logIn':
-        EventsCommon().removeAll();
-        app.innerHTML = LogInPageMarkUp();
-        EventsLogIn().add();
+        interviewApp.LogInModule.init();
         break;
 
     default:
     }
-}
+};
