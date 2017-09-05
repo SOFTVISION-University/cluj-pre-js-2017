@@ -1,6 +1,6 @@
 interviewApp.Events.EventsLogIn = function () {
     const submitFormListener = function (event) {
-        let alert = document.querySelector('.alert');
+        const alert = document.querySelector('.alert');
         if (alert) {
             event.target.removeChild(alert);
         }
@@ -15,14 +15,26 @@ interviewApp.Events.EventsLogIn = function () {
 
         if (userNameValue.length === 0 || passwordValue.length === 0) {
             displayAlert(event.target, 'Please complete both fields!');
-        } else
-
-        if (checkCredentials(userNameValue, passwordValue)) {
-            interviewApp.Modules.EvaluationsModule.init();
-            sessionStorage.setItem('loggedUser', userNameValue);
-        } else {
-            displayAlert(event.target, 'Wrong username or password!');
+            return;
         }
+        // ////////////////////////////////////////////////////////////////
+        const xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                // Typical action to be performed when the document is ready:
+
+                const logInObj = JSON.parse(xhttp.responseText);
+                if (checkCredentials(userNameValue, passwordValue, logInObj)) {
+                    interviewApp.Modules.EvaluationsModule.init();
+                    sessionStorage.setItem('loggedUser', userNameValue);
+                } else {
+                    displayAlert(event.target, 'Wrong username or password!');
+                }
+            }
+        };
+        xhttp.open('GET', 'js/Data/xhrLogIn.json', true);
+        xhttp.send();
+        // ////////////////////////////////////////////////////////////////
     };
 
     const displayAlert = function (parent, message) {
@@ -32,8 +44,7 @@ interviewApp.Events.EventsLogIn = function () {
         parent.appendChild(alertLabel);
     };
 
-    const checkCredentials = function (username, password) {
-        let logInObj = interviewApp.Data.getLogInData();
+    const checkCredentials = function (username, password, logInObj) {
         return username === logInObj.username && password === logInObj.password;
     };
 
