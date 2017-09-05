@@ -1,32 +1,36 @@
-const EventsNew = function(){
+interviewApp.Events.EventsNew = function () {
     const dataObject = {};
     const buttonEval = document.getElementById('evaluationButton');
+    const buttonNewEvaluations = document.getElementById('newEvaluationButton');
     const formNew = document.getElementById('formNew');
 
 
-    const evalButtonListener = function(event){
+    const evalButtonListener = function (event) {
         event.preventDefault();
-        RedirectTo('evaluations');
-
+        interviewApp.Modules.EvaluationsModule.init();
     };
 
-    const iterateOver = function(array){
-        array.forEach(function(textInput){
+    const newEvalButtonListener = function (event) {
+        event.preventDefault();
+        interviewApp.Modules.EvaluationsModule.init();
+    };
+
+    const iterateOver = function (array) {
+        array.forEach((textInput) => {
             let name = textInput.name;
             let value = textInput.value;
             dataObject[name] = value;
 
         });
-
     };
 
-    const getDataFromForm = function(){
+    const getDataFromForm = function () {
         const textInputsNewForm = [];
         const inputsNewForm = document.querySelectorAll('input');
         const textAreas = document.querySelectorAll('textarea');
         const selectInputs = document.querySelectorAll('select');
 
-        inputsNewForm.forEach(function(el){
+        inputsNewForm.forEach((el) => {
             if(el.type === "text" || el.type === "date"){
                 textInputsNewForm.push(el);
             }
@@ -40,31 +44,31 @@ const EventsNew = function(){
         iterateOver(textAreas);
         iterateOver(selectInputs);
 
-        //ADD OBJECT TO LOCALSTORAGE
-        dataObject.id = (dataObject.candidate + dataObject.date + (new Date).getTime()).replace(/\s/g, '');
+        // ADD OBJECT TO LOCALSTORAGE
+        dataObject.id = (dataObject.candidate + dataObject.date + (new Date()).getTime()).replace(/\s/g, '');
         const localStorageLength = localStorage.length;
-        var evaluations = [];
-        if(localStorageLength !== 0){
-             evaluations = JSON.parse(localStorage.getItem("evaluations"));
+        let evaluations = [];
+        if (localStorageLength !== 0) {
+            evaluations = JSON.parse(localStorage.getItem('evaluations'));
         }
         evaluations.push(dataObject);
-        localStorage.setItem("evaluations", JSON.stringify(evaluations));
-        RedirectTo('evaluations');
-  
+        localStorage.setItem('evaluations', JSON.stringify(evaluations));
+        interviewApp.Modules.EvaluationsModule.init();
     };
 
     const isCandidateEmpty = function() {
         const candidate = document.getElementsByName('candidate')[0]; 
+
         if(!!candidate.value.trim()){
             return false;
-        }else{
+        }
             
             return candidate;
-        }
+        
         
     };
 
-    const checkEmptyFields = function() {
+    const checkEmptyFields = function () {
         const arr = [];
         const candidate = isCandidateEmpty();
         const date = isDateEmpty();
@@ -72,69 +76,61 @@ const EventsNew = function(){
         candidate && arr.push(candidate);
         date && arr.push(date);
         return arr;
-      
-    }
-
-    const displayAlertEmpty = function(fields) {
-        window.scrollTo(0,0);
-        fields.forEach(function(field){
-            field.className += ' empty';
-        });
-
     };
 
-    
+    const displayAlertEmpty = function (fields) {
+        window.scrollTo(0, 0);
+        fields.forEach((field) => {
+            field.className += ' empty';
+        });
+    };
 
-    
 
     const isDateEmpty = function() {
         const date = document.getElementsByName('date')[0]; 
         if(!!date.value.trim()){
             return false;
-        }else{
-            return date;
         }
+            return date;
+        
     };
-    
-    
-    const submitNewFormListener = function(event) {
+
+
+    const submitNewFormListener = function (event) {
         event.stopPropagation();
         event.preventDefault();
-        !!checkEmptyFields().length ? displayAlertEmpty(checkEmptyFields()) : getDataFromForm();
-       
+        checkEmptyFields().length ? displayAlertEmpty(checkEmptyFields()) : getDataFromForm();
     };
 
-    const candidate =  document.getElementsByName('candidate')[0];
+    const candidate = document.getElementsByName('candidate')[0];
     const date = document.getElementsByName('date')[0];
 
-    const candidateListener = function(event) {
-
+    const candidateListener = function (event) {
         event.target.classList.remove('empty');
-        
-    }; 
+    };
 
-    const dateListener = function(event) {
+    const dateListener = function (event) {
         event.target.classList.remove('empty');
-    }; 
+    };
 
 
-    
-    
-    const addEventsNew = function() { 
+    const addEventsNew = function () {
         buttonEval.addEventListener('click', evalButtonListener);
+        buttonNewEvaluations.addEventListener('click', newEvalButtonListener);
         formNew.addEventListener('submit', submitNewFormListener);
         candidate.addEventListener('focus', candidateListener);
-        date.addEventListener('focus', dateListener);    
+        date.addEventListener('focus', dateListener);
     };
-    
-    const removeEventsNew = function(){
-        buttonEval &&  buttonEval.removeEventListener('click', evalButtonListener);
+
+    const removeEventsNew = function () {
+        buttonEval && buttonEval.removeEventListener('click', evalButtonListener);
+        buttonNewEvaluations && buttonNewEvaluations.addEventListener('click', newEvalButtonListener);
         formNew && formNew.removeEventListener('submit', submitNewFormListener);
         candidate && candidate.removeEventListener('focus', candidateListener);
         date && date.removeEventListener('focus', dateListener);
-    }
+    };
     return {
         add: addEventsNew,
-        remove: removeEventsNew
-    }
+        remove: removeEventsNew,
+    };
 };

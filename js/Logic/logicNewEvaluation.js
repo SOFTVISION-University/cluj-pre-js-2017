@@ -1,13 +1,14 @@
-const AddNewEvaluationLogic = function(id){
+interviewApp.Logics.AddNewEvaluationLogic = function (id) {
+    document.getElementById('newEvaluationButton').classList.remove('selected');
     const localStorageArray = JSON.parse(localStorage.getItem('evaluations'));
     let requiredEvaluation;
-    localStorageArray.forEach(function(evaluation){
+    localStorageArray.forEach((evaluation) => {
         if(evaluation.id === id){
         
             requiredEvaluation = evaluation;
         }
     });
-    document.querySelectorAll('input').forEach(function(input){
+    document.querySelectorAll('input').forEach((input) => {
         if(input.type === 'text' || input.type === 'date'){
             input.value = requiredEvaluation[input.name];
         }
@@ -23,14 +24,14 @@ const AddNewEvaluationLogic = function(id){
         input.setAttribute('readonly', true);
 
     });
-    document.querySelectorAll('select').forEach(function(select){
+    document.querySelectorAll('select').forEach((select) => {
             select.value = requiredEvaluation[select.name];
             select.setAttribute('disabled', true);
         
     });
-    document.querySelectorAll('textarea').forEach(function(ta){
+    document.querySelectorAll('textarea').forEach((ta) => {
         ta.value = requiredEvaluation[ta.name];
         ta.setAttribute('readonly', true);
     
     });
-}
+};
