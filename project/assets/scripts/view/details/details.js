@@ -98,6 +98,7 @@ const DetailsTechnicalAreaPicker = function (options = {}) {
     `;
 };
 
+
 const DetailsPage = function () {
     this.markup = `
     ${NAV()}

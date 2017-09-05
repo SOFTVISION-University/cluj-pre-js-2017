@@ -6,27 +6,31 @@ function constructIdFieldset(legend, label) {
     return `${constructId(legend)}${constructId(label)}`;
 }
 
-function getDefaultObject() {
-    return {
-        login: false,
-        evaluations: false,
-        newEvaluation: false,
-        details: {
-            state: false,
-            name: '',
-        },
-    };
-}
-
-function prepareDetailsObject(dataName) {
-    const pagesObject = getDefaultObject();
-    pagesObject.details.state = true;
-    pagesObject.details.name = dataName;
-    return pagesObject;
-}
-
 function disableElement(key, el) {
     const element = document.getElementById(key);
     element.value = el[key];
     element.disabled = true;
 }
+
+const getComponent = function (page) {
+    return ComponentConstructor(page);
+};
+
+const render = function (component) {
+    const mainContent = document.getElementById('content');
+    mainContent.innerHTML = component.view.markup;
+};
+
+const setupEvents = function (component, redirectToFunction) {
+    component.events.init(redirectToFunction);
+};
+
+const destroy = function (component) {
+    component.events.destroy();
+};
+
+const populate = function (component, dataName) {
+    component.events.populate(dataName);
+};
+
+
