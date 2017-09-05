@@ -1,7 +1,7 @@
 interviewApp.Modules.LogInModule = {
-    init: function(){
+    init() {
         interviewApp.Events.EventsCommon().removeAll();
         app.innerHTML = interviewApp.Views.LogInPageMarkUp();
         interviewApp.Events.EventsLogIn().add();
-    }
+    },
 };

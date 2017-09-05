@@ -26,7 +26,9 @@ interviewApp.Events.EventsEvaluations = function () {
         });
     };
 
-    return { add: addEventsEvaluations,
-        remove: removeEventsEvaluations };
+    return {
+        add: addEventsEvaluations,
+        remove: removeEventsEvaluations,
+    };
 };
 

@@ -17,13 +17,10 @@ interviewApp.Events.EventsLogIn = function () {
             displayAlert(event.target, 'Please complete both fields!');
             return;
         }
-        // ////////////////////////////////////////////////////////////////
-        const xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function () {
-            if (this.readyState == 4 && this.status == 200) {
-                // Typical action to be performed when the document is ready:
-
-                const logInObj = JSON.parse(xhttp.responseText);
+        const xhttpLogIn = new XMLHttpRequest();
+        xhttpLogIn.onreadystatechange = function () {
+            if (this.readyState === 4 && this.status === 200) {
+                const logInObj = JSON.parse(xhttpLogIn.responseText);
                 if (checkCredentials(userNameValue, passwordValue, logInObj)) {
                     interviewApp.Modules.EvaluationsModule.init();
                     sessionStorage.setItem('loggedUser', userNameValue);
@@ -32,9 +29,8 @@ interviewApp.Events.EventsLogIn = function () {
                 }
             }
         };
-        xhttp.open('GET', 'js/Data/xhrLogIn.json', true);
-        xhttp.send();
-        // ////////////////////////////////////////////////////////////////
+        xhttpLogIn.open('GET', 'js/Data/xhrLogIn.json', true);
+        xhttpLogIn.send();
     };
 
     const displayAlert = function (parent, message) {
@@ -56,6 +52,8 @@ interviewApp.Events.EventsLogIn = function () {
     const removeEventsLogIn = function () {
         logInForm && logInForm.removeEventListener('submit', submitFormListener);
     };
-    return { add: addEventsLogIn,
-        remove: removeEventsLogIn };
+    return {
+        add: addEventsLogIn,
+        remove: removeEventsLogIn,
+    };
 };

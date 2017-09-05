@@ -11,9 +11,9 @@ interviewApp.Views.NewEvaluationPageMarkUp = function (options) {
 
     const Form = (options, id = '') => `
     <form class="form-new" data-id="${id}" id="formNew" action="" method="">
-        ${CandidateAndTechnical({})} 
-        ${TextareaGroup(options)}
-        ${FieldsetList(interviewApp.Data.getDataForNewPage())}
+        ${CandidateAndTechnical(options.technical)} 
+        ${TextareaGroup(options.textareas)}
+        ${FieldsetList(options.fieldsets.data)}
         <input class="submit-button submit-button-skin" type="submit" value="SUBMIT">      
     </form>  
 `;
@@ -59,7 +59,7 @@ interviewApp.Views.NewEvaluationPageMarkUp = function (options) {
     const CandidateAndTechnical = (options) => `
     <div class="form-section">
         ${CandidateDetailsForm({})}
-        ${TechnicalLevelPicker(interviewApp.Data.getDataForTechnicalTable())}
+        ${TechnicalLevelPicker(options)}
     </div>
 `;
 
@@ -103,7 +103,7 @@ interviewApp.Views.NewEvaluationPageMarkUp = function (options) {
         ${interviewApp.Views.commonComponents().Navigation('new')}
             <section>
                 <div class="main-section">
-                    ${Form(interviewApp.Data.getDataForTextArea(), options)}
+                    ${Form(options, options)}
                 </div>
             </section>      
             ${interviewApp.Views.commonComponents().Footer()}
