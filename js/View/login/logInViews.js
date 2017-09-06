@@ -14,7 +14,7 @@ interviewApp.Views.LogInPageMarkUp = function () {
                 </div>
             `;
     };
-    
+
     const LogInHeader = function (options) {
         return `
                 <section class="section1 section">
@@ -24,7 +24,7 @@ interviewApp.Views.LogInPageMarkUp = function () {
                 </section>
             `;
     };
-    
+
     const SubmitFeedbackSection = function (options) {
         return `
                 <section class="section2 section2-skin section">
@@ -44,7 +44,7 @@ interviewApp.Views.LogInPageMarkUp = function () {
                 </section>
             `;
     };
-    
+
     const SubmitFeedBackResults = function (options) {
         return `
                 <section class="section3 section3-skin section">
@@ -64,13 +64,13 @@ interviewApp.Views.LogInPageMarkUp = function () {
                 </section>
             `;
     };
-    
+
     const FooterContainer = function (options) {
         return `
             ${interviewApp.Views.commonComponents().Footer()}
             `;
     };
-    
+
     return `
             ${LogInHeader()}
             ${SubmitFeedbackSection()}

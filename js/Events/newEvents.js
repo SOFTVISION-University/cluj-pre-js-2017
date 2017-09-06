@@ -17,10 +17,9 @@ interviewApp.Events.EventsNew = function () {
 
     const iterateOver = function (array) {
         array.forEach((textInput) => {
-            let name = textInput.name;
-            let value = textInput.value;
+            const name = textInput.name;
+            const value = textInput.value;
             dataObject[name] = value;
-
         });
     };
 
@@ -31,13 +30,12 @@ interviewApp.Events.EventsNew = function () {
         const selectInputs = document.querySelectorAll('select');
 
         inputsNewForm.forEach((el) => {
-            if(el.type === "text" || el.type === "date"){
+            if (el.type === 'text' || el.type === 'date') {
                 textInputsNewForm.push(el);
             }
-            if(el.type === "radio" && el.checked){
+            if (el.type === 'radio' && el.checked) {
                 textInputsNewForm.push(el);
             }
-            
         });
 
         iterateOver(textInputsNewForm);
@@ -56,16 +54,14 @@ interviewApp.Events.EventsNew = function () {
         interviewApp.Modules.EvaluationsModule.init();
     };
 
-    const isCandidateEmpty = function() {
-        const candidate = document.getElementsByName('candidate')[0]; 
+    const isCandidateEmpty = function () {
+        const candidate = document.getElementsByName('candidate')[0];
 
-        if(!!candidate.value.trim()){
+        if (candidate.value.trim()) {
             return false;
         }
-            
-            return candidate;
-        
-        
+
+        return candidate;
     };
 
     const checkEmptyFields = function () {
@@ -86,13 +82,12 @@ interviewApp.Events.EventsNew = function () {
     };
 
 
-    const isDateEmpty = function() {
-        const date = document.getElementsByName('date')[0]; 
-        if(!!date.value.trim()){
+    const isDateEmpty = function () {
+        const date = document.getElementsByName('date')[0];
+        if (date.value.trim()) {
             return false;
         }
-            return date;
-        
+        return date;
     };
 
 

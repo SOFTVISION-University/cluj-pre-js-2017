@@ -1,5 +1,5 @@
 interviewApp.Modules.EvaluationsModule = {
-    init(){
+    init() {
         interviewApp.Events.EventsCommon().removeAll();
         app.innerHTML = interviewApp.Views.EvaluationsPageMarkUp();
         interviewApp.Logics.AddEvaluationsLogic();

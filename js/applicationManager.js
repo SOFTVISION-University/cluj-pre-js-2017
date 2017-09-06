@@ -1,4 +1,4 @@
-var interviewApp = {};
+let interviewApp = {};
 interviewApp.Modules = {};
 interviewApp.Views = {};
 interviewApp.Data = {};

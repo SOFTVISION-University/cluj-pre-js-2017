@@ -20,7 +20,6 @@ interviewApp.Views.commonComponents = function () {
         }
 
 
-
         return `
             <!-- Header --> 
             <header class="header header-skin">
@@ -39,6 +38,8 @@ interviewApp.Views.commonComponents = function () {
             </header>
         `;
     };
-    return { Footer: Footer,
-        Navigation: Navigation };
+    return {
+        Footer,
+        Navigation,
+    };
 };

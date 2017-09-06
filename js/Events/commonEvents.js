@@ -22,7 +22,9 @@ interviewApp.Events.EventsCommon = function () {
         interviewApp.Events.EventsLogIn().remove();
     };
 
-    return { add: AddEventsCommon,
+    return {
+        add: AddEventsCommon,
         remove: RemoveEventsCommon,
-        removeAll: RemoveAllEvents };
+        removeAll: RemoveAllEvents,
+    };
 };
