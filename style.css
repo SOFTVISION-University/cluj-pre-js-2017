@@ -1,0 +1,55 @@
+body 
+{
+  margin: 0;
+  padding: 0;
+  background: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  width: 100%;
+}
+
+#logout
+{
+	margin-top: 6px;
+	float: right;
+}
+
+table
+{
+	margin: 100px auto 0 auto;
+	text-align: left;
+	border-collapse: collapse;
+}
+
+th
+{
+	background-color: #03A9F4;
+	color: #FFFFFF;
+	width: 330px;
+	height: 30px;
+	padding: 17px;
+}
+
+tr
+{
+	height: 10px;
+}
+
+td
+{
+	padding: 17px;
+	border-bottom: 3px solid #ddd;
+}
+
+.table-heading-details
+{
+	width: 60px;
+}
+
+.roundButton
+{
+	border-radius: 50%;
+	background-color: #03A9F4;
+	color: #FFFFFF;
+	border: 0;
+}
