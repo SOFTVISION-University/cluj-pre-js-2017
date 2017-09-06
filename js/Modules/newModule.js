@@ -1,5 +1,14 @@
 interviewApp.Modules.NewModule = {
+   
     init(id = '') {
+        
+        const currentModule = sessionStorage.getItem('currentModule') || false;
+        if(currentModule){
+            interviewApp.Events.EventsCommon().remove();
+            interviewApp.Events[currentModule]().remove();
+        }
+      
+        sessionStorage.setItem('currentModule','EventsNew');
         const isIdSet = !!id;
         const newPromise = new Promise(function(resolve, reject){
             const xhttpNew = new XMLHttpRequest();
@@ -23,20 +32,19 @@ interviewApp.Modules.NewModule = {
         });
         newPromise.then((data)=>{
             if (!isIdSet) {
-                interviewApp.Events.EventsCommon().removeAll();
                 app.innerHTML = interviewApp.Views.NewEvaluationPageMarkUp(data);
                 const dateInput = document.getElementById('date');
                 dateInput.valueAsDate = new Date();
-                interviewApp.Events.EventsCommon().add();
-                interviewApp.Events.EventsNew().add();
             } else {
                 app.innerHTML = interviewApp.Views.NewEvaluationPageMarkUp(data);
                 interviewApp.Logics.AddNewEvaluationLogic(id);
-                interviewApp.Events.EventsCommon().add();
-                interviewApp.Events.EventsNew().add();
+   
             }
+
+            interviewApp.Events.EventsCommon().add();
+            interviewApp.Events.EventsNew().add();
         }).catch((error)=>{
-            document.getElementById('app').innerHTML("Something went wrong");
+            document.getElementById('app').innerHTML= "Cannot access API";
         });
     }
 };
