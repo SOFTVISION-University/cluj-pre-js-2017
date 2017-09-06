@@ -17,39 +17,40 @@ interviewApp.Events.EventsLogIn = function () {
             displayAlert(event.target, 'Please complete both fields!');
             return;
         }
-        // ---------------------------------------------------
-        var logInPromise = new Promise(function(resolve,reject){
+
+        var logInPromise = new Promise(function (resolve, reject) {
             const xhttpLogIn = new XMLHttpRequest();
             xhttpLogIn.onreadystatechange = function () {
                 if (this.readyState === 4) {
-                    if(this.status<400){
-                    let logInObj
-                    try{
-                    logInObj = JSON.parse(xhttpLogIn.responseText);
-                    } catch(e) {
+                    if (this.status < 400) {
+                        let logInObj
+                        try {
+                            logInObj = JSON.parse(xhttpLogIn.responseText);
+                        } catch (e) {
+                            reject('Cannot access API')
+                        }
+                        resolve(logInObj);
+
+                    } else {
                         reject('Cannot access API')
                     }
-                    resolve(logInObj);
-                    
-                }else{
-                    reject('Cannot access API')
-                }}
+                }
             };
             xhttpLogIn.open('GET', 'js/Data/xhrLogIn.json', true);
             xhttpLogIn.send();
         });
-        logInPromise.then((data)=>{
+        logInPromise.then((data) => {
             if (checkCredentials(userNameValue, passwordValue, data)) {
                 interviewApp.Modules.EvaluationsModule.init();
                 sessionStorage.setItem('loggedUser', userNameValue);
             } else {
                 displayAlert(event.target, 'Wrong username or password!');
             }
-        }).catch((error)=>{
+        }).catch((error) => {
             displayAlert(event.target, error);
         })
         // ------------------------------------------------------
-        
+
     };
 
     const displayAlert = function (parent, message) {
