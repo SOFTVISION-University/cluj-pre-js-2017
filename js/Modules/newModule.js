@@ -3,12 +3,12 @@ interviewApp.Modules.NewModule = {
         const isIdSet = !!id;
 
 
-        const hxttpNew = new XMLHttpRequest();
-        hxttpNew.onreadystatechange = function () {
+        const xhttpNew = new XMLHttpRequest();
+        xhttpNew.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
                     let newObj;
                 try {
-                    newObj = JSON.parse(hxttpNew.responseText);
+                    newObj = JSON.parse(xhttpNew.responseText);
                 } catch(e) {
                     newObj = {};
                 }
@@ -27,7 +27,7 @@ interviewApp.Modules.NewModule = {
                 }
             }
         };
-        hxttpNew.open('GET', 'js/Data/xhrNew.json', true);
-        hxttpNew.send();
+        xhttpNew.open('GET', 'js/Data/xhrNew.json', true);
+        xhttpNew.send();
     },
 };
