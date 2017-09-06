@@ -6,9 +6,12 @@ interviewApp.Modules.NewModule = {
         const hxttpNew = new XMLHttpRequest();
         hxttpNew.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-                // Typical action to be performed when the document is ready:
-
-                const newObj = JSON.parse(hxttpNew.responseText);
+                    let newObj;
+                try {
+                    newObj = JSON.parse(hxttpNew.responseText);
+                } catch(e) {
+                    newObj = {};
+                }
                 if (!isIdSet) {
                     interviewApp.Events.EventsCommon().removeAll();
                     app.innerHTML = interviewApp.Views.NewEvaluationPageMarkUp(newObj);

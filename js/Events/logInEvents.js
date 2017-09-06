@@ -20,7 +20,12 @@ interviewApp.Events.EventsLogIn = function () {
         const xhttpLogIn = new XMLHttpRequest();
         xhttpLogIn.onreadystatechange = function () {
             if (this.readyState === 4 && this.status === 200) {
-                const logInObj = JSON.parse(xhttpLogIn.responseText);
+                let logInObj
+                try{
+                logInObj = JSON.parse(xhttpLogIn.responseText);
+                } catch(e) {
+                    logInObj = {};
+                }
                 if (checkCredentials(userNameValue, passwordValue, logInObj)) {
                     interviewApp.Modules.EvaluationsModule.init();
                     sessionStorage.setItem('loggedUser', userNameValue);
