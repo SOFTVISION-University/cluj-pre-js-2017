@@ -61,16 +61,16 @@ interviewApp.Events.EventsNew = function () {
             return false;
         }
 
-        return candidate;
+        return true;
     };
 
     const checkEmptyFields = function () {
         const arr = [];
-        const candidate = isCandidateEmpty();
-        const date = isDateEmpty();
+        const candidate = document.getElementsByName('candidate')[0];
+        const date = document.getElementsByName('date')[0];
 
-        candidate && arr.push(candidate);
-        date && arr.push(date);
+        isCandidateEmpty() && arr.push(candidate);
+        isDateEmpty() && arr.push(date);
         return arr;
     };
 
@@ -87,7 +87,7 @@ interviewApp.Events.EventsNew = function () {
         if (date.value.trim()) {
             return false;
         }
-        return date;
+        return true;
     };
 
 
