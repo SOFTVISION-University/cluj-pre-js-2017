@@ -1,7 +1,7 @@
 interviewApp.Modules.NewModule = {
    
     init(id = '') {
-        
+        window.scrollTo(0, 0);
         const currentModule = sessionStorage.getItem('currentModule') || false;
         if(currentModule){
             interviewApp.Events.EventsCommon().remove();
@@ -21,8 +21,7 @@ interviewApp.Modules.NewModule = {
                         resolve(newObj);
                     } catch(e) {
                         reject("Cannot access json file");
-                    }
-                    
+                    }       
                 }else{
                     reject("Cannot access json file");
                 }}
@@ -40,7 +39,6 @@ interviewApp.Modules.NewModule = {
                 interviewApp.Logics.AddNewEvaluationLogic(id);
    
             }
-
             interviewApp.Events.EventsCommon().add();
             interviewApp.Events.EventsNew().add();
         }).catch((error)=>{

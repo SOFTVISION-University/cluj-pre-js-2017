@@ -1,5 +1,6 @@
 interviewApp.Modules.EvaluationsModule = {
     init() {
+        window.scrollTo(0, 0);
         const currentModule = sessionStorage.getItem('currentModule') || false;
         if(currentModule){
             interviewApp.Events.EventsCommon().remove();
