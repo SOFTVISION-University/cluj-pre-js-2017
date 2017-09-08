@@ -12,7 +12,7 @@ interviewApp.Views.NewEvaluationPageMarkUp = function (options) {
     const Form = (options, id = '') => `
     <form class="form-new" data-id="${id}" id="formNew" action="" method="">
         ${CandidateAndTechnical(options.technical)} 
-        ${TextareaGroup(options.textareas)}
+        ${TextareaGroup(options.textareas)};
         ${FieldsetList(options.fieldsets.data)}
         <input class="submit-button submit-button-skin" type="submit" value="SUBMIT">      
     </form>  

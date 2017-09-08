@@ -25,6 +25,7 @@
 .details-cell {
     float: right;
     line-height: 50px;
+    cursor: pointer;
 }
 
 .image-for-details {
