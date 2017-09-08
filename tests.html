@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Pre-employment Training &mdash; Mocha Tests</title>
+    <link href="node_modules/mocha/mocha.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="mocha"></div>
+
+    <script src="js/applicationManager.js"></script>
+    <script src="js/Modules/loginModule.js"></script>
+    <script src="js/Modules/evaluationsModule.js"></script>
+    <script src="js/Modules/newModule.js"></script>
+
+    <script src="node_modules/chai/chai.js"></script>
+    <script src="node_modules/mocha/mocha.js"></script>
+
+    <script>
+        mocha.setup('bdd')
+    </script>
+
+    <script src="js/tests/logInModuleTests.js"></script>
+    <script src="js/tests/evaluationsModuleTests.js"></script>
+    <script src="js/tests/newModuleTests.js"></script>
+
+    <script>
+        mocha.run();
+    </script>
+    <footer>
+        Copyright &copy; Softvision &mdash; JS Pre-employment Training, Cluj, 2017
+    </footer>
+</body>
+
+</html>
